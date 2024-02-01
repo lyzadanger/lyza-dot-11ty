@@ -2,3 +2,6 @@
 
 # 11ty
 _site/
+
+# build
+_tmp/

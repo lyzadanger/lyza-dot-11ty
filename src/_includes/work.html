@@ -3,29 +3,29 @@
 >
   <div class="flex h-full flex-col border-b border-b-grey-800">
     <h2 class="flex-grow font-display text-lg leading-snug">
-      {% if work.url %}
+      {% if work.data.url %}
       <a href="{{work.url}}" class="hover:text-pank hover:underline">
-        {{work.title}}
+        {{work.data.title}}
       </a>
-      {% else %} {{work.title}} {% endif %}
+      {% else %} {{work.data.title}} {% endif %}
     </h2>
     <div class="justify-self-end">
       {% if work.source %}
-      <span class="font-display italic">{{work.source}}</span>
+      <span class="font-display italic">{{work.data.source}}</span>
       {% endif %}
       <div
         style="font-variant-caps: all-small-caps"
         class="float-end pb-2 pr-1 text-lg leading-none text-pank md:absolute md:bottom-full md:right-0 md:float-none"
       >
-        {{work.type}}
+        {{work.data.type}}
       </div>
     </div>
   </div>
   <div class="self-center border-b-grey-800 py-2">
-    {% if work.imageUrl %}
-    <a href="{{work.url}}">
+    {% if work.data.imageUrl %}
+    <a href="{{work.data.url}}">
       <img
-        src="{{work.imageUrl}}"
+        src="{{work.data.imageUrl}}"
         class="max-h-[150px] w-full object-contain"
         alt="{{work.title}}"
       />
@@ -33,6 +33,6 @@
     {% endif %}
   </div>
   <div>
-    <div class="prose flex-grow leading-normal">TODO</div>
+    <div class="prose flex-grow leading-normal">{{work.content}}</div>
   </div>
 </div>

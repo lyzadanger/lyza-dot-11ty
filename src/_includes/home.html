@@ -34,3 +34,21 @@ layout: layout.html
     {% endif %} {% endfor %}
   </ul>
 </div>
+
+{% render "home-subhead.html", title: "What I Do", id: "what-i-do" %}
+<div class="grid md:col-span-9 md:grid-cols-2 lg:col-span-10 lg:grid-cols-3">
+  {% for skillset in skills %}
+  <div class="row-span-2 grid grid-rows-subgrid border-t-3 border-grey-900">
+    <h3 class="p-1 font-display text-xl font-bold italic text-pank">
+      {{skillset.description}}
+    </h3>
+    <ul class="border-t bg-stone-100 p-2 pb-4">
+      {% for skill in skillset.skills %}
+      <li class="text-lg" style="font-variant-caps: all-small-caps">
+        {{skill}}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,57 @@
+- title: Beyond Tellerand
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706283377/btconf.png
+  locations:
+    - location: Düsseldorf
+  presentation: "Web Annotation: The Web's Conversation Layer"
+  role: speaker
+- title: JS Conf
+  imageUrl: "https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706283406/jsconf_gd33ek.png"
+  locations:
+    - location: Amelia Island
+    - location: Carlsbad
+  presentation: "NodeBots workshop: Build JavaScript-powered circuits and robots"
+- title: Smashing Conference
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/v1706557053/smashing-logo_vhdizo.png
+  logo: https://archive.smashingconf.com/ny-2017/assets/images/logo.svg
+  locations:
+    - location: Whistler
+    - location: Freiburg
+    - location: NYC
+- title: Holy JS
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284325/holyjs_eypd7k.png
+  locations:
+    - location: St. Petersburg
+- title: Responsive Field Day
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284233/responsive-field-day_osu9x0.png
+  locations:
+    - location: Portland, Ore.
+- title: Web Expo
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284218/web-expo_tzfip3.png
+  locations:
+    - location: Prague
+- title: O'Reilly Velocity
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284229/velocity_cfrzi6.png
+  locations:
+    - location: Barcelona
+    - location: San Jose
+- title: Breaking Development
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284542/bdconf_vbatqo.webp
+  locations:
+    - location: Nashville
+    - location: Dallas
+- title: Over the Air
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284781/over-the-air_nc0cst.png
+  locations:
+    - location: Bletchley Park, UK
+- title: Edge Conf 5
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284781/edge-conf-5_iotzba.png
+  locations:
+    - location: London
+- title: Responsive Day Out
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284781/responsive-day-out_fdile2.png
+  locations:
+    - location: Brighton, UK
+- title: Funka Accessibility Days
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/c_thumb,h_70/v1706284918/logo_funka_oouzwu.svg
+  locations:
+    - location: Stockholm

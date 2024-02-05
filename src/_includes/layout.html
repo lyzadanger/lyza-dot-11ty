@@ -17,7 +17,9 @@
   <body class="font-body mx-4">
     <div class="max-w-5xl mx-auto my-8 space-y-8">
       {% include 'header.html' %}
-      <main class="grid md:grid-cols-12 gap-8">{{ content }}</main>
+      <main class="grid md:grid-cols-12 gap-6 md:gap-y-8 lg:gap-y-16">
+        {{ content }}
+      </main>
     </div>
   </body>
 </html>

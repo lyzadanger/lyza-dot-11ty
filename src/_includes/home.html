@@ -29,3 +29,21 @@ layout: layout.html
   </div>
   {% endfor %}
 </div>
+
+<div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
+  <a id="events">
+    <h2 class="text-center font-display text-2xl md:text-right">
+      Selected Conferences
+    </h2>
+  </a>
+</div>
+
+<div class="md:col-span-9 lg:col-span-10">
+  <ul
+    class="grid grid-cols-3 items-center justify-items-center gap-4 md:grid-cols-4 lg:grid-cols-6 lg:gap-6"
+  >
+    {% for event in events %} {% if event.imageUrl %}
+    <li><img src="{{event.imageUrl}}"" alt={event.title} /></li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

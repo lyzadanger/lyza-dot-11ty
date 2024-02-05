@@ -6,7 +6,7 @@ const customColors = {
 };
 
 module.exports = {
-  content: ["src/_includes/**/*.{html,md,njk}"],
+  content: ["_site/**/*.{html,md,njk}"],
   theme: {
     extend: {
       borderColor: {

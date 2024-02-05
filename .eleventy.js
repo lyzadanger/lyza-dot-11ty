@@ -11,6 +11,8 @@ module.exports = function (eleventyConfig) {
   // Static images
   eleventyConfig.addPassthroughCopy("src/images");
 
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "/" });
+
   return {
     dir: {
       input: "src",

@@ -2,11 +2,7 @@
 layout: layout.html
 ---
 
-<div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
-  <a id="about">
-    <h2 class="text-center font-display text-2xl md:text-right">About Lyza</h2>
-  </a>
-</div>
+{% render "home-subhead.html", title: "About Lyza", id: "about" %}
 <div class="md:col-span-9 prose text-lg lg:text-justify">{{content}}</div>
 
 <div class="md:col-span-12">
@@ -17,11 +13,7 @@ layout: layout.html
   />
 </div>
 
-<div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
-  <a id="books">
-    <h2 class="text-center font-display text-2xl md:text-right">Books</h2>
-  </a>
-</div>
+{% render "home-subhead.html", title: "Books", id: "books" %}
 <div class="grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16">
   {% for book in books %}
   <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
@@ -30,13 +22,8 @@ layout: layout.html
   {% endfor %}
 </div>
 
-<div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
-  <a id="events">
-    <h2 class="text-center font-display text-2xl md:text-right">
-      Selected Conferences
-    </h2>
-  </a>
-</div>
+{% render "home-subhead.html", title: "Selected Conferences", id: "conferences"
+%}
 
 <div class="md:col-span-9 lg:col-span-10">
   <ul

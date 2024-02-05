@@ -1,0 +1,10 @@
+- title: "JavaScript on Things: Hacking Hardware for Web Developers"
+  source: Manning
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/v1706288827/jsot_gh01nu.jpg
+  slug: jsot
+  url: https://www.manning.com/books/javascript-on-things
+- title: "Head First Mobile Web"
+  source: "O'Reilly"
+  imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/v1706288818/hfmw_wh6za6.jpg
+  url: https://www.oreilly.com/library/view/head-first-mobile/9781449324773/
+  slug: hfmw

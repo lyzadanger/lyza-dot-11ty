@@ -1,4 +1,7 @@
+const yaml = require("js-yaml");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   // Necessary because `_tmp_ is gitignored and 11ty won't see it otherwise
   eleventyConfig.setUseGitIgnore(false);
 

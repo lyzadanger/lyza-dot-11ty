@@ -13,6 +13,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "/" });
 
+  eleventyConfig.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
+    autoescape: false,
+  });
+
   // Return all the tags used in a collection
   eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {
     const tags = [];

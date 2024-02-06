@@ -2,7 +2,19 @@
 layout: layout.html
 ---
 
-<div class="col-span-12">
+<div class="md:col-span-4">
+  <h3 class="font-display text-xl pb-2 border-b">Posts by Tag</h3>
+  <ul class="font-title text-xl" style="font-variant-caps: all-small-caps">
+    <li class="pl-2 italic text-pank border-l-3 border-pank">All Posts</li>
+    {% assign postTags = collections.post | getAllTagsWithCount %} {% for tag in
+    postTags %}
+    <li>
+      <a href="#" class="pl-2 hover:text-pank">{{tag.tag}} ({{tag.count}})</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="md:col-span-8">
   <ul>
     {% for post in collections.post reversed %}
     <li><a href="{{post.page.url}}">{{ post.data.title }}</a></li>

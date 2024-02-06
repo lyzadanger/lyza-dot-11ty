@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.html
+layout: layouts/home.njk
 title: About Lyza
 ---
 

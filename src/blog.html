@@ -5,5 +5,5 @@ title: Posts
 
 <ul class="space-y-8">
   {% for post in collections.post reversed %} {% render
-  "post-excerpt-list-item.html" with post as post %} {% endfor %}
+  "components/post-excerpt-list-item.html" with post as post %} {% endfor %}
 </ul>

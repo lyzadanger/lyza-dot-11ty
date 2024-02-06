@@ -1,3 +1,22 @@
-<ul className="flex flex-row gap-4 sm:gap-6 justify-self-stretch">
-  <li class="border border-pank">TODO</li>
+<ul class="flex flex-row gap-4 sm:gap-6 justify-self-stretch">
+  <li
+    class="pt-2.5 border-b-10 {% if navigationKey == 'about' %}border-pank{% else %} border-transparent{% endif %}"
+  >
+    <a
+      href="/"
+      style="font-variant-caps: all-small-caps"
+      class="pt-2.5 font-title text-grey-700 text-2xl font-light hover:text-pank {% if navigationKey == 'about' %}italic{% endif %}"
+      >About</a
+    >
+  </li>
+  <li
+    class="pt-2.5 border-b-10 {% if navigationKey == 'posts' %}border-pank{% else %} border-transparent{% endif %}"
+  >
+    <a
+      href="/blog"
+      style="font-variant-caps: all-small-caps"
+      class="pt-2.5 font-title text-grey-700 text-2xl font-light hover:text-pank {% if navigationKey == 'posts' %}italic{% endif %}"
+      >Posts</a
+    >
+  </li>
 </ul>

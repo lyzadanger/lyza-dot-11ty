@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: activeTag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: blog.html
+eleventyComputed:
+  title: Posts tagged “{{ activeTag }}”
+permalink: /tags/{{ activeTag | slugify }}/
+---
+
+<ul class="space-y-8">
+  {% for post in collections[activeTag] reversed %} {% render
+  "post-excerpt-list-item.html" with post as post %} {% endfor %}
+</ul>

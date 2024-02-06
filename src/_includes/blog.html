@@ -1,0 +1,36 @@
+---
+layout: layout.html
+description: >
+  A layout with post tags in the left column (wide screen) and a content area
+---
+
+<div class="md:col-span-4">
+  <h3 class="font-display text-xl pb-2 border-b">Posts by Tag</h3>
+  <ul>
+    <li class="font-title">
+      <a
+        href="/blog"
+        class="pl-2 hover:text-pank {% unless activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endunless %}"
+        >All Posts ({{collections.post.size}})</a
+      >
+    </li>
+    {% assign postTags = collections.post | getAllTagsWithCount %} {% for tag in
+    postTags %}
+    <li class="font-title">
+      <a
+        href="/tags/{{tag.tag | slugify}}"
+        class="pl-2 hover:text-pank {% if tag.tag == activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endif %}"
+        >{{tag.tag}} ({{tag.count}})</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="md:col-span-8 space-y-8">
+  <h1
+    class="font-display text-2xl p-2 border-l border-l-8 border-pank bg-grey-100"
+  >
+    {{title}}
+  </h1>
+  {{content}}
+</div>

@@ -1,5 +1,5 @@
 {
   "tags": "post",
-  "layout": "post.html",
+  "layout": "blog-post.html",
   "tags-works-comment": "make files available in `collections.posts`"
 }

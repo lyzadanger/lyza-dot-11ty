@@ -14,7 +14,7 @@
             class="text-lg text-grey-600 hover:text-pank"
             style="font-variant-caps: all-small-caps"
           >
-            #{{tag}}
+            <a href="/tags/{{tag | slugify}}">#{{tag}}</a>
           </li>
           {% endunless %} {% endfor %}
         </ul>

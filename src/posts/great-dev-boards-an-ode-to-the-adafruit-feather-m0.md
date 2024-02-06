@@ -20,7 +20,7 @@ In a [previous post](/2017/07/07/i-am-a-hardware-beginner-which-dev-board-should
 
 My introduction to Adafruit’s family of Feather boards wasn’t auspicious: while trying to cobble together a little network of LoRA radios (maybe I’ll talk about this more in-depth sometime as a case-study of Never, Ever, Ever Give Up; maybe it’s just too embarrassing), I feverishly ordered several Feathers from Adafruit, amazed that you could buy a tidily-packaged board with microcontroller and LoRA module for ONLY TWENTY DOLLARS.
 
-![Adafruit's Feather line of dev boards](/post-images/adafruit-feather-site.png)
+![Adafruit's Feather line of dev boards](/images/posts/adafruit-feather-site.png)
 
 _Image: Adafruit Feather dev boards on their website._
 
@@ -34,7 +34,7 @@ Won over I was not. The (limited) [pin layout](https://learn.adafruit.com/assets
 
 A few table-flips later I ultimately netted a small stack of the [Feather M0 Proto](https://www.adafruit.com/product/2772) boards. Now a few hundred bucks down the Feather rabbit hole, I was steeled for rueful-ironic laughter. And, yet. What is this? These boards fundamentally _do not suck_. In fact, they’re pretty great!
 
-![Adafruit Feather M0 Basic Proto](/post-images/adafruit-feather-m0.png)
+![Adafruit Feather M0 Basic Proto](/images/posts/adafruit-feather-m0.png)
 
 _Image: Adafruit Feather M0 Basic Proto. Source: Adafruit website._
 
@@ -48,7 +48,7 @@ The consistency and commitment to the Feather form factor is handy if you want t
 
 Also, minor detail but one close to my heart: the pinout diagrams for the Feathers are clear and well-designed. Just lovely.
 
-![Feather M0 pinout diagram](/post-images/m0_pinout.png)
+![Feather M0 pinout diagram](/images/posts/m0_pinout.png)
 
 _Image: The M0 pinout diagram is clear and easy to read._ [Go see it full size](https://cdn-learn.adafruit.com/assets/assets/000/030/920/original/2772_pinout_v1_0.pdf?1457305622). _Credit: Adafruit._
 

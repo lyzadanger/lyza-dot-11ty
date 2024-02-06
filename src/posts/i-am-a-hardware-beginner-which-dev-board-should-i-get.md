@@ -30,7 +30,7 @@ Let’s not go off half-cocked with a major undefined or vague term. What’s a 
 
 When setting off on a learn-electronics journey, choosing a board is a solid first step. It’ll determine the trajectory of your explorations.
 
-![A selection of development boards. Clockwise from top left: Texas Instruments Launch Pad, Arduino Uno R3, Adafruit Trinket 5V, Particle Photon](/post-images/dev-boards.jpg)
+![A selection of development boards. Clockwise from top left: Texas Instruments Launch Pad, Arduino Uno R3, Adafruit Trinket 5V, Particle Photon](/images/posts/dev-boards.jpg)
 
 _Photo: A selection of development boards. Clockwise from top left: Texas Instruments Launch Pad, Arduino Uno R3, Adafruit Trinket 5V, Particle Photon_
 
@@ -44,7 +44,7 @@ A good beginner dev board should support a reasonable set of I/O features (note:
 
 Pins should be sensibly laid out and named (or, often, numbered). Many boards have pin numbering and capability information helpfully _silkscreened_ onto the board itself. A board with missing key features, nonsensical pin layout or a confusing pinout diagram can make you wish you hadn’t bothered.
 
-![Detail of Arduino Uno R3 showing silkscreened pin information](/post-images/uno-silkscreen.jpg)
+![Detail of Arduino Uno R3 showing silkscreened pin information](/images/posts/uno-silkscreen.jpg)
 
 _Photo: Detail of the Arduino Uno (R3) board showing silkscreened pin numbers._
 
@@ -79,7 +79,7 @@ At the end of the day, there are certain dev boards that tick most of the boxes 
 
 Ohmigod, how _boring_! you might be lamenting. I’ve just held up the non-cutting-edgiest, pedestrian, and basically _first_ open-source board as a shining example of newbie awesome.
 
-![A bad artist's impression of the Arduino Uno (R3) board](/post-images/uno.png)
+![A bad artist's impression of the Arduino Uno (R3) board](/images/posts/uno.png)
 
 _Illustration: A bad artist's impression of the Arduino Uno (R3) board_.
 
@@ -111,7 +111,7 @@ OK, so there is this fantastic book—brilliant visual design, clear instruction
 
 And now for something completely different, and lightly violating what I said about constraints and ubiquity: the [Tessel 2](https://tessel.io/) board. The Tessel runs an optimized-for-embedded Linux distribution, OpenWRT, and has enough oomph to run Node.js on-board. So, if you’ve selected the “Web-Connected Devices” adventure, you can `npm` to your heart’s content and do some pretty complex, nifty software things in short order.
 
-![The Tessel 2 board](/post-images/tessel.png)
+![The Tessel 2 board](/images/posts/tessel.png)
 
 Like the Arduino, Tessel is an open-source platform. Also like the Arduino Uno, the Tessel’s pins are sanely organized and labeled and the board supports all the major features you’d expect. It’s a more sophisticated device than the Uno, with a separate co-processor for handling I/O. There are some frills. You’ll likely put the on-board WiFi to use straightaway. There are two USB peripheral ports, which are fun to play with but I’d recommend keeping it simple to start and ignoring those initially.
 

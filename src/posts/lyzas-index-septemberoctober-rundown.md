@@ -21,7 +21,7 @@ It was the first event Cloud Four has put on, and the first event for which I wa
 
 You can find videos and podcast-ed audio of everything from the day, talks and panels, on the [event's web site](http://www.responsivefieldday.com).
 
-![Hosting a panel about progressive enhancement at Responsive Field Day](/post-images/win-goodbody-photo.jpg)
+![Hosting a panel about progressive enhancement at Responsive Field Day](/images/posts/win-goodbody-photo.jpg)
 
 _Photo copyright 2015 [Win Goodbody](http://www.wingoodbody.photography/Event/20150925-Responsive-Field-Day/i-PzCzdDb)_
 
@@ -43,7 +43,7 @@ Here's proof that I can Pinterest with the rest of 'em. I got bored with the scr
 
 #### Before
 
-![Stupid Table: Before](/post-images/before.jpg)
+![Stupid Table: Before](/images/posts/before.jpg)
 
 #### Then
 
@@ -51,6 +51,6 @@ Sanding, priming, and gold spray paint.
 
 #### After
 
-![Stupid Table: After](/post-images/after-1.jpg)
+![Stupid Table: After](/images/posts/after-1.jpg)
 
-![Stupid Table: After 2](/post-images/after-2.jpg)
+![Stupid Table: After 2](/images/posts/after-2.jpg)

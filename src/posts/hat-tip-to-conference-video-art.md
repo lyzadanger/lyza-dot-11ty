@@ -16,7 +16,7 @@ From time to time, we celebrate certain conference videos—usually the kind tha
 
 In Marc Costa's [intro video for Smashing Conf NYC 2017](https://vimeo.com/220945744), different materials are laser-cut, twisted, bounced and folded into representations of speaker names, making strong use of the third dimension. It's an artful melding of the technical and the tangible. While each individual composition is handsome, it's the entire collection together that feels sublime.
 
-![Still from Smashing Conf NYC 2017 intro video, by Marc Costa](/post-images/still.png)
+![Still from Smashing Conf NYC 2017 intro video, by Marc Costa](/images/posts/still.png)
 
 _A still from Marc Costa's Smashing Conf 2017 intro video. [Watch it on Vimeo](https://vimeo.com/220945744)_
 
@@ -24,6 +24,6 @@ _A still from Marc Costa's Smashing Conf 2017 intro video. [Watch it on Vimeo](h
 
 [CreativeBloq's intro video for it's 2016 San Francisco Generate conference](https://www.youtube.com/watch?v=MsTbwflWXKI) is all digital, but the animation is inventive, dimensional and kinetic. And I happen to be a fan of the energy of the music.
 
-![Still from CreativeBloq's 2016 SFO Generate intro](/post-images/generate.png)
+![Still from CreativeBloq's 2016 SFO Generate intro](/images/posts/generate.png)
 
 _It is awfully fun watching my own name unfurl! [Watch it on YouTube](https://www.youtube.com/watch?v=MsTbwflWXKI)_

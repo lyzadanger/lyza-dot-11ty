@@ -26,7 +26,7 @@ _Except it doesn't_, in my book.
 
 There's been a voyeuristic flocking to [@firt's](https://twitter.com/firt) (_quite_ well-done) dimension porn image:
 
-![Image copyright Maximilian Firtman @firt, used with permission: viewport dimensions in iOS 9 Safari split view on iPad](/post-images/ios9rwd.png)
+![Image copyright Maximilian Firtman @firt, used with permission: viewport dimensions in iOS 9 Safari split view on iPad](/images/posts/ios9rwd.png)
 
 _(Thanks to @firt for permission to use this image from his [original post](http://www.mobilexweb.com/blog/ios9-safari-for-web-developers))_
 

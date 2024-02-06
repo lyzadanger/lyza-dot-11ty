@@ -32,17 +32,17 @@ Townspeople noticed quickly, for example, that the higher and steeper the cliff,
 
 Higher cliffs provide more "voltage", that is, electrical potential. _Voltage_ is like electrical "pressure", pushing the charges (jellyfish) from high potential energy toward a location of lower potential.
 
-![Higher cliffs provide more "voltage", that is, electrical potential. *Voltage* is like electrical "pressure", pushing the charges—jellyfish—from high potential energy toward a location of lower potential.](/post-images/03-voltage.png)
+![Higher cliffs provide more "voltage", that is, electrical potential. *Voltage* is like electrical "pressure", pushing the charges—jellyfish—from high potential energy toward a location of lower potential.](/images/posts/03-voltage.png)
 
 _Voltage_ is a measurement of the difference of potential energy between two points. It's something like pressure or tension or gravitational force, as electricity is always itching to move from higher voltage to lower voltage. Voltage, measured in volts, is _potential_ energy, however—voltage alone without moving charged electrons (jellyfish) can't wreak any havoc.
 
-![Voltage is _potential_ energy.](/post-images/03-potential-energy.png)
+![Voltage is _potential_ energy.](/images/posts/03-potential-energy.png)
 
 For something interesting to happen, jellyfish need to get actively chucked over the edge of the cliff, a task which the gnomes are more than happy to perform.
 
 The townspeople learned to measure jellyfish current by staking out a spot on the cliff and precisely counting the number of jellyfish that passed by over a precise period of time. _Current_, the flow of electric charge, is measured in _Amperes_, often abbreviated as _Amps_.
 
-![Current is a flow of charge.](/post-images/03-current.png)
+![Current is a flow of charge.](/images/posts/03-current.png)
 
 _Current_, the flow of electricity, can be measured by counting how many charges (jellyfish) pass a specific spot on a cliff during a defined period of time.
 
@@ -52,7 +52,7 @@ They engineered jellyfish-channeling systems into the cliff faces, restricting t
 
 Townspeople add _resistance_ to the circuit by channeling falling jellyfish through a series of tubes. Increasing resistance lowers the current.
 
-![Increasing resistance lowers current](/post-images/03-resistance.png)
+![Increasing resistance lowers current](/images/posts/03-resistance.png)
 
 A summary of the townspeople's discoveries is shown here:
 
@@ -82,7 +82,7 @@ To reduce the jellyfish current to manageable levels, channeling systems and pip
 
 Once the jellyfish have given power to the cookie-making machinery and reached the floor of the factory, they reach the point of lowest potential in the circuit. Jet-pack-wearing gnomes act like a pump of sorts, hoisting the weary jellyfish back up the cliff where they can be thrown over again. And again and again...
 
-![A complete gnome-and-jellyfish "circuit"](/post-images/03-gnome-circuit.png)
+![A complete gnome-and-jellyfish "circuit"](/images/posts/03-gnome-circuit.png)
 
 Voltage, current and resistance are vital concepts of basic circuitry. The next step is to understand how these factors relate to each other, and how they apply to real-world circuits.
 
@@ -92,11 +92,11 @@ Voltage, current and resistance are related to each other in consistent ways. Ea
 
 The townspeople's new signature cookie showed the relationship between voltage (V), current (I) and resistance (R).
 
-![The townspeople's new signature cookie showed the relationship between voltage (V), current (I) and resistance (R)](/post-images/03-cookie.png)
+![The townspeople's new signature cookie showed the relationship between voltage (V), current (I) and resistance (R)](/images/posts/03-cookie.png)
 
 The bearer of the cookie can bite off the factor she wishes to determine—then see how it can be derived from the other two factors. For example, if she wanted to determine resistance (R), she could bite that off and see that R = voltage (V) divided by current (I).
 
-![For example, if she wanted to determine resistance (R), she could bite that off and see that R = voltage (V) divided by current (I)](/post-images/03-cookie-equations.png)
+![For example, if she wanted to determine resistance (R), she could bite that off and see that R = voltage (V) divided by current (I)](/images/posts/03-cookie-equations.png)
 
 Georg Ohm figured out these key relationships between voltage, resistance and current back in the 1820s, well before the clever cookie-townspeople, which is why _Ohm's Law_ bears his name. If you prefer your math in non-cookie form, the relevant equations are:
 

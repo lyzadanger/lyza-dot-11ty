@@ -22,7 +22,7 @@ The "tiny computer" involved is typically a _microcontroller_, which combine pro
 
 Microcontrollers are small, with absolutely itty-bitty connection pins. For novices and hackers and prototypers, _development boards_ make it easier to work with microcontrollers by providing human-sized ways to connect to the I/O pins of the microcontroller. The boards also provide a steady way to power the microcontroller as well as several supporting features like timing chips, connections for different communication protocols, easier methods to get programs onto the microcontroller, etc.
 
-![Arduino Uno Development Board](/post-images/arduino-uno.jpg)
+![Arduino Uno Development Board](/images/posts/arduino-uno.jpg)
 
 Developer boards like the omnipresent Arduino Uno give easy access to I/O connections and take some headache out of working with microcontrollers.
 
@@ -42,6 +42,6 @@ I recently gave a presentation about this at the [March meeting](http://www.meet
 
 To learn more about how prepare a board as a client and some Johnny-five basics, you can read [my (warning: pretty informal!) slides](http://lyzadanger.github.io/jsot-johnny-five-slides). Or jump straight to looking at [some examples of scripts and wiring schematics](https://github.com/lyzadanger/jsot-johnny-five), like this "pointing-north alarm":
 
-![Fritzing wiring schematic for one of the examples in the jsot-johnny-five repo](/post-images/fritzing-compass.png)
+![Fritzing wiring schematic for one of the examples in the jsot-johnny-five repo](/images/posts/fritzing-compass.png)
 
 I was also just on [Hanselminutes](http://www.hanselminutes.com/521/march-is-for-makers-arduinos-javascript-and-johnny-five-with-lyza-danger-gardner) talking about the host-client method of controlling hardware with JavaScript.

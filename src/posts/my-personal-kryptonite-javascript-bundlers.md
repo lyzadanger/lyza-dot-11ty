@@ -24,17 +24,17 @@ A number of times recently, I have thought, OK, this is the time. I'm going to s
 
 There are parts of this problem I find moderately _interesting_, but interesting in a momentary-eyebrow-raise way. Interesting in an academic sense. But the majority of it is, to me, boring. It's hard to want to dig in and figure something out that bores the socks off of me. As I say in my slides, one of the greatest technical demotivators is when something is difficult and dull at the same time:
 
-![Where Motivation Goes to Die](/post-images/generalist-01.jpg)
+![Where Motivation Goes to Die](/images/posts/generalist-01.jpg)
 
 That intersection, for me, is where this stuff ends up:
 
-![The intersection of Boring and Hard](/post-images/generalist-02.jpg)
+![The intersection of Boring and Hard](/images/posts/generalist-02.jpg)
 
 ### And no offense to the tools
 
 I'm not bashing the tools that do this work: they're essential and, often, sort of quietly amazing. But it just seems so _hard_ sometimes (maybe I'm a whining, lazy developer?) and there are so many options out there, some of which are pieces of the same puzzle and some of which are mutually incompatible:
 
-![Some of the tooling options](/post-images/generalist-03.jpg)
+![Some of the tooling options](/images/posts/generalist-03.jpg)
 
 ### I just feel so dumb
 
@@ -46,7 +46,7 @@ When I spend a half an hour or more fighting a single transpiling error or a mis
 
 But I now suspect I'm more angry because I feel like a fool. I want to get my head around this stuff, I want to subdue it, prevail. Even if it isn't _interesting_, the fact that it plays me for the fool puts me on a rampage. What's in my head is _Why the hell can't I figure this out? What the hell is wrong with me. I'm in the wrong industry._ What comes out of my mouth is: "Goddamit [browserify](http://browserify.org), why do you suck so hard?" Which of course it does not.
 
-![Really Boring Kryptonite](/post-images/generalist-04.jpg)
+![Really Boring Kryptonite](/images/posts/generalist-04.jpg)
 
 So, yeah, it's boring. But that _Kryptonite_ part is relevant. That's what kills me.
 

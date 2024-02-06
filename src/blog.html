@@ -2,22 +2,53 @@
 layout: layout.html
 ---
 
-<div class="md:col-span-4">
+<div class="md:col-span-4 space-y-2">
   <h3 class="font-display text-xl pb-2 border-b">Posts by Tag</h3>
-  <ul class="font-title text-xl" style="font-variant-caps: all-small-caps">
-    <li class="pl-2 italic text-pank border-l-3 border-pank">All Posts</li>
+  <ul>
+    <li class="font-title">
+      <a
+        href="#"
+        class="pl-2 hover:text-pank text-pank italic border-l-3 border-pank font-semibold"
+        >All Posts ({{collections.post.size}})</a
+      >
+    </li>
     {% assign postTags = collections.post | getAllTagsWithCount %} {% for tag in
     postTags %}
-    <li>
+    <li class="font-title">
       <a href="#" class="pl-2 hover:text-pank">{{tag.tag}} ({{tag.count}})</a>
     </li>
     {% endfor %}
   </ul>
 </div>
 <div class="md:col-span-8">
-  <ul>
+  <ul class="space-y-8">
     {% for post in collections.post reversed %}
-    <li><a href="{{post.page.url}}">{{ post.data.title }}</a></li>
+    <li class="flex flex-col gap-y-1 border-solid border-grey-900 border-t-3">
+      <div>
+        <a href="{{post.page.url}}" class="hover:text-pank"
+          ><h3 class="font-display text-xl">{{ post.data.title }}</h3></a
+        >
+        <div class="flex items-center gap-x-1 border-b">
+          <h4 class="font-display font-normal italic text-l">
+            {{ post.date | date: "%b %d, %Y" }}
+          </h4>
+          <div class="flex-grow">
+            <ul class="flex flex-row gap-2 font-title justify-end">
+              {% for tag in post.data.tags %} {% unless tag == "post" %}
+              <li
+                class="text-lg text-grey-600 hover:text-pank"
+                style="font-variant-caps: all-small-caps"
+              >
+                #{{tag}}
+              </li>
+              {% endunless %} {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="font-body text-grey-700">{{post.data.excerpt}}</div>
+      </div>
+    </li>
     {% endfor %}
   </ul>
 </div>

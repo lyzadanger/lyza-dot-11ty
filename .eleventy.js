@@ -1,3 +1,4 @@
+const { DateTime } = require("luxon");
 const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
@@ -16,6 +17,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
     throwOnUndefined: true,
     autoescape: false,
+  });
+
+  eleventyConfig.addFilter("readableDate", (date) => {
+    let dateObj = date;
+    if (typeof date === "string") {
+      dateObj = DateTime.fromISO(date);
+    } else {
+      dateObj = DateTime.fromJSDate(date, { zone: "utc" });
+    }
+    return dateObj.toFormat("LLL dd, yyyy");
   });
 
   // Return all the tags used in a collection

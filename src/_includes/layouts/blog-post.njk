@@ -8,20 +8,20 @@ navigationKey: posts
   <div class="space-y-2">
     <div class="border-b py-2 font-display">
       <h2 class="text-xl">{{title}}</h2>
-      <h4 class="italic">{{ date | date: "%b %d, %Y" }}</h4>
+      <h4 class="italic">{{date | readableDate}}</h4>
     </div>
     <div class="border-b pb-2">
       <div class="prose prose-lg italic">{{excerpt}}</div>
     </div>
     <ul class="flex flex-row gap-2 font-title">
-      {% for tag in tags %} {% unless tag == "posts" %}
+      {% for tag in tags %} {% if tag != "posts" %}
       <li
         class="text-lg text-grey-600 hover:text-pank"
         style="font-variant-caps: all-small-caps"
       >
         <a href="/tags/{{tag | slugify}}">#{{tag}}</a>
       </li>
-      {% endunless %} {% endfor %}
+      {% endif %} {% endfor %}
     </ul>
   </div>
 </div>

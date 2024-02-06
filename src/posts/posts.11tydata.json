@@ -1,5 +1,5 @@
 {
   "tags": "post",
-  "layout": "layouts/blog-post.html",
+  "layout": "layouts/blog-post.njk",
   "tags-works-comment": "make files available in `collections.posts`"
 }

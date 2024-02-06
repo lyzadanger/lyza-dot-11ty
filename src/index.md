@@ -1,5 +1,5 @@
 ---
-layout: home.html
+layout: layouts/home.html
 ---
 
 Hi, I'm Lyza Danger Gardner. I have over 25 years of experience building on the open Web platform. I came from Portland, Ore., where was a co-founder of [Cloud Four](http://www.cloudfour.com/). I’m a generalist with an abiding love for the Web.

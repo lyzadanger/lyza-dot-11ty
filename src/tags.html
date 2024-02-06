@@ -9,7 +9,7 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: blog.html
+layout: layouts/blog.html
 eleventyComputed:
   title: Posts tagged “{{ activeTag }}”
 permalink: /tags/{{ activeTag | slugify }}/

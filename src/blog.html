@@ -4,6 +4,6 @@ title: Posts
 ---
 
 <ul class="space-y-8">
-  {% for post in collections.post reversed %} {% render
-  "components/post-excerpt-list-item.html" with post as post %} {% endfor %}
+  {% for post in collections.post reversed %} {% include
+  "components/post-excerpt-list-item.njk" %} {% endfor %}
 </ul>

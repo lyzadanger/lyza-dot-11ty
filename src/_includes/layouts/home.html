@@ -19,7 +19,7 @@ navigationKey: about
 <div class="grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16">
   {% for book in books %}
   <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
-    {% render "book.html" with book as book %}
+    {% include "components/book.njk" %}
   </div>
   {% endfor %}
 </div>

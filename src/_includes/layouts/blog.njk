@@ -11,11 +11,11 @@ navigationKey: posts
     <li class="font-title">
       <a
         href="/blog"
-        class="pl-2 hover:text-pank {% unless activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endunless %}"
-        >All Posts ({{collections.post.size}})</a
+        class="pl-2 hover:text-pank {% if not activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endif %}"
+        >All Posts ({{collections.post.length}})</a
       >
     </li>
-    {% assign postTags = collections.post | getAllTagsWithCount %} {% for tag in
+    {% set postTags = collections.post | getAllTagsWithCount %} {% for tag in
     postTags %}
     <li class="font-title">
       <a

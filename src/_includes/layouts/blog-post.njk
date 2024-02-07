@@ -8,7 +8,7 @@ navigationKey: posts
   <div class="space-y-2">
     <div class="border-b py-2 font-display">
       <h2 class="text-xl">{{title}}</h2>
-      <h4 class="italic">{{date | readableDate}}</h4>
+      <h4 class="italic">{{page.date | localeDate }}</h4>
     </div>
     <div class="border-b pb-2">
       <div class="prose prose-lg italic">{{excerpt}}</div>

@@ -19,14 +19,10 @@ module.exports = function (eleventyConfig) {
     autoescape: false,
   });
 
-  eleventyConfig.addFilter("readableDate", (date) => {
-    let dateObj = date;
-    if (typeof date === "string") {
-      dateObj = DateTime.fromISO(date);
-    } else {
-      dateObj = DateTime.fromJSDate(date, { zone: "utc" });
-    }
-    return dateObj.toFormat("LLL dd, yyyy");
+  eleventyConfig.addFilter("localeDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toLocaleString(
+      DateTime.DATE_FULL
+    );
   });
 
   // Return all the tags used in a collection

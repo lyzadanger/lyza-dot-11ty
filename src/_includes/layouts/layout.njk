@@ -6,6 +6,7 @@ description: base layout for site
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -23,9 +24,9 @@ description: base layout for site
     <title>Lyza.com: {{title}}</title>
   </head>
   <body class="font-body mx-4">
-    <div class="max-w-5xl mx-auto my-8 space-y-8">
+    <div class="max-w-5xl mx-auto my-2 md:my-8 space-y-8">
       {% include "components/site-header.njk" %}
-      <main class="grid md:grid-cols-12 gap-x-4 gap-y-6 md:gap-y-8 lg:gap-y-16">
+      <main class="grid md:grid-cols-12 md:gap-x-4 gap-y-6 md:gap-y-8 lg:gap-y-16">
         {{ content | safe }}
       </main>
     </div>

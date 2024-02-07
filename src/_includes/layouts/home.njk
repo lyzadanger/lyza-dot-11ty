@@ -12,8 +12,35 @@ navigationKey: about
 </div>
 {% endmacro %}
 
+{% macro iconLink(url, title, icon) %}
+  <li class="font-light text-xl leading-none group transition-colors" style="font-variant-caps:all-small-caps">
+    <a href="{{url}}">
+    <div class="flex gap-x-2 md:gap-x-3 items-center">
+      <div class="w-4 h-4 text-stone-700 group-hover:text-pank">{% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}</div>
+      <div class="text-pank group-hover:underline transition-colors -mt-[2px]">{{title}}</div>
+    </div>
+    </a>
+  </li>
+{% endmacro %}
+
 {{ subhead("about", "About Lyza") }}
-<div class="md:col-span-9 prose text-lg lg:text-justify">{{content | safe }}</div>
+<div class="md:col-span-6 lg:col-span-7 prose text-lg lg:text-justify">{{content | safe }}</div>
+
+<div class="md:col-span-3 flex flex-col px-2 gap-y-4 md:gap-y-0">
+
+  <h2 class="border-b pb-2 font-display text-xl lg:text-left md:text-lg">Find me out there</h2>
+  <ul class="space-y-2 gap-2 md:gap-x-4 md:block md:space-y-3 md:p-4">
+    {% for identity in profile.identities %}
+      {{ iconLink(identity.url, identity.title, identity.icon) }}
+    {% endfor %}
+    </ul>
+    <h2 class="border-b pb-2 font-display text-xl lg:text-left md:text-lg">Follow my work (and play)</h2>
+    <ul class="pt-4 md:p-4 space-y-2 gap-2 md:gap-x-4 md:block md:space-y-3 md:p-4">
+      {{iconLink("/feeds/rss.rss", "RSS: Everything", "rss")}}
+      {{iconLink("/feeds/tech.rss", "RSS: Tech stuff", "rss")}}
+      {{iconLink("/feeds/tech.rss", "RSS: Non-tech stuff", "rss")}}
+    </ul>
+</div>
 
 <div class="md:col-span-12">
   <img
@@ -22,6 +49,7 @@ navigationKey: about
     class="max-h-[200px] w-full object-cover object-top lg:max-h-[280px]"
   />
 </div>
+
 
 {{ subhead("books", "Books") }}
 <div class="grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16">
@@ -66,7 +94,7 @@ navigationKey: about
 
 {{ subhead("publications", "Publications, Interviews and More")}}
 <div
-  class="grid md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
+  class="grid gap-y-4 md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
 >
   {% for work in collections.works | reverse %} {% include "components/work.njk" %} {% endfor %}
 </div>

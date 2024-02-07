@@ -1,4 +1,5 @@
 ---
+date: 2018-01-01
 type: interview
 title: "What Comes Next is the Future"
 url: http://www.futureisnext.com/

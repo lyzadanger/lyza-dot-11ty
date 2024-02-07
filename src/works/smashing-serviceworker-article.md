@@ -1,4 +1,5 @@
 ---
+date: 2019-01-01
 type: article
 source: Smashing Magazine
 url: https://www.smashingmagazine.com/2016/02/making-a-service-worker/

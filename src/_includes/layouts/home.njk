@@ -68,5 +68,5 @@ navigationKey: about
 <div
   class="grid md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
 >
-  {% for work in collections.works %} {% include "components/work.njk" %} {% endfor %}
+  {% for work in collections.works | reverse %} {% include "components/work.njk" %} {% endfor %}
 </div>

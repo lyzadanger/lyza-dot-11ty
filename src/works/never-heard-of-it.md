@@ -1,4 +1,5 @@
 ---
+date: 2017-01-01
 type: article
 title: "Column: Never Heard of It"
 imageUrl: https://res.cloudinary.com/dfsssdwbu/image/upload/v1706626207/ala-logo_zu6mfm.png

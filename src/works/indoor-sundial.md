@@ -1,4 +1,5 @@
 ---
+date: 2016-06-01
 type: chapter
 title: "How to Build Your Own Indoor Sundial"
 source: O'Reilly

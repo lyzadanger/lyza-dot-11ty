@@ -1,4 +1,5 @@
 ---
+date: 2020-01-01
 type: interview
 title: "Lyza Gardner on keeping pace with web technologies"
 source: net magazine

@@ -1,7 +1,13 @@
 const { DateTime } = require("luxon");
 const yaml = require("js-yaml");
 
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(pluginRss);
+
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   // Necessary because `_tmp_ is gitignored and 11ty won't see it otherwise
   eleventyConfig.setUseGitIgnore(false);

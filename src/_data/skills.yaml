@@ -1,8 +1,8 @@
 - description: "web development and fundamentals"
   skills:
     - HTML
-    - CSS
     - JavaScript
+    - CSS
     - Open web standards
     - Web APIs
     - accessibility
@@ -13,41 +13,43 @@
     - articles
     - conferences
     - tutorials
-    - synthesis
     - workshops
-    - mentorship
+    - code reviews
 - description: "empathic, values-based technical leadership"
   skills:
     - team leadership
     - project management
     - web standards stewardship
+    - team process management
     - open-source contributor
+    - mentorship
+- description: "full-stack web application development"
+  skills:
+    - Node.js
+    - TypeScript
+    - python
+    - PHP
+    - React/framework du jour
+    - tailwindcss/CSS thingy du jour
+    - embedded systems
+    - API design
+    - CMSes
+    - SQL
+    - ...etc.
+- description: "software development methodology"
+  skills:
+    - project architecture
+    - design patterns
+    - version control / git
+    - testing
+    - teamwork
+    - workflows
 - description: "design thinking and technical humanity"
   skills:
     - design systems
     - responsive design
     - accessibility
     - WAI-ARIA
-    - UX
-    - UI
+    - User Experience (UX)
+    - User Interface (UI)
     - feature design
-- description: "full-stack web application development"
-  skills:
-    - TypeScript
-    - Node.js
-    - preact/React
-    - tailwindcss
-    - python
-    - embedded systems
-    - PHP
-    - API design
-    - CMSes
-    - SQL
-- description: "software development methodology"
-  skills:
-    - project architecture
-    - design patterns
-    - git/vcs
-    - testing
-    - teamwork
-    - workflows

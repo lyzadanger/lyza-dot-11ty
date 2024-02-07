@@ -19,10 +19,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   // Build config
+  // Everything in src/public will pass through to _site
+  eleventyConfig.addPassthroughCopy({ "./src/public/": "/" });
+
+  // Styles
   eleventyConfig.addWatchTarget("./_tmp/styles.css");
   eleventyConfig.addPassthroughCopy({ "./_tmp/styles.css": "./styles.css" });
-  eleventyConfig.addPassthroughCopy("src/images");
-  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "/" });
 
   // Templating config
   eleventyConfig.setNunjucksEnvironmentOptions({

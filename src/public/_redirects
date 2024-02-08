@@ -1,0 +1,12 @@
+# Very old WordPress posts
+/2005/*  http://archive.lyza.com/2005/:splat
+/2006/*  http://archive.lyza.com/2006/:splat
+/2007/*  http://archive.lyza.com/2007/:splat
+/2008/*  http://archive.lyza.com/2008/:splat
+/2009/*  http://archive.lyza.com/2009/:splat
+/2010/*  http://archive.lyza.com/2010/:splat
+/2011/*  http://archive.lyza.com/2011/:splat
+
+# Currently the landing page of the site serves as about
+/about   			/
+/about/bio			/

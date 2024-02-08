@@ -8,8 +8,7 @@ tags:
   - rwd
 date: "2015-09-17T17:21:11.918Z"
 excerpt: >
-  Max Firtman's [post about iOS 9 Safari technical
-  details](http://www.mobilexweb.com/blog/ios9-safari-for-web-developers)
+  Max Firtman's post about iOS 9 Safari technical details
   contains a lot of stuff to get amped about, but let's not get so geeked over
   details that we inadvertently restart a web design arms race.
 ---

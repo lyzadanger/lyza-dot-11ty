@@ -106,6 +106,25 @@ description: base layout for site
       <main class="grid gap-y-6 md:grid-cols-12 md:gap-x-4 md:gap-y-8 lg:gap-y-16">
         {{ content | safe }}
       </main>
+
+      <footer
+        class="flex justify-center border-t-2 py-4 text-center text-xl md:grid-cols-12"
+        style="font-variant-caps:all-small-caps"
+      >
+        <div class="flex gap-x-2 px-2">
+          <div>Built by Lyza with <a href="https://www.11ty.dev/" class="text-pank hover:underline">Eleventy</a></div>
+        </div>
+        <div class="group flex items-center gap-x-2 border-l px-2 transition-colors">
+          <a href="https://github.com/lyzadanger/lyza-dot-11ty" class="group-hover:text-pank group-hover:underline"
+            >Source</a
+          >
+          <div class="mt-px h-4 w-4">
+            <a href="https://github.com/lyzadanger/lyza-dot-11ty" class="text-stone-700 group-hover:text-pank">
+              {%- include 'icons/github.njk' -%}
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,22 +1,30 @@
-<ul class="flex flex-row gap-4 justify-self-stretch sm:gap-6">
-  <li
-    class="border-b-10 pt-2.5 {% if navigationKey == 'about' %}border-pank{% else %} border-transparent{% endif %}"
-  >
-    <a
-      href="/"
-      style="font-variant-caps: all-small-caps"
-      class="pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank {% if navigationKey == 'about' %}italic{% endif %}"
-      >About</a
+<nav>
+  <ul class="flex flex-row gap-4 justify-self-stretch sm:gap-6">
+    <li
+      class="border-b-10 pt-2.5 {% if navigationKey == 'about' %}border-pank{% else %} border-transparent{% endif %}"
     >
-  </li>
-  <li
-    class="border-b-10 pt-2.5 {% if navigationKey == 'posts' %}border-pank{% else %} border-transparent{% endif %}"
-  >
-    <a
-      href="/blog"
-      style="font-variant-caps: all-small-caps"
-      class="pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank {% if navigationKey == 'posts' %}italic{% endif %}"
-      >Posts</a
+      <a
+        href="/"
+        style="font-variant-caps: all-small-caps"
+        class="pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank {% if navigationKey == 'about' %}italic{% endif %}"
+        {% if navigationKey == 'about' %}
+          aria-current="page"
+        {% endif %}
+        >About</a
+      >
+    </li>
+    <li
+      class="border-b-10 pt-2.5 {% if navigationKey == 'posts' %}border-pank{% else %} border-transparent{% endif %}"
     >
-  </li>
-</ul>
+      <a
+        href="/blog"
+        style="font-variant-caps: all-small-caps"
+        class="pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank {% if navigationKey == 'posts' %}italic{% endif %}"
+        {% if navigationKey == 'posts' %}
+          aria-current="page"
+        {% endif %}
+        >Posts</a
+      >
+    </li>
+  </ul>
+</nav>

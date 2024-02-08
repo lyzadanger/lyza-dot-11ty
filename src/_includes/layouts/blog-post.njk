@@ -3,6 +3,7 @@ layout: layouts/layout.njk
 description: layout for an individual blog post; excerpt at left
 navigationKey: posts
 ---
+
 <div class="md:col-span-4">
   <div class="space-y-2">
     <div class="border-b py-2 font-display">
@@ -19,7 +20,7 @@ navigationKey: posts
             class="text-lg text-grey-600 hover:text-pank"
             style="font-variant-caps: all-small-caps"
           >
-            <a href="/tags/{{tag | slugify}}">#{{ tag }}</a>
+            <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
           </li>
         {% endif %}
       {% endfor %}

@@ -1,7 +1,7 @@
 <div class="border-b border-t-3 border-grey-800 py-2">
   <h3 class="text-center font-display text-sky-800">
     <a
-      href="{{book.url}}"
+      href="{{ book.url }}"
       class="transition-colors group-hover:text-pank group-hover:underline"
     >
       <i>{{ book.title }}</i>
@@ -10,11 +10,11 @@
 </div>
 
 <div class="self-center justify-self-center p-4">
-  <a href="{{book.url}}">
+  <a href="{{ book.url }}">
     <img
-      src="{{book.imageUrl}}"
-      alt="{{book.title}}"
+      src="{{ book.imageUrl }}"
+      alt="{{ book.title }}"
       class="drop-shadow-lg group-hover:outline group-hover:outline-grey-600 group-hover:drop-shadow-xl"
-    >
+    />
   </a>
 </div>

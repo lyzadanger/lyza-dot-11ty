@@ -1,6 +1,6 @@
 <li class="flex flex-col gap-y-1 border-t-3 border-solid border-grey-900">
   <div>
-    <a href="{{post.page.url}}" class="hover:text-pank">
+    <a href="{{ post.page.url }}" class="hover:text-pank">
       <h3 class="font-display text-xl">{{ post.data.title }}</h3>
     </a>
     <div class="flex items-center gap-x-1 border-b">
@@ -15,7 +15,7 @@
                 class="text-lg text-grey-600 hover:text-pank"
                 style="font-variant-caps: all-small-caps"
               >
-                <a href="/tags/{{tag | slugify}}">#{{ tag }}</a>
+                <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
               </li>
             {% endif %}
           {% endfor %}

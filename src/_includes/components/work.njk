@@ -4,7 +4,7 @@
   <div class="flex h-full flex-col border-b border-b-grey-800">
     <h2 class="flex-grow font-display text-lg leading-snug">
       {% if work.data.url %}
-        <a href="{{work.data.url}}" class="hover:text-pank hover:underline">
+        <a href="{{ work.data.url }}" class="hover:text-pank hover:underline">
           {{ work.data.title }}
         </a>
       {% else %}
@@ -25,11 +25,11 @@
   </div>
   <div class="self-center border-b-grey-800 py-2">
     {% if work.data.imageUrl %}
-      <a href="{{work.data.url}}">
+      <a href="{{ work.data.url }}">
         <img
-          src="{{work.data.imageUrl}}"
+          src="{{ work.data.imageUrl }}"
           class="max-h-[150px] w-full object-contain"
-          alt="{{work.data.title}}"
+          alt="{{ work.data.title }}"
         >
       </a>
     {% endif %}

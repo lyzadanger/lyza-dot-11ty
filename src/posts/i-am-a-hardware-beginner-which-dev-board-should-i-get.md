@@ -10,7 +10,7 @@ excerpt: >-
   IoT. Which development platform should you start with?
 ---
 
-<a href="https://www.manning.com/books/javascript-on-things"><img src="js-on-things.png" alt="JavaScript on Things: Hardware for Web Developers by Lyza Danger Gardner" class="Pull--left" /></a>
+![JavaScript on Things: Hardware for Web Developers by Lyza Danger Gardner](https://res.cloudinary.com/dfsssdwbu/image/upload/v1706288827/jsot_gh01nu.jpg)
 
 _As part and parcel of writing my book_ ([JavaScript on Things, Manning](https://www.manning.com/books/javascript-on-things) ) _and scratching the curiosity-itches of my hardware-hacking hobbies, I’ve had my hands on scads of different hardware platforms and components over the past year and more. This series of articles contain a collection of opinions and recommendations based on my experiences as they relate to two focus areas: electronics for beginners and JavaScript-controlled hardware._
 

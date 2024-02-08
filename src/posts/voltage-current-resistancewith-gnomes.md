@@ -12,7 +12,7 @@ excerpt: >-
   hydraulic-based (water) metaphors be my guide. I had to involve gnomes.
 ---
 
-<a href="https://www.manning.com/books/javascript-on-things"><img src="js-on-things.png" alt="JavaScript on Things: Hardware for Web Developers by Lyza Danger Gardner" class="Pull--left" /></a>
+![JavaScript on Things: Hardware for Web Developers by Lyza Danger Gardner](https://res.cloudinary.com/dfsssdwbu/image/upload/v1706288827/jsot_gh01nu.jpg)
 
 _The following is an excerpt from chapter 3 of_ [JavaScript on Things: Hardware for Web Developers](https://www.manning.com/books/javascript-on-things) _by me, Lyza Danger Gardner (I also take the blame for the illustrations). I hope you enjoy it! The book is in early release (MEAP) from Manning Publications. It's intended as a soup-to-nuts get-started guide to electronics hacking for JS-familiar web developers._
 

@@ -4,34 +4,34 @@ description: >
   A layout with post tags in the left column (wide screen) and a content area
 navigationKey: posts
 ---
-
 <div class="md:col-span-4">
-  <h3 class="font-display text-xl pb-2 border-b">Posts by Tag</h3>
+  <h3 class="border-b pb-2 font-display text-xl">Posts by Tag</h3>
   <ul>
     <li class="font-title">
       <a
         href="/blog"
         class="pl-2 hover:text-pank {% if not activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endif %}"
-        >All Posts ({{collections.post.length}})</a
+        >All Posts ({{ collections.post.length }})</a
       >
     </li>
-    {% set postTags = collections.post | getAllTagsWithCount %} {% for tag in
-    postTags %}
-    <li class="font-title">
-      <a
-        href="/tags/{{tag.tag | slugify}}"
-        class="pl-2 hover:text-pank {% if tag.tag == activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endif %}"
-        >{{tag.tag}} ({{tag.count}})</a
-      >
-    </li>
+    {% set postTags = collections.post | getAllTagsWithCount %}
+    {% for tag in postTags %}
+      <li class="font-title">
+        <a
+          href="/tags/{{tag.tag | slugify}}"
+          class="pl-2 hover:text-pank {% if tag.tag == activeTag %}text-pank italic border-l-3 border-pank font-semibold{% endif %}"
+        >
+          {{- tag.tag }} ({{ tag.count }})</a
+        >
+      </li>
     {% endfor %}
   </ul>
 </div>
-<div class="md:col-span-8 space-y-8">
+<div class="space-y-8 md:col-span-8">
   <h1
-    class="font-display text-2xl p-2 border-l border-l-8 border-pank bg-grey-100"
+    class="border-l border-l-8 border-pank bg-grey-100 p-2 font-display text-2xl"
   >
-    {{title}}
+    {{ title }}
   </h1>
-  {{content}}
+  {{ content }}
 </div>

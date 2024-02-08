@@ -3,7 +3,7 @@ title: Talking to myself with git
 tags:
   - web
   - tech
-date: '2015-11-05T23:15:34.273Z'
+date: "2015-11-05T23:15:34.273Z"
 excerpt: >-
   Even when my projects involve a crowd with a size of one (me), I still use git
   workflow tactics. Is this good practice or an unnecessary monologue?

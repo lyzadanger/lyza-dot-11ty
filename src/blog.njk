@@ -2,8 +2,8 @@
 layout: layouts/blog.njk
 title: Posts
 ---
-
 <ul class="space-y-8">
-  {% for post in collections.post | reverse %} {% include
-  "components/post-excerpt-list-item.njk" %} {% endfor %}
+  {% for post in collections.post | reverse %}
+    {% include 'components/post-excerpt-list-item.njk' %}
+  {% endfor %}
 </ul>

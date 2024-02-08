@@ -1,20 +1,20 @@
 <header
   role="banner"
-  class="grid grid-cols-3 items-center gap-x-8 border-t border-b-2 border-grey-900"
+  class="grid grid-cols-3 items-center gap-x-8 border-b-2 border-t border-grey-900"
 >
   <nav
     role="navigation"
-    class="col-span-3 grid grid-cols-2 md:grid-cols-3 border-b-3 border-b-grey-900"
+    class="col-span-3 grid grid-cols-2 border-b-3 border-b-grey-900 md:grid-cols-3"
   >
-    <div class="col-span-1 md:col-span-2 self-center pl-4">
+    <div class="col-span-1 self-center pl-4 md:col-span-2">
       <a href="/">
         <div
-          class="flex items-center gap-x-1 font-display italic text-lg sm:text-xl md:text-2xl"
+          class="flex items-center gap-x-1 font-display text-lg italic sm:text-xl md:text-2xl"
         >
           <div class="sr-only md:not-sr-only">Web Builder</div>
           <div class="md:sr-only">Dev</div>
           <div
-            class="flex items-center justify-center h-6 w-6 md:h-10 md:w-10 bg-pank md:text-4xl text-white rounded-full"
+            class="flex h-6 w-6 items-center justify-center rounded-full bg-pank text-white md:h-10 md:w-10 md:text-4xl"
           >
             &amp;
           </div>
@@ -23,8 +23,7 @@
       </a>
     </div>
     <div class="col-span-1 justify-self-end pr-4">
-      {% include 'components/navigation.njk'
-      %}
+      {% include 'components/navigation.njk' %}
     </div>
   </nav>
 
@@ -32,28 +31,25 @@
     <a href="/">
       <h1 class="font-display text-2xl sm:text-5xl lg:text-6xl">
         <div class="relative z-10 md:-mt-2">Lyza</div>
-        <div class="relative text-pank -mt-4 ml-3 z-0">Danger</div>
+        <div class="relative z-0 -mt-4 ml-3 text-pank">Danger</div>
         <div class="relative -mt-4 ml-1">Gardner</div>
       </h1>
     </a>
   </div>
 
-  <div class="col-span-2 flex self-stretch border-l border-grey-900 relative">
+  <div class="relative col-span-2 flex self-stretch border-l border-grey-900">
     <div class="grid sm:grid-cols-2">
       <div class="col-span-1">
         <img
           src="/images/lyza.gif"
-          class="absolute bottom-0 right-full sm:right-auto w-[100px] h-[110px] sm:w-auto sm:h-auto sm:scale-x-[-1]"
+          class="absolute bottom-0 right-full h-[110px] w-[100px] sm:right-auto sm:h-auto sm:w-auto sm:scale-x-[-1]"
           alt="Lyza"
-        />
+        >
       </div>
       <div class="col-span-1 self-center p-2 text-grey-800">
-        <span class="font-display text-lg sm:text-2xl mr-2">
-          Hi! I'm Lyza!
-        </span>
+        <span class="mr-2 font-display text-lg sm:text-2xl"> Hi! I'm Lyza! </span>
         <span class="italic text-grey-600">
-          I am a developer and human, forest dweller of Vermont and steward of
-          the web platform for over 25 years.
+          I am a developer and human, forest dweller of Vermont and steward of the web platform for over 25 years.
         </span>
       </div>
     </div>

@@ -2,7 +2,7 @@
 title: And now for something completely...different?
 tags:
   - life
-date: '2016-09-20T17:38:25.320Z'
+date: "2016-09-20T17:38:25.320Z"
 excerpt: >-
   Four months ago, I upped stakes from my hometown and moved thousands of miles
   to the middle of the forest in Vermont. I took a break from the Web and

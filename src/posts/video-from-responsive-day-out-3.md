@@ -9,8 +9,8 @@ sticky: true
 thumbnail:
   type: video
   ratio: 16by9
-  url: 'https://player.vimeo.com/video/134952796'
-date: '2015-08-01T03:04:05.955Z'
+  url: "https://player.vimeo.com/video/134952796"
+date: "2015-08-01T03:04:05.955Z"
 excerpt: >-
   Jeremy Keith has released videos from the sessions at Responsive Day Out 3 in
   Brighton. Here is my session!

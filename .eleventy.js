@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
   // Custom filter for formatting locale dates
   eleventyConfig.addFilter("localeDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toLocaleString(
-      DateTime.DATE_FULL
+      DateTime.DATE_FULL,
     );
   });
 

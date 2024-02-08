@@ -6,8 +6,8 @@ tags:
 thumbnail:
   type: video
   ratio: 16by9
-  url: 'https://www.youtube.com/embed/e_-1aFNlb1s'
-date: '2017-07-03T14:56:51.527Z'
+  url: "https://www.youtube.com/embed/e_-1aFNlb1s"
+date: "2017-07-03T14:56:51.527Z"
 excerpt: >-
   A minute-long excerpt from a recent talk about Service Workers: a whirlwind
   explanation of JS Promises.

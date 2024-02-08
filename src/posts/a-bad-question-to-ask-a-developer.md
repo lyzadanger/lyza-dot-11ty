@@ -3,7 +3,7 @@ title: A Bad Question to ask a Developer
 tags:
   - tech
   - teams
-date: '2015-08-19T06:05:06.839Z'
+date: "2015-08-19T06:05:06.839Z"
 excerpt: >
   There is this question that I'd like to suggest is *never* useful to ask
   another developer. I find myself asking it when I talk to other developers,
@@ -16,7 +16,7 @@ There's this terrible question. I didn't stop to notice how terrible it was unti
 
 ### The genesis of the terrible question
 
-It's so easy to get to this question. A colleague or friend starts unrolling a  story at you: "I spent all day ramming my head against this CORS issue" or "I could _not_ for the life of me figure out how write a test for this thing" or "I was trying to do this thing with `flexbox` and...world of pain."
+It's so easy to get to this question. A colleague or friend starts unrolling a story at you: "I spent all day ramming my head against this CORS issue" or "I could _not_ for the life of me figure out how write a test for this thing" or "I was trying to do this thing with `flexbox` and...world of pain."
 
 You've already been there; you've already suffered this specific grief. Or, lucky you, you chanced to learn of a solution to the grief in _advance_ of the first time you got whacked with it. You already know a safe path out of the wilderness in question.
 

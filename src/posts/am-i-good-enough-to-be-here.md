@@ -3,7 +3,7 @@ title: Am I Good Enough to be Here?
 tags:
   - tech
   - opinion
-date: '2016-01-21T23:28:55.267Z'
+date: "2016-01-21T23:28:55.267Z"
 excerpt: >-
   Navigating between merit and diverse inclusivity is profoundly hard. Sometimes
   I end up on the sad side of the fence.

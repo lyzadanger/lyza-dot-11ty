@@ -1,26 +1,28 @@
-<li class="flex flex-col gap-y-1 border-solid border-grey-900 border-t-3">
+<li class="flex flex-col gap-y-1 border-t-3 border-solid border-grey-900">
   <div>
-    <a href="{{post.page.url}}" class="hover:text-pank"
-      ><h3 class="font-display text-xl">{{ post.data.title }}</h3></a
-    >
+    <a href="{{post.page.url}}" class="hover:text-pank">
+      <h3 class="font-display text-xl">{{ post.data.title }}</h3>
+    </a>
     <div class="flex items-center gap-x-1 border-b">
-      <h4 class="font-display font-normal italic text-l">
+      <h4 class="text-l font-display font-normal italic">
         {{ page.date | localeDate }}
       </h4>
       <div class="flex-grow">
-        <ul class="flex flex-row gap-2 font-title justify-end">
-          {% for tag in post.data.tags %} {% if tag != "post" %}
-          <li
-            class="text-lg text-grey-600 hover:text-pank"
-            style="font-variant-caps: all-small-caps"
-          >
-            <a href="/tags/{{tag | slugify}}">#{{tag}}</a>
-          </li>
-          {% endif %} {% endfor %}
+        <ul class="flex flex-row justify-end gap-2 font-title">
+          {% for tag in post.data.tags %}
+            {% if tag != 'post' %}
+              <li
+                class="text-lg text-grey-600 hover:text-pank"
+                style="font-variant-caps: all-small-caps"
+              >
+                <a href="/tags/{{tag | slugify}}">#{{ tag }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>
 
-    <div class="font-body text-grey-700">{{post.data.excerpt}}</div>
+    <div class="font-body text-grey-700">{{ post.data.excerpt }}</div>
   </div>
 </li>

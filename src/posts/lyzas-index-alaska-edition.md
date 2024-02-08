@@ -1,9 +1,9 @@
 ---
-title: 'Lyza''s Index: Alaska Edition'
+title: "Lyza's Index: Alaska Edition"
 tags:
   - life
   - til
-date: '2015-08-30T20:34:23.961Z'
+date: "2015-08-30T20:34:23.961Z"
 excerpt: >
   Sea canaries, sea otters, the aurora borealis, and the economical joys of a
   late-summer trip to a high latitude.
@@ -17,11 +17,11 @@ Turnagain Arm is a dead-end, long finger of sea extending eastward from Anchorag
 
 Cook Inlet—including Turnagain Arm—has a population of Beluga whales. Most of the world's population of Belugas is more arctic, and the Cook Inlet Belugas are genetically isolated. DNA suggests no inter-breeding with other Belugas for something like 6000 years. Unfortunately, about half of the Cook Inlet Belugas died off mysteriously in the 1990s and the herd (pod?) is still struggling to slowly re-establish itself. So I feel doubly lucky that I was able to spot a few, just white humps, out in the water on this trip. Who knows how long they'll be around? (Source for this: various interpretive signs at Beluga Point and Bird Point along the Seward Highway. I have a generally-reliable memory, but this is non-robust, source-wise).
 
-Belugas are one of my favorite whales (perhaps only beaten out by narwhals, which are amazing). They have this lovely demeanor and they look like they'd be good friends. I [learned by watching Wikipedia](https://en.wikipedia.org/wiki/Beluga_whale) that they are sometimes called *Sea Canaries* because of their "high-pitched twitter". And also, through associated Wiki-drift, that echolocation and such elaborate chatter are restricted to whales that have teeth (Odontoceti).
+Belugas are one of my favorite whales (perhaps only beaten out by narwhals, which are amazing). They have this lovely demeanor and they look like they'd be good friends. I [learned by watching Wikipedia](https://en.wikipedia.org/wiki/Beluga_whale) that they are sometimes called _Sea Canaries_ because of their "high-pitched twitter". And also, through associated Wiki-drift, that echolocation and such elaborate chatter are restricted to whales that have teeth (Odontoceti).
 
 ### Other Things Waterbound
 
-We also saw a sea otter in the harbor at Seward. I've been reading [James Michener's *Alaska*](http://www.amazon.com/Alaska-Novel-James-A-Michener/dp/037576142X), which has a goodly amount to say about sea otters, so I wasn't taken by surprise by how big she or he was. He or she was big! And relaxed, swimming on his/her back and grooming and pausing to let us take photos and video. Did you know that sea otters have the densest fur of any animal? (Both roadsign park signs _and_ [Wikipedia](https://en.wikipedia.org/wiki/Sea_otter) agree on that _so it must be true_.)
+We also saw a sea otter in the harbor at Seward. I've been reading [James Michener's _Alaska_](http://www.amazon.com/Alaska-Novel-James-A-Michener/dp/037576142X), which has a goodly amount to say about sea otters, so I wasn't taken by surprise by how big she or he was. He or she was big! And relaxed, swimming on his/her back and grooming and pausing to let us take photos and video. Did you know that sea otters have the densest fur of any animal? (Both roadsign park signs _and_ [Wikipedia](https://en.wikipedia.org/wiki/Sea_otter) agree on that _so it must be true_.)
 
 Late August is spawning season for silver salmon on the Kenai peninsula, and we timidly peered into solid creeks of flipping, disintegrating fish, nervously scanning around for salmon-keen bears.
 

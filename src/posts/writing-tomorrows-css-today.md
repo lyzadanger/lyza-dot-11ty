@@ -4,7 +4,7 @@ tags:
   - tech
   - standards
   - site
-date: '2015-08-11T17:22:29.218Z'
+date: "2015-08-11T17:22:29.218Z"
 excerpt: >-
   Did you know that, using CSS transpilers, you can use to-spec CSS of the
   future, today? Here are some of the magical things I'm using these days.

@@ -3,43 +3,43 @@ layout: layouts/layout.njk
 description: layout for the site landing page
 navigationKey: about
 ---
-
 {% macro subhead(id, title) %}
 <div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
   <a id="{{id}}">
-    <h2 class="text-center font-display text-2xl md:text-right">{{title}}</h2>
+    <h2 class="text-center font-display text-2xl md:text-right">{{ title }}</h2>
   </a>
 </div>
 {% endmacro %}
 
 {% macro iconLink(url, title, icon) %}
-  <li class="font-light text-xl leading-none group transition-colors" style="font-variant-caps:all-small-caps">
-    <a href="{{url}}">
-    <div class="flex gap-x-2 md:gap-x-3 items-center">
-      <div class="w-4 h-4 text-stone-700 group-hover:text-pank">{% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}</div>
-      <div class="text-pank group-hover:underline transition-colors -mt-[2px]">{{title}}</div>
+<li class="group text-xl font-light leading-none transition-colors" style="font-variant-caps:all-small-caps">
+  <a href="{{url}}">
+    <div class="flex items-center gap-x-2 md:gap-x-3">
+      <div class="h-4 w-4 text-stone-700 group-hover:text-pank">
+        {% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}
+      </div>
+      <div class="-mt-[2px] text-pank transition-colors group-hover:underline">{{ title }}</div>
     </div>
-    </a>
-  </li>
+  </a>
+</li>
 {% endmacro %}
 
 {{ subhead("about", "About Lyza") }}
-<div class="md:col-span-6 lg:col-span-7 prose text-lg lg:text-justify">{{content | safe }}</div>
+<div class="prose text-lg md:col-span-6 lg:col-span-7 lg:text-justify">{{ content | safe }}</div>
 
-<div class="md:col-span-3 flex flex-col px-2 gap-y-4 md:gap-y-0">
-
-  <h2 class="border-b pb-2 font-display text-xl lg:text-left md:text-lg">Find me out there</h2>
-  <ul class="space-y-2 gap-2 md:gap-x-4 md:block md:space-y-3 md:p-4">
+<div class="flex flex-col gap-y-4 px-2 md:col-span-3 md:gap-y-0">
+  <h2 class="border-b pb-2 font-display text-xl md:text-lg lg:text-left">Find me out there</h2>
+  <ul class="gap-2 space-y-2 md:block md:gap-x-4 md:space-y-3 md:p-4">
     {% for identity in profile.identities %}
       {{ iconLink(identity.url, identity.title, identity.icon) }}
     {% endfor %}
-    </ul>
-    <h2 class="border-b pb-2 font-display text-xl lg:text-left md:text-lg">Follow my work (and play)</h2>
-    <ul class="pt-4 md:p-4 space-y-2 gap-2 md:gap-x-4 md:block md:space-y-3 md:p-4">
-      {{iconLink("/feeds/rss.rss", "RSS: Everything", "rss")}}
-      {{iconLink("/feeds/tech.rss", "RSS: Tech stuff", "rss")}}
-      {{iconLink("/feeds/life.rss", "RSS: Non-tech stuff", "rss")}}
-    </ul>
+  </ul>
+  <h2 class="border-b pb-2 font-display text-xl md:text-lg lg:text-left">Follow my work (and play)</h2>
+  <ul class="gap-2 space-y-2 pt-4 md:block md:gap-x-4 md:space-y-3 md:p-4 md:p-4">
+    {{ iconLink("/feeds/rss.rss", "RSS: Everything", "rss") }}
+    {{ iconLink("/feeds/tech.rss", "RSS: Tech stuff", "rss") }}
+    {{ iconLink("/feeds/life.rss", "RSS: Non-tech stuff", "rss") }}
+  </ul>
 </div>
 
 <div class="md:col-span-12">
@@ -47,16 +47,15 @@ navigationKey: about
     src="https://res.cloudinary.com/dfsssdwbu/image/upload/v1706555956/lyza-working_bdrz2p.jpg"
     alt="Lyza Working"
     class="max-h-[200px] w-full object-cover object-top lg:max-h-[280px]"
-  />
+  >
 </div>
-
 
 {{ subhead("books", "Books") }}
 <div class="grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16">
   {% for book in books %}
-  <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
-    {% include "components/book.njk" %}
-  </div>
+    <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
+      {% include 'components/book.njk' %}
+    </div>
   {% endfor %}
 </div>
 
@@ -68,8 +67,8 @@ navigationKey: about
   >
     {% for event in events %}
       {% if event.imageUrl %}
-    <li><img src="{{event.imageUrl}}" alt="{{event.title}}" /></li>
-    {% endif %}
+        <li><img src="{{event.imageUrl}}" alt="{{event.title}}"></li>
+      {% endif %}
     {% endfor %}
   </ul>
 </div>
@@ -77,24 +76,26 @@ navigationKey: about
 {{ subhead("what-i-do", "What I Do") }}
 <div class="grid md:col-span-9 md:grid-cols-2 lg:col-span-10 lg:grid-cols-3">
   {% for skillset in skills %}
-  <div class="row-span-2 grid grid-rows-subgrid border-t-3 border-grey-900">
-    <h3 class="p-1 font-display text-xl font-bold italic text-pank">
-      {{skillset.description}}
-    </h3>
-    <ul class="border-t bg-stone-100 p-2 pb-4">
-      {% for skill in skillset.skills %}
-      <li class="text-lg" style="font-variant-caps: all-small-caps">
-        {{skill}}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <div class="row-span-2 grid grid-rows-subgrid border-t-3 border-grey-900">
+      <h3 class="p-1 font-display text-xl font-bold italic text-pank">
+        {{ skillset.description }}
+      </h3>
+      <ul class="border-t bg-stone-100 p-2 pb-4">
+        {% for skill in skillset.skills %}
+          <li class="text-lg" style="font-variant-caps: all-small-caps">
+            {{ skill }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   {% endfor %}
 </div>
 
-{{ subhead("publications", "Publications, Interviews and More")}}
+{{ subhead("publications", "Publications, Interviews and More") }}
 <div
   class="grid gap-y-4 md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
 >
-  {% for work in collections.works | reverse %} {% include "components/work.njk" %} {% endfor %}
+  {% for work in collections.works | reverse %}
+    {% include 'components/work.njk' %}
+  {% endfor %}
 </div>

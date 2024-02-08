@@ -6,9 +6,9 @@ tags:
 thumbnail:
   type: video
   ratio: 16by9
-  url: 'https://www.youtube.com/embed/cz6EUrXizXo'
+  url: "https://www.youtube.com/embed/cz6EUrXizXo"
   caption: This video about my spring doings is the most concrete thing I made in July.
-date: '2015-09-02T17:24:37.539Z'
+date: "2015-09-02T17:24:37.539Z"
 excerpt: >-
   I guess I shipped a few things at the end of the summer, but now it's time to
   find the next biggish thing. Will I be able to emerge from the inspirational

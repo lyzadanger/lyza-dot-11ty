@@ -4,7 +4,7 @@ tags:
   - tech
   - web
   - js
-date: '2015-12-08T18:55:01.019Z'
+date: "2015-12-08T18:55:01.019Z"
 excerpt: >-
   Everything about Node.js is exponential curves right now. While at Node
   Interactive here in Portland, my mind has started racing about understanding
@@ -17,8 +17,8 @@ Node.js versions are _cray-zee_ for me right now.
 
 For some reason, it was calming when [James Snell](https://twitter.com/jasnell) mentioned that the late-2014 Node.js/io split freaked _everyone_ out and my desire to stick my fingers in my ears and pretend it didn't happen echoed how most of the community felt, too. And so we are all glad to see the convergence, and now the best of both communities combined:
 
-* The open governance model and velocity from io.js
-* The stability focus from Node.js
+- The open governance model and velocity from io.js
+- The stability focus from Node.js
 
 And a whole lot less weird tension about the Node.js vs. io.js fiasco.
 

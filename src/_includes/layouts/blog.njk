@@ -4,6 +4,7 @@ description: >
   A layout with post tags in the left column (wide screen) and a content area
 navigationKey: posts
 ---
+
 <div class="space-y-2 md:col-span-4">
   <h3 class="border-b pb-2 font-display text-xl">Posts by Tag</h3>
   <nav>
@@ -12,8 +13,9 @@ navigationKey: posts
         <a
           href="/blog"
           class="
-            {% if not activeTag %}text-pank italic border-l-3 border-pank
-            font-semibold{% endif %} pl-2 hover:text-pank
+            {% if not activeTag %}
+            text-pank italic border-l-3 border-pank font-semibold
+          {% endif %} pl-2 hover:text-pank
           "
           {% if not activeTag %}
             aria-current="page"
@@ -27,15 +29,15 @@ navigationKey: posts
           <a
             href="/tags/{{ tag.tag | slugify }}"
             class="
-              {% if tag.tag == activeTag %}text-pank italic border-l-3
-              border-pank font-semibold{% endif %} pl-2 hover:text-pank
+              {% if tag.tag == activeTag %}
+              text-pank italic border-l-3 border-pank font-semibold
+            {% endif %} pl-2 hover:text-pank
             "
             {% if tag.tag == activeTag %}
               aria-current="page"
             {% endif %}
           >
-            {{- tag.tag -}}
-            &nbsp;({{ tag.count }})</a
+            {{- tag.tag -}} &nbsp;({{ tag.count }})</a
           >
         </li>
       {% endfor %}

@@ -60,6 +60,44 @@ navigationKey: about
   </ul>
 </div>
 
+<div
+  class="grid items-center gap-4 border-l border-l-8 border-pank bg-grey-100 p-3 md:col-span-12 md:grid-cols-12"
+>
+  <h2
+    class="font-display text-2xl md:col-span-3 md:pr-8 md:text-right lg:col-span-2"
+  >
+    The latest
+  </h2>
+  <div class="space-y-2 md:col-span-9 lg:col-span-10">
+    {% set latestPost = collections.post | last %}
+    {% if latestPost %}
+      <div class="border-b">
+        <h3 class="font-display text-lg">
+          <a
+            href="{{ latestPost.url }}"
+            class="transition-colors hover:text-pank hover:underline"
+            >{{ latestPost.data.title }}</a
+          >
+        </h3>
+      </div>
+      <div>{{ latestPost.data.excerpt }}</div>
+      <div>
+        <a
+          class="text-sky-800 underline transition-colors hover:text-pank"
+          href="{{ latestPost.url }}"
+          >Read More</a
+        >
+        |
+        <a
+          href="/blog"
+          class="text-sky-800 underline transition-colors hover:text-pank"
+          >All blog posts</a
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 <div class="md:col-span-12">
   <img
     src="https://res.cloudinary.com/dfsssdwbu/image/upload/v1706555956/lyza-working_bdrz2p.jpg"

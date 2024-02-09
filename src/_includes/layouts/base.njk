@@ -1,47 +1,71 @@
 ---
 description: base layout for site
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{ "Lyza.com: " + title }}
-    </title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ "Lyza.com: " + title }}</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,900;1,400&family=Playfair+Display:ital,wght@0,900;1,400&display=swap"
       rel="stylesheet"
-    >
-    <link href="/styles.css" rel="stylesheet">
+    />
+    <link href="/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
       integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    >
-    <link rel="me" href="mailto:lyza@lyza.com">
-    <meta name="robots" content="noimageai">
-    <meta name="robots" content="noai">
-    <meta name="author" content="{{ metadata.author.name }}">
-    <meta name="robots" content="index,follow">
+    />
+    <link rel="me" href="mailto:lyza@lyza.com" />
+    <meta name="robots" content="noimageai" />
+    <meta name="robots" content="noai" />
+    <meta name="author" content="{{ metadata.author.name }}" />
+    <meta name="robots" content="index,follow" />
 
-    <link rel="alternate" type="application/rss+xml" href="/feeds/rss.rss" title="Lyza.com: All Posts">
-    <link rel="alternate" type="application/rss+xml" href="/feeds/tech.rss" title="Lyza.com: Work and Tech Posts">
-    <link rel="alternate" type="application/rss+xml" href="/feeds/life.rss" title="Lyza.com: Life (Non-tech) Posts">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/feeds/rss.rss"
+      title="Lyza.com: All Posts"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/feeds/tech.rss"
+      title="Lyza.com: Work and Tech Posts"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/feeds/life.rss"
+      title="Lyza.com: Life (Non-tech) Posts"
+    />
 
-    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}">
-    <meta property="article:author" content="{{ metadata.author.name }}">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
-    <meta property="og:image" content="{{ '/images/lyza.gif' | htmlBaseUrl(metadata.url) }}">
+    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />
+    <meta property="article:author" content="{{ metadata.author.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta
+      property="og:url"
+      content="{{ page.url | htmlBaseUrl(metadata.url) }}"
+    />
+    <meta
+      property="og:image"
+      content="{{ '/images/lyza.gif' | htmlBaseUrl(metadata.url) }}"
+    />
     {% if excerpt %}
-      <meta property="og:description" content="{{ excerpt }}">
+      <meta property="og:description" content="{{ excerpt }}" />
     {% else %}
-      <meta property="og:description" content="{{ metadata.description }}">
+      <meta property="og:description" content="{{ metadata.description }}" />
     {% endif %}
   </head>
   <body class="mx-4 font-body">
@@ -84,26 +108,33 @@ description: base layout for site
           </a>
         </div>
 
-        <div class="relative col-span-2 flex self-stretch border-l border-grey-900">
+        <div
+          class="relative col-span-2 flex self-stretch border-l border-grey-900"
+        >
           <div class="grid sm:grid-cols-2">
             <div class="col-span-1">
               <img
                 src="/images/lyza.gif"
                 class="absolute bottom-0 right-full h-[110px] w-[100px] sm:right-auto sm:h-auto sm:w-auto sm:scale-x-[-1]"
                 alt="Lyza"
-              >
+              />
             </div>
             <div class="col-span-1 self-center p-2 text-grey-800">
-              <span class="mr-2 font-display text-lg sm:text-2xl"> Hi! I'm Lyza! </span>
+              <span class="mr-2 font-display text-lg sm:text-2xl">
+                Hi! I'm Lyza!
+              </span>
               <span class="italic text-grey-600">
-                I am a developer and human, forest dweller of Vermont and steward of the web platform for over 25 years.
+                I am a developer and human, forest dweller of Vermont and
+                steward of the web platform for over 25 years.
               </span>
             </div>
           </div>
         </div>
       </header>
 
-      <main class="grid gap-y-6 md:grid-cols-12 md:gap-x-4 md:gap-y-8 lg:gap-y-16">
+      <main
+        class="grid gap-y-6 md:grid-cols-12 md:gap-x-4 md:gap-y-8 lg:gap-y-16"
+      >
         {{ content | safe }}
       </main>
 
@@ -112,14 +143,26 @@ description: base layout for site
         style="font-variant-caps:all-small-caps"
       >
         <div class="flex gap-x-2 px-2">
-          <div>Built by Lyza with <a href="https://www.11ty.dev/" class="text-pank hover:underline">Eleventy</a></div>
+          <div>
+            Built by Lyza with
+            <a href="https://www.11ty.dev/" class="text-pank hover:underline"
+              >Eleventy</a
+            >
+          </div>
         </div>
-        <div class="group flex items-center gap-x-2 border-l px-2 transition-colors">
-          <a href="https://github.com/lyzadanger/lyza-dot-11ty" class="group-hover:text-pank group-hover:underline"
+        <div
+          class="group flex items-center gap-x-2 border-l px-2 transition-colors"
+        >
+          <a
+            href="https://github.com/lyzadanger/lyza-dot-11ty"
+            class="group-hover:text-pank group-hover:underline"
             >Source</a
           >
           <div class="mt-px h-4 w-4">
-            <a href="https://github.com/lyzadanger/lyza-dot-11ty" class="text-stone-700 group-hover:text-pank">
+            <a
+              href="https://github.com/lyzadanger/lyza-dot-11ty"
+              class="text-stone-700 group-hover:text-pank"
+            >
               {%- include 'icons/github.njk' -%}
             </a>
           </div>

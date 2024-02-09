@@ -2,8 +2,9 @@
 title: Unafraid of Times New Roman
 template: post
 tags:
-  - site
+  - lyza-dot-com
   - tech
+  - css
 date: "2015-07-29T21:52:27.815Z"
 excerpt: |
   In which I save myself from the fripperies of excessive fonts.

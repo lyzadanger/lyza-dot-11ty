@@ -2,8 +2,8 @@
 title: "Voltage, Current, Resistance...with Gnomes"
 tags:
   - tech
-  - js
-  - hardware
+  - javascript
+  - JSoT
   - web
 date: "2016-11-30T20:48:30.888Z"
 excerpt: >-

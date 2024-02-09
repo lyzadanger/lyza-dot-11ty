@@ -1,7 +1,6 @@
 ---
 title: Time for a New Project
 tags:
-  - projects
   - life
 thumbnail:
   type: video

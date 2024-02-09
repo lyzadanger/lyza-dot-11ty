@@ -2,8 +2,8 @@
 title: JavaScript and Hardware with the Host-Client Method
 tags:
   - tech
-  - js
-  - hardware
+  - javascript
+  - JSoT
   - web
 date: "2016-04-05T15:48:38.155Z"
 excerpt: >-

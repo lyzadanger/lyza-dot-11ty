@@ -1,7 +1,6 @@
 ---
 title: Video from Responsive Day Out 3
 tags:
-  - work
   - tech
   - events
   - speaking

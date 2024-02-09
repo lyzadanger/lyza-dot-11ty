@@ -3,7 +3,7 @@ title: Scampering after Node.js Versions
 tags:
   - tech
   - web
-  - js
+  - javascript
 date: "2015-12-08T18:55:01.019Z"
 excerpt: >-
   Everything about Node.js is exponential curves right now. While at Node

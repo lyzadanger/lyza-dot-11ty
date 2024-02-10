@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /**
+    * Style header permalink anchors in markdown-to-html text
+    * These anchors are added by the markdown-it-anchor plugin
+    */
+  .markdown-it-anchor-permalink {
+    @apply relative text-stone-800 no-underline hover:text-sky-800;
+
+    &::before {
+      content: "#";
+      @apply hidden;
+    }
+
+    &:hover::before {
+      @apply text-sky-800 md:absolute md:-ml-4 md:block;
+    }
+  }
+}

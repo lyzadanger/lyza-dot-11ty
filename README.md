@@ -4,7 +4,8 @@ This project houses the source of [Lyza.com](https://www.lyza.com) built with th
 
 ## Content and Data
 
-- Source content is authored in markdown with front-matter. markdown should adhere to the [commonmark spec](https://spec.commonmark.org/)
+- Source content is authored in markdown with front-matter. markdown should adhere to the [commonmark spec](https://spec.commonmark.org/) with the following extensions:
+  - footnotes
 - Source data is authored in YAML
 
 ## Development

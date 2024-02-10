@@ -2,6 +2,8 @@ const { DateTime } = require("luxon");
 const yaml = require("js-yaml");
 
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -10,6 +12,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Extend markdown transformation with permalinks and footnotes support
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    mdLib.use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.headerLink({
+        class: "markdown-it-anchor-permalink",
+        safariReaderFix: true,
+      }),
+    }),
+  );
 
   // Add YAML support
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));

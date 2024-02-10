@@ -5,44 +5,48 @@ description: >
 navigationKey: posts
 ---
 
-<div class="space-y-2 md:col-span-4">
-  <h3 class="border-b pb-2 font-display text-xl">Posts by Tag</h3>
-  <nav>
-    <ul>
-      <li class="font-title">
-        <a
-          href="/blog"
-          class="
-            {% if not activeTag %}
-            text-pank italic border-l-3 border-pank font-semibold
-          {% endif %} pl-2 hover:text-pank
-          "
-          {% if not activeTag %}
-            aria-current="page"
-          {% endif %}
-          >All Posts ({{ collections.post.length }})</a
-        >
-      </li>
-      {% set postTags = collections.post | getAllTagsWithCount %}
-      {% for tag in postTags %}
+<div class="md:col-span-4">
+  <div>
+    <h3 class="border-b pb-2 font-display text-xl">Posts by Tag</h3>
+    <nav
+      class="max-h-40 overflow-auto border-b pt-2 shadow-inner md:max-h-none md:border-none md:shadow-none"
+    >
+      <ul>
         <li class="font-title">
           <a
-            href="/tags/{{ tag.tag | slugify }}"
+            href="/blog"
             class="
-              {% if tag.tag == activeTag %}
+            {% if not activeTag %}
               text-pank italic border-l-3 border-pank font-semibold
             {% endif %} pl-2 hover:text-pank
-            "
-            {% if tag.tag == activeTag %}
+          "
+            {% if not activeTag %}
               aria-current="page"
             {% endif %}
-          >
-            {{- tag.tag -}} &nbsp;({{ tag.count }})</a
+            >All Posts ({{ collections.post.length }})</a
           >
         </li>
-      {% endfor %}
-    </ul>
-  </nav>
+        {% set postTags = collections.post | getAllTagsWithCount %}
+        {% for tag in postTags %}
+          <li class="font-title">
+            <a
+              href="/tags/{{ tag.tag | slugify }}"
+              class="
+              {% if tag.tag == activeTag %}
+                text-pank italic border-l-3 border-pank font-semibold
+              {% endif %} pl-2 hover:text-pank
+            "
+              {% if tag.tag == activeTag %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{- tag.tag -}} &nbsp;({{ tag.count }})</a
+            >
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 </div>
 <main class="space-y-8 md:col-span-8" id="skip">
   <h1

@@ -1,14 +1,13 @@
 ---
 title: "Lyza.com Turns 27 this Year"
 tags:
+  - life
   - tech
   - lyza-dot-com
 date: 2024-02-09
 excerpt: >
   I registered Lyza.com on the 18th of May, 1997. I don’t know that because I wrote it down, or because it has enough weight with me that I remembered it on its own accord. I know because an ICANN lookup today told me so.
 ---
-
-## Prologue
 
 _If you close your eyes and picture today’s rural American small-town police chief, that’s the guy who conducted my TSA PreCheck[^1] interview this week in C⸻, Vermont. Shaved head, folds at the back of the neck so that the head can fit onto the big shoulders, overloaded and outward-tilting utility belt with its medley of options both partially and entirely fatal from which he could select to suit the moment. The TSA PreCheck processing area, with its private-sector equipment, was situated across a narrow hallway from the department’s single holding cell._
 

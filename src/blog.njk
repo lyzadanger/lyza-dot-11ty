@@ -9,7 +9,7 @@ pagination:
 
 <ul class="space-y-8">
   {% for post in pagination.items %}
-    {% include 'components/post-excerpt-list-item.njk' %}
+    <li>{% include 'components/post-summary.njk' %}</li>
   {% endfor %}
 </ul>
 

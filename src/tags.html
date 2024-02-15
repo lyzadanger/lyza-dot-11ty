@@ -16,6 +16,7 @@ permalink: /tags/{{ activeTag | slugify }}/
 ---
 
 <ul class="space-y-8">
-  {% for post in collections[activeTag] reversed %} {% include
-  "components/post-excerpt-list-item.njk" %} {% endfor %}
+  {% for post in collections[activeTag] reversed %}
+  <li>{% include "components/post-summary.njk" %}</li>
+  {% endfor %}
 </ul>

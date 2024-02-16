@@ -1,0 +1,8 @@
+{
+  "tags": "experience",
+  "tags-works-comment": "make files available in `collections.experience`",
+
+  "permalink": false,
+  "permalint-false-comment": "exclude files from output, only make them available in collections",
+  "permalint-false-docs": "https://www.11ty.dev/docs/permalinks/#permalink-false"
+}

@@ -52,6 +52,10 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("formatDate", (dateObj, format = "LLL dd, yyyy") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
+
   // Custom filter: Return all the tags used in a collection, with counts
   // of how many items in the collection use each tag, sorted by count desc
   eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {

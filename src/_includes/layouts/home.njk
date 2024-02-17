@@ -42,21 +42,19 @@ navigationKey: about
   {{ content | safe }}
 </main>
 
-<div class="flex flex-col gap-y-4 px-2 md:col-span-3 md:gap-y-0">
-  <h2 class="border-b pb-2 font-display text-xl md:text-lg lg:text-left">
+<div class="flex flex-col gap-y-4 md:col-span-3 md:gap-y-0 md:px-2">
+  <h2 class="border-b pb-2 font-display text-xl md:text-lg">
     Find me out there
   </h2>
-  <ul class="gap-2 space-y-2 md:block md:gap-x-4 md:space-y-3 md:p-4">
+  <ul class="space-y-4 px-2 md:space-y-3 md:p-4">
     {% for identity in profile.identities %}
       {{ iconLink(identity.url, identity.title, identity.icon) }}
     {% endfor %}
   </ul>
-  <h2 class="border-b pb-2 font-display text-xl md:text-lg lg:text-left">
+  <h2 class="border-b pb-2 font-display text-xl md:text-lg">
     Follow my work (and play)
   </h2>
-  <ul
-    class="gap-2 space-y-2 pt-4 md:block md:gap-x-4 md:space-y-3 md:p-4 md:p-4"
-  >
+  <ul class="space-y-4 px-2 md:space-y-3 md:p-4">
     {{ iconLink("/feeds/rss.rss", "RSS: Everything", "rss") }}
     {{ iconLink("/feeds/tech.rss", "RSS: Tech stuff", "rss") }}
     {{ iconLink("/feeds/life.rss", "RSS: Non-tech stuff", "rss") }}

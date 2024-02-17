@@ -19,9 +19,9 @@
   skills:
     - team leadership
     - project management
-    - web standards stewardship
-    - team process management
-    - open-source contributor
+    - standards stewardship
+    - process management
+    - OSS contributor
     - mentorship
 - description: "full-stack web application development"
   skills:
@@ -29,11 +29,11 @@
     - TypeScript
     - python
     - PHP
-    - React/framework du jour
-    - tailwindcss/CSS thingy du jour
-    - embedded systems
+    - React, or
+    - JS framework du jour
+    - tailwindcss, or
+    - CSS thingy du jour
     - API design
-    - CMSes
     - SQL
     - ...etc.
 - description: "software development methodology"

@@ -4,7 +4,7 @@ description: layout for an individual blog post; excerpt at left
 navigationKey: posts
 ---
 
-<div class="relative md:col-span-4">
+<div class="relative col-span-12 md:col-span-4">
   <div class="static space-y-2 md:sticky md:top-0">
     <div class="border-b py-2 font-display">
       <h2 class="text-xl">{{ title }}</h2>
@@ -30,6 +30,9 @@ navigationKey: posts
 {# Set min-width and overflow to prevent code block blowouts.
  #  See https://stackoverflow.com/questions/55738093/prismjs-not-overflowing-with-css-grid
  #}
-<main class="prose min-w-0 overflow-auto md:col-span-8 md:pl-4" id="skip">
+<main
+  class="prose col-span-12 min-w-0 overflow-auto md:col-span-8 md:pl-4"
+  id="skip"
+>
   {{ content }}
 </main>

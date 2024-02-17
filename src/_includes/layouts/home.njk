@@ -36,7 +36,7 @@ navigationKey: about
 
 {{ subhead("about", "About Lyza") }}
 <main
-  class="prose text-lg md:col-span-6 lg:col-span-7 lg:text-justify"
+  class="prose lg:prose-lg md:col-span-6 lg:col-span-7 lg:text-justify"
   id="skip"
 >
   {{ content | safe }}
@@ -67,7 +67,7 @@ navigationKey: about
   class="grid items-center gap-4 border-l border-l-8 border-pank bg-grey-100 p-3 md:col-span-12 md:grid-cols-12"
 >
   <h2
-    class="font-display text-2xl md:col-span-3 md:pr-8 md:text-right lg:col-span-2"
+    class="font-display text-xl md:col-span-3 md:pr-8 md:text-right md:text-2xl lg:col-span-2"
   >
     The latest
   </h2>
@@ -75,7 +75,7 @@ navigationKey: about
     {% set latestPost = collections.post | last %}
     {% if latestPost %}
       <div class="border-b">
-        <h3 class="font-display text-lg">
+        <h3 class="font-display md:text-lg">
           <a
             href="{{ latestPost.url }}"
             class="transition-colors hover:text-pank hover:underline"
@@ -83,7 +83,9 @@ navigationKey: about
           >
         </h3>
       </div>
-      <div>{{ latestPost.data.excerpt }}</div>
+      <div class="prose prose-sm md:prose-base">
+        {{ latestPost.data.excerpt }}
+      </div>
       <div>
         <a
           class="text-sky-800 underline transition-colors hover:text-pank"

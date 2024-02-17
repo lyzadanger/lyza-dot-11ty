@@ -5,7 +5,9 @@ navigationKey: about
 ---
 
 {% macro subhead(id, title) %}
-  <div class="md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2">
+  <div
+    class="col-span-12 md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2"
+  >
     <a id="{{ id }}">
       <h2 class="text-center font-display text-2xl md:text-right">
         {{ title }}
@@ -36,13 +38,13 @@ navigationKey: about
 
 {{ subhead("about", "About Lyza") }}
 <main
-  class="prose lg:prose-lg md:col-span-6 lg:col-span-7 lg:text-justify"
+  class="prose col-span-12 lg:prose-lg md:col-span-6 lg:col-span-7 lg:text-justify"
   id="skip"
 >
   {{ content | safe }}
 </main>
 
-<div class="flex flex-col gap-y-4 md:col-span-3 md:gap-y-0 md:px-2">
+<div class="col-span-12 flex flex-col gap-y-4 md:col-span-3 md:gap-y-0 md:px-2">
   <h2 class="border-b pb-2 font-display text-xl md:text-lg">
     Find me out there
   </h2>
@@ -62,7 +64,7 @@ navigationKey: about
 </div>
 
 <div
-  class="grid items-center gap-4 border-l border-l-8 border-pank bg-grey-100 p-3 md:col-span-12 md:grid-cols-12"
+  class="col-span-12 grid items-center gap-4 border-l border-l-8 border-pank bg-grey-100 p-3 md:grid-cols-12"
 >
   <h2
     class="font-display text-xl md:col-span-3 md:pr-8 md:text-right md:text-2xl lg:col-span-2"
@@ -101,7 +103,7 @@ navigationKey: about
   </div>
 </div>
 
-<div class="md:col-span-12">
+<div class="col-span-12">
   <img
     src="https://res.cloudinary.com/dfsssdwbu/image/upload/v1706555956/lyza-working_bdrz2p.jpg"
     alt="Lyza Working"
@@ -110,7 +112,9 @@ navigationKey: about
 </div>
 
 {{ subhead("books", "Books") }}
-<div class="grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16">
+<div
+  class="col-span-12 grid grid-cols-2 gap-4 md:col-span-9 lg:col-span-10 lg:px-16"
+>
   {% for book in books %}
     <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
       {% include 'components/book.njk' %}
@@ -120,7 +124,7 @@ navigationKey: about
 
 {{ subhead("conferences", "Selected Conferences") }}
 
-<div class="md:col-span-9 lg:col-span-10">
+<div class="col-span-12 md:col-span-9 lg:col-span-10">
   <ul
     class="grid grid-cols-3 items-center justify-items-center gap-4 md:grid-cols-4 lg:grid-cols-6 lg:gap-6"
   >
@@ -133,7 +137,9 @@ navigationKey: about
 </div>
 
 {{ subhead("what-i-do", "What I Do") }}
-<div class="grid md:col-span-9 md:grid-cols-2 lg:col-span-10 lg:grid-cols-3">
+<div
+  class="col-span-12 grid md:col-span-9 md:grid-cols-2 lg:col-span-10 lg:grid-cols-3"
+>
   {% for skillset in skills %}
     <div class="row-span-2 grid grid-rows-subgrid border-t-3 border-grey-900">
       <h3 class="p-1 font-display text-xl font-bold italic text-pank">
@@ -152,7 +158,7 @@ navigationKey: about
 
 {{ subhead("publications", "Publications, Interviews and More") }}
 <div
-  class="grid gap-y-4 md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
+  class="col-span-12 grid gap-y-4 md:col-span-9 md:grid-cols-2 md:gap-x-4 md:gap-y-8 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
 >
   {% for work in collections.works | reverse %}
     {% include 'components/work.njk' %}

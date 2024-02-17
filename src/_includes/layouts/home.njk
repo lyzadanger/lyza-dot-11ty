@@ -6,10 +6,12 @@ navigationKey: about
 
 {% macro subhead(id, title) %}
   <div
-    class="col-span-12 md:col-span-3 md:border-r md:pr-4 md:text-right lg:col-span-2"
+    class="col-span-12 md:col-span-2 md:border-r md:pr-4 md:text-right lg:col-span-2"
   >
     <a id="{{ id }}">
-      <h2 class="text-center font-display text-2xl sm:text-left md:text-right">
+      <h2
+        class="text-center font-display text-2xl sm:text-left md:text-right md:text-base lg:text-2xl"
+      >
         {{ title }}
       </h2>
     </a>
@@ -45,7 +47,7 @@ navigationKey: about
 </main>
 
 <div
-  class="col-span-12 flex flex-col gap-y-4 sm:col-span-4 sm:pl-2 md:col-span-3 md:gap-y-0"
+  class="col-span-12 flex flex-col gap-y-4 sm:col-span-4 sm:pl-2 md:col-span-4 md:gap-y-0 lg:col-span-3"
 >
   <h2 class="border-b pb-2 font-display text-lg sm:text-base lg:text-lg">
     Find me out there

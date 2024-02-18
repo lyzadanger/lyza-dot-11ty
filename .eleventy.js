@@ -57,10 +57,20 @@ module.exports = function (eleventyConfig) {
   });
 
   // These tags should not be shown when rendering blog-post tags
-  const excludedPostTags = ["all", "posts"];
+  const excludedPostTags = ["all", "posts", /^series/];
 
   const filterTags = (itemTags, disallowedTags = excludedPostTags) => {
-    return itemTags.filter((tag) => !disallowedTags.includes(tag));
+    return itemTags.filter((tag) => {
+      for (const disallowed of disallowedTags) {
+        // string comparison being speedier than `.match` if it's not a RegExp
+        if (typeof disallowed === "string" && tag === disallowed) {
+          return false;
+        } else if (tag.match(disallowed)) {
+          return false;
+        }
+      }
+      return true;
+    });
   };
 
   // Filter out excludedPostTags from an array of tags

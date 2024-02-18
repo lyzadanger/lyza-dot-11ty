@@ -1,0 +1,42 @@
+---
+pagination:
+  data: series
+  size: 1
+  alias: activeSeries
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+eleventyComputed:
+  title: "Series: “{{ activeSeries.title }}”"
+permalink: /series/{{ activeSeries.slug | slugify }}/
+navigationKey: posts
+---
+
+{% set seriesItems = collections['series-' + activeSeries.slug] %}
+
+<div class="col-span-12 space-y-4 md:col-span-4">
+  <div class="static space-y-2 md:sticky md:top-0">
+    <div class="border-b py-2 font-display md:pt-0">
+      <h1 class="text-xl">
+        <span class="text-pank">Series</span> / {{ activeSeries.title }}
+      </h1>
+    </div>
+    <div class="border-b pb-2">
+      <div class="prose prose-lg italic">{{ activeSeries.description }}</div>
+    </div>
+  </div>
+</div>
+<div class="col-span-12 md:col-span-8">
+  <ol class="ml-4 space-y-8 pl-8 [counter-reset:section] md:ml-8">
+    {%- for post in seriesItems -%}
+      <li
+        class="relative font-sans [counter-increment:section] before:absolute before:-left-12 before:top-3 before:flex before:min-h-8 before:min-w-8 before:items-center
+        before:justify-center before:rounded-full before:bg-pank before:text-center before:text-xl before:font-semibold before:leading-none before:text-white before:content-[counters(section,'.')]"
+      >
+        {%
+          include
+          "components/post-summary.njk"
+        %}
+      </li>
+    {%- endfor -%}
+  </ol>
+</div>

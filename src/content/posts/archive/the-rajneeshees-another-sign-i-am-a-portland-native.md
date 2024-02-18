@@ -1,6 +1,5 @@
 ---
 title: "The Rajneeshees: Another Sign I am a Portland Native"
-template: post
 tags:
   - oregon
   - life

@@ -3,7 +3,6 @@ title: "Lyza's Index: July 30"
 tags:
   - life
   - til
-template: post
 date: "2015-07-30T23:12:59.176Z"
 excerpt: In which I mention a few things I learned.
 ---

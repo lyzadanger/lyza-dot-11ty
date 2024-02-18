@@ -23,10 +23,10 @@ navigationKey: posts
             {% if not activeTag %}
               aria-current="page"
             {% endif %}
-            >All Posts ({{ collections.post.length }})</a
+            >All Posts ({{ collections.posts.length }})</a
           >
         </li>
-        {% set postTags = collections.post | getAllTagsWithCount %}
+        {% set postTags = collections.posts | getAllTagsWithCount %}
         {% for tag in postTags %}
           <li class="font-title">
             <a

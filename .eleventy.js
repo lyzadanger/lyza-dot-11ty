@@ -76,6 +76,29 @@ module.exports = function (eleventyConfig) {
   // Filter out excludedPostTags from an array of tags
   eleventyConfig.addFilter("postTags", filterTags);
 
+  // Return the series tag representing the series that this item belongs to, if
+  // any. Throw if the item belongs to multiple series, as that is not currently
+  // allowed.
+  // NB: This function cannot be an arrow function because of necessary
+  // `this` binding.
+  eleventyConfig.addFilter("seriesSlug", function (tags) {
+    const seriesTags = (tags || []).filter((tag) => tag.match(/^series/));
+    if (!seriesTags.length) {
+      return false;
+    }
+    if (seriesTags.length > 1) {
+      throw new Error(
+        `Item may only belong to one series. File at '${this.page.inputPath}' has multiple series tags`,
+      );
+    }
+    return seriesTags[0].replace("series-", "");
+  });
+
+  // Look up a series data object in `seriesData` by slug
+  eleventyConfig.addFilter("getSeriesBySlug", (seriesData, slug) =>
+    seriesData.find((item) => item.slug == slug),
+  );
+
   // Custom filter: Return all the tags used in a collection, with counts
   // of how many items in the collection use each tag, sorted by count desc
   eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {

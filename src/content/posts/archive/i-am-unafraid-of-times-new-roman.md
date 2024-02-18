@@ -1,6 +1,5 @@
 ---
 title: Unafraid of Times New Roman
-template: post
 tags:
   - lyza-dot-com
   - tech

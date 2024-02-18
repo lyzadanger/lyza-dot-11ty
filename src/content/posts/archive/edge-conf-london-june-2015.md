@@ -1,6 +1,5 @@
 ---
 title: "Edge Conf London, June 2015"
-template: post
 tags:
   - tech
   - standards

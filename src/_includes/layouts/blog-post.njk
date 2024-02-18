@@ -29,9 +29,79 @@ navigationKey: posts
 {# Set min-width and overflow to prevent code block blowouts.
  #  See https://stackoverflow.com/questions/55738093/prismjs-not-overflowing-with-css-grid
  #}
-<main
-  class="prose col-span-12 min-w-0 overflow-auto md:col-span-8 md:pl-4"
-  id="skip"
->
-  {{ content }}
+<main class="col-span-12 min-w-0 overflow-auto md:col-span-8 md:pl-4" id="skip">
+  {% set seriesSlug = tags | seriesSlug %}
+  {% if seriesSlug %}
+    {% set seriesPosts = collections['series-' + seriesSlug] %}
+    {% set activeSeries = series | getSeriesBySlug(seriesSlug) %}
+    <nav
+      class="mb-6 flex w-full flex-col
+  sm:float-right sm:my-2 sm:ml-4 sm:w-1/2 sm:min-w-0"
+    >
+      <div
+        class="border-b py-1 font-display text-lg sm:border-y sm:border-t-2 sm:p-1"
+      >
+        <span class="text-pank">Series</span> /
+        <a
+          class="not-prose transition-colors hover:text-pank hover:underline"
+          href="/series/{{ seriesSlug }}"
+          >{{ activeSeries.title }}</a
+        >
+      </div>
+      <p class="my-2 italic leading-snug md:text-sm">
+        {{ activeSeries.description }}
+      </p>
+
+      <div class="prose">
+        <ol class="mt-0 border-b pb-1 leading-snug sm:text-sm">
+          {% for seriesPost in seriesPosts %}
+            <li>
+              <a
+                href="{{ seriesPost.url }}"
+                class="{% if seriesPost.url == page.url %}
+                  text-grey-700 no-underline font-semibold
+                {% endif %} transition-colors hover:text-pank hover:underline"
+                {% if seriesPost.url == page.url %}aria-current="page"{% endif %}
+                >{{ seriesPost.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </nav>
+  {% endif %}
+  <div class="prose">{{ content }}</div>
 </main>
+<div class="col-span-12 max-w-none space-y-4">
+  {% if seriesSlug %}
+    {% set nextPost = seriesPosts | getNextCollectionItem(page) %}
+    {% set prevPost = seriesPosts | getPreviousCollectionItem(page) %}
+    <hr class="border-t border-stone-200 md:mx-4" />
+    <div class="text-center md:text-xl">
+      <span class="font-display text-pank">Series</span> /
+      <span class="font-display"
+        ><a
+          class="transition-colors hover:text-pank hover:underline"
+          href="/series/{{ seriesSlug }}"
+          >{{ activeSeries.title }}</a
+        ></span
+      >
+    </div>
+    <div class="prose flex max-w-none items-start gap-x-2 leading-none">
+      {% if prevPost %}
+        <div>«</div>
+        <div class="text-left leading-tight">
+          <div class="sr-only italic sm:not-sr-only">Previous in series:</div>
+          <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+        </div>
+      {% endif %}
+      {% if nextPost %}
+        <div class="flex-grow text-right leading-tight">
+          <div class="sr-only italic sm:not-sr-only">Next in series:</div>
+          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        </div>
+        <div>»</div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

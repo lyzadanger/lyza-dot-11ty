@@ -56,15 +56,23 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
+  // These tags should not be shown when rendering blog-post tags
+  const excludedPostTags = ["post", "posts"];
+
+  const filterTags = (itemTags, disallowedTags = excludedPostTags) => {
+    return itemTags.filter((tag) => !disallowedTags.includes(tag));
+  };
+
+  // Filter out excludedPostTags from an array of tags
+  eleventyConfig.addFilter("postTags", filterTags);
+
   // Custom filter: Return all the tags used in a collection, with counts
   // of how many items in the collection use each tag, sorted by count desc
   eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {
     const tags = [];
     for (let item of collection) {
-      (item.data.tags || []).forEach((tag) => {
-        if (tag === "post") {
-          return;
-        }
+      const postTags = filterTags(item.data.tags || []);
+      postTags.forEach((tag) => {
         const existingTag = tags.find((el) => el.tag === tag);
         if (existingTag) {
           existingTag.count++;

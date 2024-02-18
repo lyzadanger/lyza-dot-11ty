@@ -76,7 +76,7 @@ navigationKey: about
     The latest
   </h2>
   <div class="space-y-2 md:col-span-9 lg:col-span-10">
-    {% set latestPost = collections.post | last %}
+    {% set latestPost = collections.posts | last %}
     {% if latestPost %}
       <div class="border-b">
         <h3 class="font-display md:text-lg">

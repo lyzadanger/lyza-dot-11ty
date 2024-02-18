@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // These tags should not be shown when rendering blog-post tags
-  const excludedPostTags = ["post", "posts"];
+  const excludedPostTags = ["all", "posts"];
 
   const filterTags = (itemTags, disallowedTags = excludedPostTags) => {
     return itemTags.filter((tag) => !disallowedTags.includes(tag));

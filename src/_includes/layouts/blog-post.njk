@@ -14,15 +14,14 @@ navigationKey: posts
       <div class="prose prose-lg italic">{{ excerpt }}</div>
     </div>
     <ul class="flex flex-row gap-2 font-title">
-      {% for tag in tags %}
-        {% if tag != 'posts' %}
-          <li
-            class="text-lg text-grey-600 hover:text-pank"
-            style="font-variant-caps: all-small-caps"
-          >
-            <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
-          </li>
-        {% endif %}
+      {% set postTags = tags | postTags %}
+      {% for tag in postTags %}
+        <li
+          class="text-lg text-grey-600 hover:text-pank"
+          style="font-variant-caps: all-small-caps"
+        >
+          <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
+        </li>
       {% endfor %}
     </ul>
   </div>

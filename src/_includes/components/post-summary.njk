@@ -1,8 +1,11 @@
 <div class="flex flex-col gap-y-1 border-t-3 border-solid border-grey-900">
   <div>
     <a href="{{ post.page.url }}" class="hover:text-pank">
-      <h3 class="font-display text-xl">{{ post.data.title }}</h3>
+      {% if post.data.title %}
+        <h3 class="font-display text-xl">{{ post.data.title }}</h3>
+      {% endif %}
     </a>
+
     <div class="flex items-center gap-x-1 border-b">
       <h4 class="text-l font-display font-normal italic">
         {{ post.date | localeDate }}
@@ -20,7 +23,9 @@
         </ul>
       </div>
     </div>
+  </div>
 
-    <div class="font-body text-grey-700">{{ post.data.excerpt }}</div>
+  <div class="font-body text-grey-700">
+    {% if post.data.excerpt %}{{ post.data.excerpt }}{% endif %}
   </div>
 </div>

@@ -10,12 +10,12 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/blog.njk
 eleventyComputed:
-  title: Posts tagged “{{ activeTag }}”
+  title: "Posts tagged '{{ activeTag }}'"
 permalink: /tags/{{ activeTag | slugify }}/
 ---
 
 <ul class="space-y-8">
-  {% for post in collections[activeTag] reversed %}
-  <li>{% include "components/post-summary.njk" %}</li>
+  {% for post in collections[activeTag] | reverse %}
+    <li>{% include "components/post-summary.njk" %}</li>
   {% endfor %}
 </ul>

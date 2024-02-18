@@ -55,7 +55,7 @@ module.exports = {
               transitionProperty: "color",
               transitionDuration: "150ms",
               "&:hover": {
-                color: customColors.pank,
+                color: customColors.pank.DEFAULT,
               },
             },
           },

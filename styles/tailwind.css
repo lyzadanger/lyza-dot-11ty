@@ -8,7 +8,7 @@
     * These anchors are added by the markdown-it-anchor plugin
     */
   .markdown-it-anchor-permalink {
-    @apply relative text-grey-800 no-underline hover:text-sky-800;
+    @apply relative text-grey-800 no-underline hover:text-blue-800;
 
     &::before {
       content: "#";
@@ -16,7 +16,7 @@
     }
 
     &:hover::before {
-      @apply text-sky-800 md:absolute md:-ml-4 md:block;
+      @apply text-blue-800 md:absolute md:-ml-4 md:block;
     }
   }
 }

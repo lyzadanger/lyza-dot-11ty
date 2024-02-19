@@ -58,6 +58,11 @@ module.exports = {
                 color: customColors.pank.DEFAULT,
               },
             },
+            // Remove literal quotation marks and backticks from blockquote, code
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+            "code ::before": { content: "none" },
+            "code ::after": { content: "none" },
           },
         },
       },

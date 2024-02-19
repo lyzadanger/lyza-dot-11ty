@@ -11,7 +11,7 @@ navigationKey: posts
       <h4 class="italic">{{ page.date | localeDate }}</h4>
     </div>
     <div class="border-b pb-2">
-      <div class="prose prose-lg italic">{{ excerpt }}</div>
+      <div class="prose prose-lg prose-stone italic">{{ excerpt }}</div>
     </div>
     <ul class="flex flex-row gap-2 font-title">
       {% set postTags = tags | postTags %}
@@ -52,7 +52,7 @@ navigationKey: posts
         {{ activeSeries.description }}
       </p>
 
-      <div class="prose">
+      <div class="prose prose-stone">
         <ol class="mt-0 border-b pb-1 leading-snug sm:text-sm">
           {% for seriesPost in seriesPosts %}
             <li>
@@ -70,7 +70,7 @@ navigationKey: posts
       </div>
     </nav>
   {% endif %}
-  <div class="prose">{{ content }}</div>
+  <div class="prose prose-stone">{{ content }}</div>
 </main>
 <div class="col-span-12 max-w-none space-y-4">
   {% if seriesSlug %}
@@ -87,7 +87,9 @@ navigationKey: posts
         ></span
       >
     </div>
-    <div class="prose flex max-w-none items-start gap-x-2 leading-none">
+    <div
+      class="prose prose-stone flex max-w-none items-start gap-x-2 leading-none"
+    >
       {% if prevPost %}
         <div>«</div>
         <div class="text-left leading-tight">

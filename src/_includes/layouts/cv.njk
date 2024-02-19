@@ -22,7 +22,9 @@ navigationKey: about
         {{ eData.position }}
       </div>
     </div>
-    <div class="prose prose-sm leading-snug md:prose-base md:leading-normal">
+    <div
+      class="prose prose-sm prose-stone leading-snug md:prose-base md:leading-normal"
+    >
       {{ experience.content | safe }}
     </div>
   </div>
@@ -65,7 +67,7 @@ navigationKey: about
           style="font-variant-caps:all-small-caps"
         >
           {% for skill in skillset.skills %}
-            <li class="marker:text-pank-300 leading-tight print:leading-none">
+            <li class="leading-tight marker:text-pank-300 print:leading-none">
               {{ skill }}
             </li>
           {% endfor %}
@@ -76,7 +78,7 @@ navigationKey: about
 </div>
 <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
   <div
-    class="prose prose-sm leading-snug md:prose-lg md:text-justify md:leading-normal"
+    class="prose prose-sm prose-stone leading-snug md:prose-lg md:text-justify md:leading-normal"
   >
     {{ content | safe }}
   </div>

@@ -25,7 +25,7 @@ navigationKey: about
   >
     <a href="{{ url }}">
       <div class="flex items-center gap-x-2 md:gap-x-3">
-        <div class="h-4 w-4 text-stone-700 group-hover:text-pank">
+        <div class="h-4 w-4 text-grey-700 group-hover:text-pank">
           {% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}
         </div>
         <div
@@ -151,7 +151,7 @@ navigationKey: about
       >
         {{ skillset.description }}
       </h3>
-      <ul class="border-t bg-stone-100 p-2 pb-4">
+      <ul class="border-t bg-grey-100 p-2 pb-4">
         {% for skill in skillset.skills %}
           <li class="text-lg" style="font-variant-caps: all-small-caps">
             {{ skill }}

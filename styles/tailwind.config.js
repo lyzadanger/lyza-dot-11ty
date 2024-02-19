@@ -32,6 +32,7 @@ module.exports = {
       colors: {
         ...customColors,
         grey: colors.stone,
+        blue: colors.sky,
       },
       fontFamily: {
         body: ["'Georgia'", "'Times New Roman'", "serif"],

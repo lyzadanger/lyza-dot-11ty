@@ -18,10 +18,7 @@
       <div class="sm:flex-grow">
         <ul class="font-smallcaps flex flex-row gap-2 sm:justify-end">
           {% for tag in post.data.tags | postTags %}
-            <li
-              class="text-lg text-grey-600"
-              style="font-variant-caps: all-small-caps"
-            >
+            <li class="font-smallcaps text-sm text-grey-600">
               <a
                 class="transition-colors hover:text-pank"
                 href="/tags/{{ tag | slugify }}"

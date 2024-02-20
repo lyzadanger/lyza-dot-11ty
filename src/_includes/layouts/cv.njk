@@ -66,14 +66,9 @@ navigationKey: about
         >
           {{ skillset.description }}
         </h3>
-        <ul
-          class="list-inside list-disc p-2 md:text-lg print:text-sm"
-          style="font-variant-caps:all-small-caps"
-        >
+        <ul class="font-smallcaps list-inside list-disc p-2 text-sm">
           {% for skill in skillset.skills %}
-            <li class="leading-tight marker:text-pank-300 print:leading-none">
-              {{ skill }}
-            </li>
+            <li class="marker:text-pank-300 print:leading-none">{{ skill }}</li>
           {% endfor %}
         </ul>
       </li>

@@ -2,7 +2,10 @@
   class="border-t-3 border-solid border-grey-900 sm:flex sm:flex-col sm:gap-y-1"
 >
   <div>
-    <a href="{{ post.page.url }}" class="hover:text-pank">
+    <a
+      href="{{ post.page.url }}"
+      class="transition-colors hover:text-pank hover:underline"
+    >
       {% if post.data.title %}
         <h3 class="font-display text-xl">{{ post.data.title }}</h3>
       {% endif %}
@@ -16,10 +19,14 @@
         <ul class="flex flex-row gap-2 font-title sm:justify-end">
           {% for tag in post.data.tags | postTags %}
             <li
-              class="text-lg text-grey-600 hover:text-pank"
+              class="text-lg text-grey-600"
               style="font-variant-caps: all-small-caps"
             >
-              <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
+              <a
+                class="transition-colors hover:text-pank"
+                href="/tags/{{ tag | slugify }}"
+                >#{{ tag }}</a
+              >
             </li>
           {% endfor %}
         </ul>

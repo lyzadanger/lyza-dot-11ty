@@ -20,12 +20,14 @@ navigationKey: about
 
 {% macro iconLink(url, title, icon) %}
   <li
-    class="group text-xl font-light leading-none transition-colors"
+    class="group text-xl font-light leading-none"
     style="font-variant-caps:all-small-caps"
   >
     <a href="{{ url }}">
       <div class="flex items-center gap-x-2 md:gap-x-3">
-        <div class="h-4 w-4 text-grey-700 group-hover:text-pank">
+        <div
+          class="h-4 w-4 text-grey-700 transition-colors group-hover:text-pank"
+        >
           {% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}
         </div>
         <div

@@ -34,7 +34,11 @@ navigationKey: about
   <div>
     <div class="flex items-center gap-x-2">
       <h3 class="font-bold md:text-lg">
-        <a href="{{ edu.url }}">{{ edu.institution }}</a>
+        <a
+          href="{{ edu.url }}"
+          class="transition-colors hover:text-pank hover:underline"
+          >{{ edu.institution }}</a
+        >
       </h3>
 
       <div class="flex-grow text-right italic">

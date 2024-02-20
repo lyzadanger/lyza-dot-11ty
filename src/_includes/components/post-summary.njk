@@ -1,4 +1,6 @@
-<div class="flex flex-col gap-y-1 border-t-3 border-solid border-grey-900">
+<div
+  class="border-t-3 border-solid border-grey-900 sm:flex sm:flex-col sm:gap-y-1"
+>
   <div>
     <a href="{{ post.page.url }}" class="hover:text-pank">
       {% if post.data.title %}
@@ -6,12 +8,12 @@
       {% endif %}
     </a>
 
-    <div class="flex items-center gap-x-1 border-b">
-      <h4 class="text-l font-display font-normal italic">
+    <div class="border-b sm:flex sm:items-center sm:gap-x-1">
+      <h4 class="text-l whitespace-nowrap font-display font-normal italic">
         {{ post.date | localeDate }}
       </h4>
-      <div class="flex-grow">
-        <ul class="flex flex-row justify-end gap-2 font-title">
+      <div class="sm:flex-grow">
+        <ul class="flex flex-row gap-2 font-title sm:justify-end">
           {% for tag in post.data.tags | postTags %}
             <li
               class="text-lg text-grey-600 hover:text-pank"

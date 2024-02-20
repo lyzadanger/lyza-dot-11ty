@@ -1,11 +1,10 @@
 {% macro topNavLink(href, title, key, navigationKey) %}
   <a
     href="{{ href }}"
-    style="font-variant-caps: all-small-caps"
     {% if navigationKey == key %}
       aria-current="page"
     {% endif %}
-    class="{% if navigationKey == key %}italic{% endif %} font-smallcaps pt-2.5 text-2xl font-light text-grey-700 transition-colors hover:text-pank"
+    class="{% if navigationKey == key %}italic{% endif %} font-smallcaps text-lg font-light text-grey-700 transition-colors hover:text-pank"
     >{{ title }}</a
   >
 {% endmacro %}

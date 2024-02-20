@@ -1,30 +1,26 @@
+{% macro topNavLink(href, title, key, navigationKey) %}
+  <a
+    href="{{ href }}"
+    style="font-variant-caps: all-small-caps"
+    {% if navigationKey == key %}
+      aria-current="page"
+    {% endif %}
+    class="{% if navigationKey == key %}italic{% endif %} pt-2.5 font-title text-2xl font-light text-grey-700 transition-colors hover:text-pank"
+    >{{ title }}</a
+  >
+{% endmacro %}
+
+{% macro topNavItem(href, title, key, navigationKey) %}
+  <li
+    class="{% if navigationKey == key %}border-pank{% else %}border-transparent{% endif %} border-b-10 pt-2.5"
+  >
+    {{ topNavLink(href, title, key, navigationKey) }}
+  </li>
+{% endmacro %}
+
 <nav class="print:hidden">
   <ul class="flex flex-row gap-4 justify-self-stretch sm:gap-6">
-    <li
-      class="{% if navigationKey == 'about' %}border-pank{% else %}border-transparent{% endif %} border-b-10 pt-2.5"
-    >
-      <a
-        href="/"
-        style="font-variant-caps: all-small-caps"
-        class="{% if navigationKey == 'about' %}italic{% endif %} pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank"
-        {% if navigationKey == 'about' %}
-          aria-current="page"
-        {% endif %}
-        >About</a
-      >
-    </li>
-    <li
-      class="{% if navigationKey == 'posts' %}border-pank{% else %}border-transparent{% endif %} border-b-10 pt-2.5"
-    >
-      <a
-        href="/blog"
-        style="font-variant-caps: all-small-caps"
-        class="{% if navigationKey == 'posts' %}italic{% endif %} pt-2.5 font-title text-2xl font-light text-grey-700 hover:text-pank"
-        {% if navigationKey == 'posts' %}
-          aria-current="page"
-        {% endif %}
-        >Blog</a
-      >
-    </li>
+    {{ topNavItem('/', 'About', 'about', navigationKey) }}
+    {{ topNavItem('/blog', 'Blog', 'posts', navigationKey) }}
   </ul>
 </nav>

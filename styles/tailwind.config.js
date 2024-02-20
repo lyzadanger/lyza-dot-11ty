@@ -43,6 +43,7 @@ module.exports = {
           "'Times New Roman'",
           "ui-serif",
         ],
+        smallcaps: ["'Playfair Display SC'", "'Times New Roman'", "serif"],
       },
       screens: {
         xs: "480px",

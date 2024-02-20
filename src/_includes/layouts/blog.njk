@@ -11,7 +11,7 @@ navigationKey: posts
     href="{% if tag == 'all' %}/blog/{% else %}/tags/{{ tag | slugify }}{% endif %}"
     class="{% if tag == _activeTag %}
       text-pank italic border-l-3 border-pank font-semibold
-    {% endif %} pl-2 transition-colors hover:text-pank"
+    {% endif %} font-smallcaps pl-2 transition-colors hover:text-pank"
     {% if tag == _activeTag %}
       aria-current="page"
     {% endif %}
@@ -27,14 +27,10 @@ navigationKey: posts
       class="max-h-40 overflow-auto border-b pt-2 shadow-inner md:max-h-none md:border-none md:shadow-none"
     >
       <ul>
-        <li class="font-title">
-          {{ tagLink('all', collections.posts.length, activeTag) }}
-        </li>
+        <li>{{ tagLink('all', collections.posts.length, activeTag) }}</li>
         {% set postTags = collections.posts | getAllTagsWithCount %}
         {% for tag in postTags %}
-          <li class="font-title">
-            {{ tagLink(tag.tag, tag.count, activeTag) }}
-          </li>
+          <li>{{ tagLink(tag.tag, tag.count, activeTag) }}</li>
         {% endfor %}
       </ul>
     </nav>

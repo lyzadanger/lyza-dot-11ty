@@ -1,0 +1,27 @@
+<hr class="border-t border-grey-200 md:mx-4" />
+<div class="text-center md:text-xl">
+  <span class="font-display text-pank">Series</span> /
+  <span class="font-display"
+    ><a
+      class="transition-colors hover:text-pank hover:underline"
+      href="/series/{{ inSeries }}"
+      >{{ activeSeries.title }}</a
+    ></span
+  >
+</div>
+<div class="prose prose-stone flex max-w-none items-start gap-x-2 leading-none">
+  {% if prevPost %}
+    <div>«</div>
+    <div class="text-left leading-tight">
+      <div class="sr-only italic sm:not-sr-only">Previous in series:</div>
+      <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+    </div>
+  {% endif %}
+  {% if nextPost %}
+    <div class="flex-grow text-right leading-tight">
+      <div class="sr-only italic sm:not-sr-only">Next in series:</div>
+      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    </div>
+    <div>»</div>
+  {% endif %}
+</div>

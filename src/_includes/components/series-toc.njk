@@ -1,0 +1,35 @@
+<nav
+  class="mb-6 flex w-full flex-col
+sm:float-right sm:my-2 sm:ml-4 sm:w-1/2 sm:min-w-0"
+>
+  <div
+    class="border-b py-1 font-display text-lg sm:border-y sm:border-t-2 sm:p-1"
+  >
+    <span class="text-pank">Series</span> /
+    <a
+      class="not-prose transition-colors hover:text-pank hover:underline"
+      href="/series/{{ inSeries }}"
+      >{{ activeSeries.title }}</a
+    >
+  </div>
+  <p class="my-2 italic leading-snug md:text-sm">
+    {{ activeSeries.description }}
+  </p>
+
+  <div class="prose prose-stone">
+    <ol class="mt-0 border-b pb-1 leading-snug sm:text-sm">
+      {% for seriesPost in seriesPosts %}
+        <li>
+          <a
+            href="{{ seriesPost.url }}"
+            class="{% if seriesPost.url == page.url %}
+              text-grey-700 no-underline font-semibold
+            {% endif %} transition-colors hover:text-pank hover:underline"
+            {% if seriesPost.url == page.url %}aria-current="page"{% endif %}
+            >{{ seriesPost.data.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>

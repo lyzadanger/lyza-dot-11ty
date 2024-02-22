@@ -7,11 +7,16 @@ const markdownItFootnote = require("markdown-it-footnote");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+const seriesPlugin = require("./lib/series");
+
 module.exports = function (eleventyConfig) {
   // 11ty plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // My own plugins
+  eleventyConfig.addPlugin(seriesPlugin);
 
   // Extend markdown transformation with permalinks and footnotes support
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));
@@ -45,7 +50,7 @@ module.exports = function (eleventyConfig) {
     autoescape: false,
   });
 
-  // Custom filter for formatting locale dates
+  // Custom date filters
   eleventyConfig.addFilter("localeDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toLocaleString(
       DateTime.DATE_MED,
@@ -57,7 +62,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // These tags should not be shown when rendering blog-post tags
-  const excludedPostTags = ["all", "posts", /^series/];
+  const excludedPostTags = ["all", "posts"];
 
   const filterTags = (itemTags, disallowedTags = excludedPostTags) => {
     return itemTags.filter((tag) => {
@@ -75,29 +80,6 @@ module.exports = function (eleventyConfig) {
 
   // Filter out excludedPostTags from an array of tags
   eleventyConfig.addFilter("postTags", filterTags);
-
-  // Return the series tag representing the series that this item belongs to, if
-  // any. Throw if the item belongs to multiple series, as that is not currently
-  // allowed.
-  // NB: This function cannot be an arrow function because of necessary
-  // `this` binding.
-  eleventyConfig.addFilter("seriesSlug", function (tags) {
-    const seriesTags = (tags || []).filter((tag) => tag.match(/^series/));
-    if (!seriesTags.length) {
-      return false;
-    }
-    if (seriesTags.length > 1) {
-      throw new Error(
-        `Item may only belong to one series. File at '${this.page.inputPath}' has multiple series tags`,
-      );
-    }
-    return seriesTags[0].replace("series-", "");
-  });
-
-  // Look up a series data object in `seriesData` by slug
-  eleventyConfig.addFilter("getSeriesBySlug", (seriesData, slug) =>
-    seriesData.find((item) => item.slug == slug),
-  );
 
   // Custom filter: Return all the tags used in a collection, with counts
   // of how many items in the collection use each tag, sorted by count desc

@@ -11,7 +11,7 @@ permalink: /series/{{ activeSeries.slug | slugify }}/
 navigationKey: posts
 ---
 
-{% set seriesItems = collections['series-' + activeSeries.slug] %}
+{% set seriesItems = collections[activeSeries.slug] %}
 
 <div class="col-span-12 space-y-4 md:col-span-4">
   <div class="static space-y-2 md:sticky md:top-0">

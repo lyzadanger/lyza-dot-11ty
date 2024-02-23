@@ -1,0 +1,32 @@
+{% macro latest(title, excerpt, url, headline = "The latest") %}
+  <h2
+    class="font-display text-xl md:col-span-3 md:pr-8 md:text-right md:text-2xl lg:col-span-2"
+  >
+    {{ headline }}
+  </h2>
+  <div class="space-y-2 md:col-span-9 lg:col-span-10">
+    <div class="border-b">
+      <h3 class="font-display md:text-lg">
+        <a
+          href="{{ url }}"
+          class="transition-colors hover:text-pank hover:underline"
+          >{{ title }}</a
+        >
+      </h3>
+    </div>
+    <div class="prose prose-sm prose-stone md:prose-base">{{ excerpt }}</div>
+    <div>
+      <a
+        class="text-blue-800 underline transition-colors hover:text-pank"
+        href="{{ url }}"
+        >Read more...</a
+      >
+      |
+      <a
+        href="/blog"
+        class="text-blue-800 underline transition-colors hover:text-pank"
+        >All blog posts</a
+      >
+    </div>
+  </div>
+{% endmacro %}

@@ -4,6 +4,8 @@ layout: layouts/base.njk
 navigationKey: about
 ---
 
+{% from 'components/icon-link.njk' import iconLink %}
+
 {% macro experienceItem(experience) %}
   {% set eData = experience.data %}
   <div class="space-y-2">
@@ -51,47 +53,82 @@ navigationKey: about
     </div>
   </div>
 {% endmacro %}
-
 <div
-  class="order-last col-span-12 space-y-4 sm:order-first sm:col-span-4 print:space-y-3"
+  class="col-span-12 grid grid-cols-12 gap-4 sm:gap-y-6 md:gap-y-8 lg:gap-x-6"
 >
-  <h2 class="border-b font-display lg:text-lg">What I Can Do</h2>
-  <ul class="space-y-2 lg:space-y-4">
-    {% for skillset in skills %}
-      <li
-        class="rounded-lg bg-grey-100 p-2 lg:p-3 print:bg-transparent print:p-0"
-      >
-        <h3
-          class="border-b border-grey-500 pb-1 text-sm font-semibold italic leading-tight text-pank lg:text-base lg:leading-snug print:border-none print:leading-none"
-        >
-          {{ skillset.description }}
-        </h3>
-        <ul class="font-smallcaps list-inside list-disc p-2 text-sm">
-          {% for skill in skillset.skills %}
-            <li class="marker:text-pank-300 print:leading-none">{{ skill }}</li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-<div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
+  <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
+    <div
+      class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg md:text-justify md:leading-normal"
+    >
+      {{ content | safe }}
+    </div>
+  </div>
   <div
-    class="prose prose-sm prose-stone leading-snug md:prose-lg md:text-justify md:leading-normal"
+    class="order-first col-span-12 space-y-4 sm:order-none sm:col-span-4 print:space-y-3"
   >
-    {{ content | safe }}
+    <div class="text-center">
+      <h2 class="font-display text-lg sm:text-base md:text-lg lg:text-xl">
+        Lyza Danger Gardner
+      </h2>
+      <h3 class="font-display text-sm italic lg:text-base">
+        Senior Developer / Web Advocate
+      </h3>
+    </div>
+    <div class="flex flex-col items-center">
+      {% set email = profile.identities.email %}
+      {% set mastodon = profile.identities.mastodon %}
+      {% set github = profile.identities.github %}
+      <div class="text-center text-xl sm:text-2xl">
+        {{ iconLink(email.url, 'lyza@lyza.com', email.icon) }}
+      </div>
+      <div
+        class="hidden font-display text-base italic leading-tight sm:text-lg print:block"
+      >
+        www.lyza.com
+      </div>
+      <div class="flex items-center gap-x-2 text-base sm:text-lg print:hidden">
+        {{ iconLink(mastodon.url, mastodon.title, mastodon.icon) }}
+        <div>|</div>
+        {{ iconLink(github.url, github.title, github.icon) }}
+      </div>
+    </div>
   </div>
 
-  <h2 class="border-b-2 font-display text-lg md:text-2xl">Experience</h2>
-  <ul class="space-y-4">
-    {% for exp in collections.experience | reverse %}
-      <li>{{ experienceItem(exp) }}</li>
-    {% endfor %}
-  </ul>
-  <h2 class="border-b-2 font-display text-xl">Education</h2>
-  <ul class="space-y-4">
-    {% for edu in education | reverse %}
-      <li>{{ educationItem(edu) }}</li>
-    {% endfor %}
-  </ul>
+  <div class="col-span-12 space-y-4 sm:col-span-4 print:space-y-3">
+    <h2 class="border-b-2 font-display text-lg md:text-2xl">What I Can Do</h2>
+    <ul class="space-y-2 lg:space-y-4">
+      {% for skillset in skills %}
+        <li
+          class="rounded-lg bg-grey-100 p-2 lg:p-3 print:bg-transparent print:p-0"
+        >
+          <h3
+            class="border-b border-grey-500 pb-1 text-sm font-semibold italic leading-tight text-pank lg:text-base lg:leading-snug print:border-none print:leading-none"
+          >
+            {{ skillset.description }}
+          </h3>
+          <ul class="list-inside list-disc p-2 font-smallcaps text-sm">
+            {% for skill in skillset.skills %}
+              <li class="marker:text-pank-300 print:leading-none">
+                {{ skill }}
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
+    <h2 class="border-b-2 font-display text-lg md:text-2xl">Experience</h2>
+    <ul class="space-y-4">
+      {% for exp in collections.experience | reverse %}
+        <li>{{ experienceItem(exp) }}</li>
+      {% endfor %}
+    </ul>
+    <h2 class="border-b-2 font-display text-xl">Education</h2>
+    <ul class="space-y-4">
+      {% for edu in education | reverse %}
+        <li>{{ educationItem(edu) }}</li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

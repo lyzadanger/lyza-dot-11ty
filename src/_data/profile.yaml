@@ -1,17 +1,21 @@
 email: lyza@lyza.com
 identities:
-  - title: GitHub
+  github:
+    title: GitHub
     username: "@lyzadanger"
     url: https://github.com/lyzadanger
     icon: github
-  - title: Instagram
+  instagram:
+    title: Instagram
     username: "@lyzadanger"
     url: https://www.instagram.com/lyzadanger/
     icon: instagram
-  - title: Mastodon
+  mastodon:
+    title: Mastodon
     username: "@lyzadanger"
     url: https://indieweb.social/@lyzadanger
     icon: mastodon
-  - title: Email
+  email:
+    title: Email
     url: mailto:lyza@lyza.com
     icon: email

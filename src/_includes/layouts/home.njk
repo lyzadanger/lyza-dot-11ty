@@ -5,6 +5,7 @@ navigationKey: about
 ---
 
 {% from 'components/featured-summary.njk' import latest %}
+{% from 'components/icon-link.njk' import iconLink %}
 
 {% macro subhead(id, title) %}
   <div
@@ -18,28 +19,6 @@ navigationKey: about
       </h2>
     </a>
   </div>
-{% endmacro %}
-
-{% macro iconLink(url, title, icon) %}
-  <li
-    class="group text-xl font-light leading-none"
-    style="font-variant-caps:all-small-caps"
-  >
-    <a href="{{ url }}">
-      <div class="flex items-center gap-x-2 md:gap-x-3">
-        <div
-          class="h-4 w-4 text-grey-700 transition-colors group-hover:text-pank"
-        >
-          {% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}
-        </div>
-        <div
-          class="-mt-[2px] text-pank transition-colors group-hover:underline"
-        >
-          {{ title }}
-        </div>
-      </div>
-    </a>
-  </li>
 {% endmacro %}
 
 {{ subhead("about", "About Lyza") }}
@@ -56,15 +35,15 @@ navigationKey: about
   <h2 class="border-b pb-2 font-display text-lg sm:text-base lg:text-lg">
     Find me out there
   </h2>
-  <ul class="space-y-4 px-2 md:space-y-3 md:p-4">
-    {% for identity in profile.identities %}
-      {{ iconLink(identity.url, identity.title, identity.icon) }}
+  <ul class="space-y-4 px-2 text-xl md:space-y-3 md:p-4">
+    {% for key, identity in profile.identities %}
+      <li>{{ iconLink(identity.url, identity.title, identity.icon) }}</li>
     {% endfor %}
   </ul>
   <h2 class="border-b pb-2 font-display text-lg sm:text-base lg:text-lg">
     Follow my work (and play)
   </h2>
-  <ul class="space-y-4 px-2 md:space-y-3 md:p-4">
+  <ul class="space-y-4 px-2 text-xl md:space-y-3 md:p-4">
     {{ iconLink("/feeds/rss.rss", "RSS: Everything", "rss") }}
     {{ iconLink("/feeds/tech.rss", "RSS: Tech stuff", "rss") }}
     {{ iconLink("/feeds/life.rss", "RSS: Non-tech stuff", "rss") }}

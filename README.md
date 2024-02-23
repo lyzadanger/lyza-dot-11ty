@@ -22,3 +22,14 @@ An inelegant local 11ty plugin (`lib/series`) supports the ability to group cont
 The feature is designed this way to avoid coupling content source data with 11ty implementation details.
 
 [^1]: The field is keyed as `inSeries` to avoid namespace collision with `series` in 11ty's globals. This is an artifact of 11ty architecture.
+
+## Featured content snippet on home page
+
+The featured-content ("The latest") snippet on the landing page (`index.md` content) will by default feature the most recent content tagged `'posts'` (i.e. the latest blog post). To feature something else, add a `featured` object to the front-matter/data of `index.md`, e.g.:
+
+```yaml
+featured:
+  title: Title of featured content
+  excerpt: Some description of featured content
+  url: /relative/to/site/root
+```

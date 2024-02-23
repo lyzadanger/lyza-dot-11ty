@@ -4,6 +4,8 @@ description: layout for the site landing page
 navigationKey: about
 ---
 
+{% from 'components/featured-summary.njk' import latest %}
+
 {% macro subhead(id, title) %}
   <div
     class="col-span-12 md:col-span-2 md:border-r md:pr-4 md:text-right lg:col-span-2"
@@ -69,44 +71,15 @@ navigationKey: about
   </ul>
 </div>
 
+{# look for `featured` in this content's front-matter else, feature the latest post #}
+{% set latestPost = collections.posts | last %}
+{% set featuredData = featured if featured else latestPost.data %}
+{% set featuredUrl = featured.url if featured else latestPost.url %}
+
 <div
   class="col-span-12 grid items-center gap-4 border-l border-l-8 border-pank bg-grey-100 p-3 md:grid-cols-12"
 >
-  <h2
-    class="font-display text-xl md:col-span-3 md:pr-8 md:text-right md:text-2xl lg:col-span-2"
-  >
-    The latest
-  </h2>
-  <div class="space-y-2 md:col-span-9 lg:col-span-10">
-    {% set latestPost = collections.posts | last %}
-    {% if latestPost %}
-      <div class="border-b">
-        <h3 class="font-display md:text-lg">
-          <a
-            href="{{ latestPost.url }}"
-            class="transition-colors hover:text-pank hover:underline"
-            >{{ latestPost.data.title }}</a
-          >
-        </h3>
-      </div>
-      <div class="prose prose-sm prose-stone md:prose-base">
-        {{ latestPost.data.excerpt }}
-      </div>
-      <div>
-        <a
-          class="text-blue-800 underline transition-colors hover:text-pank"
-          href="{{ latestPost.url }}"
-          >Read More</a
-        >
-        |
-        <a
-          href="/blog"
-          class="text-blue-800 underline transition-colors hover:text-pank"
-          >All blog posts</a
-        >
-      </div>
-    {% endif %}
-  </div>
+  {{ latest(featuredData.title, featuredData.excerpt, featuredUrl) }}
 </div>
 
 <div class="col-span-12">

@@ -1,0 +1,21 @@
+{% macro iconLink(url, title, icon) %}
+  <div
+    class="group font-light leading-none"
+    style="font-variant-caps:all-small-caps"
+  >
+    <a href="{{ url }}">
+      <div class="flex items-center gap-x-[0.4em] md:gap-x-[0.5em]">
+        <div
+          class="h-[0.8em] w-[0.8em] text-grey-700 transition-colors group-hover:text-pank"
+        >
+          {% if icon %}{% include "icons/" + icon + ".njk" %}{% endif %}
+        </div>
+        <div
+          class="-mt-[0.1em] text-pank transition-colors group-hover:underline"
+        >
+          {{ title }}
+        </div>
+      </div>
+    </a>
+  </div>
+{% endmacro %}

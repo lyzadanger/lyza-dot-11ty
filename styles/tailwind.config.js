@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+// These are from https://uicolors.app/create based on the DEFAULT
 const customColors = {
   pank: {
     50: "#fff0f7",

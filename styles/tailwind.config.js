@@ -66,6 +66,11 @@ module.exports = {
             "blockquote p:first-of-type::after": { content: "none" },
             "code ::before": { content: "none" },
             "code ::after": { content: "none" },
+            code: {
+              fontWeight: 500,
+              padding: "0 0.25em",
+              backgroundColor: colors.stone["100"],
+            },
           },
         },
       },

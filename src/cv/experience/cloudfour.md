@@ -16,5 +16,5 @@ Cloud Four is a leading web design and development agency that works with organi
 - With co-founder Jason Grigsby, literally wrote the book on the mobile web (_Head First Mobile Web_, O’Reilly)
 - Collaborated to build the Obama ’08 iPhone app, one of the earliest apps in the App Store
 - Helped Walmart design responsively
-- Built mobile web apps for clients from Hautelook to local brewery Deschutes
+- Built mobile web apps for clients such as Hautelook and Deschutes Brewery
 - Organized and hosted the Responsive Field Day event, attracting speakers and attendees from around the world

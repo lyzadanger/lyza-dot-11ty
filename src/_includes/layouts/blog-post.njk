@@ -11,7 +11,9 @@ navigationKey: posts
       <h4 class="italic">{{ page.date | localeDate }}</h4>
     </div>
     <div class="border-b pb-2">
-      <div class="prose prose-lg prose-stone italic">{{ excerpt }}</div>
+      <div class="prose prose-lg prose-stone italic">
+        {% markdown %}{{ excerpt }}{% endmarkdown %}
+      </div>
     </div>
     <ul class="flex flex-row gap-2 font-smallcaps">
       {% set postTags = tags | postTags %}

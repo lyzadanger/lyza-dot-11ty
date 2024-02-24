@@ -14,7 +14,9 @@
         >
       </h3>
     </div>
-    <div class="prose prose-sm prose-stone md:prose-base">{{ excerpt }}</div>
+    <div class="prose prose-sm prose-stone md:prose-base">
+      {% markdown %}{{ excerpt }}{% endmarkdown %}
+    </div>
     <div>
       <a
         class="text-blue-800 underline transition-colors hover:text-pank"

@@ -16,7 +16,7 @@
         {{ post.date | localeDate }}
       </h4>
       <div class="sm:flex-grow">
-        <ul class="font-smallcaps flex flex-row gap-2 sm:justify-end">
+        <ul class="flex flex-row gap-2 font-smallcaps sm:justify-end">
           {% for tag in post.data.tags | postTags %}
             <li class="font-smallcaps text-sm text-grey-600">
               <a
@@ -32,6 +32,6 @@
   </div>
 
   <div class="font-body text-grey-700">
-    {% if post.data.excerpt %}{{ post.data.excerpt }}{% endif %}
+    {% if post.data.excerpt %}{% markdown %}{{ post.data.excerpt }}{% endmarkdown %}{% endif %}
   </div>
 </div>

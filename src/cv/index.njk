@@ -97,9 +97,42 @@ title: Lyza Danger Gardner, CV (Resume)
     </div>
   </div>
 
-  <div
-    class="order-last col-span-12 space-y-4 sm:order-none sm:col-span-4 print:space-y-3"
-  >
+  <div class="order-last col-span-12 space-y-4 sm:order-none sm:col-span-4">
+    <h2 class="border-b-2 font-display text-lg md:text-2xl">Works</h2>
+
+    {% for book in books %}
+      <div class="group grid grid-cols-2 gap-x-3">
+        <div class="self-center justify-self-center">
+          <a href="{{ book.url }}">
+            <img
+              src="{{ book.imageUrl }}"
+              alt="{{ book.title }}"
+              class="drop-shadow-lg group-hover:outline group-hover:outline-grey-600 group-hover:drop-shadow-xl"
+            />
+          </a>
+        </div>
+
+        <div>
+          <h3
+            class="h-full text-balance text-center font-display text-sm text-blue-800"
+          >
+            <a
+              href="{{ book.url }}"
+              class="block h-full transition-colors group-hover:text-pank group-hover:underline"
+            >
+              <i>{{ book.title }}</i>
+            </a>
+          </h3>
+        </div>
+      </div>
+    {% endfor %}
+    <div
+      class="prose prose-sm leading-snug lg:prose-base print:prose-a:no-underline"
+    >
+      {% markdown %}
+        {%- include './works.md' -%}
+      {% endmarkdown %}
+    </div>
     <h2 class="border-b-2 font-display text-lg md:text-2xl">What I Can Do</h2>
     <ul class="space-y-2 lg:space-y-4">
       {% for skillset in skills %}

@@ -59,7 +59,7 @@ title: Lyza Danger Gardner, CV (Resume)
 >
   <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
     <div
-      class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg md:text-justify md:leading-normal"
+      class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg sm:text-justify md:leading-normal"
     >
       {% markdown %}
         {%- include "./objective.md" -%}
@@ -67,7 +67,7 @@ title: Lyza Danger Gardner, CV (Resume)
     </div>
   </div>
   <div
-    class="order-first col-span-12 space-y-4 sm:order-none sm:col-span-4 print:space-y-3"
+    class="order-first col-span-12 space-y-3 sm:order-none sm:col-span-4 print:space-y-3"
   >
     <div class="text-center">
       <h2 class="font-display text-lg sm:text-base md:text-lg lg:text-xl">
@@ -77,22 +77,28 @@ title: Lyza Danger Gardner, CV (Resume)
         Senior Developer / Web Advocate
       </h3>
     </div>
+
     <div class="flex flex-col items-center">
       {% set email = profile.identities.email %}
       {% set mastodon = profile.identities.mastodon %}
       {% set github = profile.identities.github %}
-      <div class="text-center text-xl sm:text-2xl">
+      <div class="text-2xl">
         {{ iconLink(email.url, 'lyza@lyza.com', email.icon) }}
       </div>
       <div
         class="hidden font-display text-base italic leading-tight sm:text-lg print:block"
       >
-        www.lyza.com
+        <a href="https://wwww.lyza.com">www.lyza.com</a>
       </div>
-      <div class="flex items-center gap-x-2 text-base sm:text-lg print:hidden">
+      <div
+        class="flex items-center gap-x-2 pb-2 text-base sm:border-b sm:text-lg print:hidden"
+      >
         {{ iconLink(mastodon.url, mastodon.title, mastodon.icon) }}
         <div>|</div>
         {{ iconLink(github.url, github.title, github.icon) }}
+      </div>
+      <div class="hidden py-2 text-center text-lg sm:block print:hidden">
+        {{ iconLink('/lyza-danger-gardner-resume-cv.pdf', 'Download PDF', 'download') }}
       </div>
     </div>
   </div>
@@ -127,7 +133,7 @@ title: Lyza Danger Gardner, CV (Resume)
       </div>
     {% endfor %}
     <div
-      class="prose prose-sm leading-snug lg:prose-base print:prose-a:no-underline"
+      class="prose prose-sm leading-snug lg:prose-base print:prose-a:italic print:prose-a:no-underline"
     >
       {% markdown %}
         {%- include './works.md' -%}
@@ -144,9 +150,9 @@ title: Lyza Danger Gardner, CV (Resume)
           >
             {{ skillset.description }}
           </h3>
-          <ul class="list-inside list-disc p-2 font-smallcaps text-sm">
+          <ul class="list-inside list-disc p-2 font-smallcaps text-xs">
             {% for skill in skillset.skills %}
-              <li class="marker:text-pank-300 print:leading-none">
+              <li class="marker:text-pank-300 print:leading-[1.1em]">
                 {{ skill }}
               </li>
             {% endfor %}

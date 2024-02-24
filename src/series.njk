@@ -22,7 +22,7 @@ navigationKey: posts
     </div>
     <div class="border-b pb-2">
       <div class="prose prose-lg prose-stone italic">
-        {{ activeSeries.description }}
+        {% markdown %}{{ activeSeries.description }}{% endmarkdown %}
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 description: Layout for CV/resume
 layout: layouts/base.njk
 navigationKey: about
+title: Lyza Danger Gardner, CV (Resume)
 ---
 
 {% from 'components/icon-link.njk' import iconLink %}
@@ -60,7 +61,9 @@ navigationKey: about
     <div
       class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg md:text-justify md:leading-normal"
     >
-      {{ content | safe }}
+      {% markdown %}
+        {%- include "./objective.md" -%}
+      {% endmarkdown %}
     </div>
   </div>
   <div

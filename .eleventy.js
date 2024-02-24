@@ -1,9 +1,11 @@
 const { DateTime } = require("luxon");
 const yaml = require("js-yaml");
-
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const matter = require("gray-matter");
+const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItFootnote = require("markdown-it-footnote");
+
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -48,6 +50,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
     throwOnUndefined: true,
     autoescape: false,
+  });
+
+  const md = new markdownIt({
+    html: true,
+  });
+
+  // Add a custom shortcode to render the content as markdown, after first
+  // parsing out any front matter
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(matter(content).content);
   });
 
   // Custom date filters

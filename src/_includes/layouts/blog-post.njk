@@ -4,6 +4,14 @@ description: layout for an individual blog post; excerpt at left
 navigationKey: posts
 ---
 
+{% from 'series.njk' import seriesNavigation, seriesContents %}
+{% if inSeries %}
+  {% set seriesPosts = collections[inSeries] %}
+  {% set activeSeries = series | getSeriesBySlug(inSeries) %}
+  {% set nextPost = seriesPosts | getNextCollectionItem(page) %}
+  {% set prevPost = seriesPosts | getPreviousCollectionItem(page) %}
+{% endif %}
+
 <div class="relative col-span-12 md:col-span-4">
   <div class="static space-y-2 md:sticky md:top-0">
     <div class="border-b py-2 font-display">
@@ -34,16 +42,12 @@ navigationKey: posts
  #}
 <main class="col-span-12 min-w-0 overflow-auto md:col-span-8 md:pl-4" id="skip">
   {% if inSeries %}
-    {% set seriesPosts = collections[inSeries] %}
-    {% set activeSeries = series | getSeriesBySlug(inSeries) %}
-    {% include 'components/series-toc.njk' %}
+    {{ seriesContents(activeSeries, seriesPosts, page.url) }}
   {% endif %}
   <div class="prose prose-stone">{{ content }}</div>
 </main>
 <div class="col-span-12 max-w-none space-y-4">
   {% if inSeries %}
-    {% set nextPost = seriesPosts | getNextCollectionItem(page) %}
-    {% set prevPost = seriesPosts | getPreviousCollectionItem(page) %}
-    {% include 'components/series-navigation.njk' %}
+    {{ seriesNavigation(activeSeries, nextPost, prevPost) }}
   {% endif %}
 </div>

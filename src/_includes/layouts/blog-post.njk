@@ -14,15 +14,19 @@ navigationKey: posts
 
 <div class="relative col-span-12 md:col-span-4">
   <div class="static space-y-2 md:sticky md:top-0">
-    <div class="border-b py-2 font-display">
+    <div
+      class="{% if inSeries %}border-grey-300{% endif %} border-b py-2 font-display"
+    >
       <h2 class="text-xl">{{ title }}</h2>
       <h4 class="italic">{{ page.date | localeDate }}</h4>
     </div>
-    <div class="border-b pb-2">
-      <div class="prose prose-lg prose-stone italic">
-        {% markdown %}{{ excerpt }}{% endmarkdown %}
+    {% if not inSeries %}
+      <div class="border-b pb-2">
+        <div class="prose prose-lg prose-stone italic">
+          {% markdown %}{{ excerpt }}{% endmarkdown %}
+        </div>
       </div>
-    </div>
+    {% endif %}
     <ul class="flex flex-row gap-2 font-smallcaps">
       {% set postTags = tags | postTags %}
       {% for tag in postTags %}
@@ -35,15 +39,17 @@ navigationKey: posts
         </li>
       {% endfor %}
     </ul>
+    {% if inSeries %}
+      <div class="py-2">
+        {{ seriesContents(activeSeries, seriesPosts, page.url) }}
+      </div>
+    {% endif %}
   </div>
 </div>
 {# Set min-width and overflow to prevent code block blowouts.
  #  See https://stackoverflow.com/questions/55738093/prismjs-not-overflowing-with-css-grid
  #}
 <main class="col-span-12 min-w-0 overflow-auto md:col-span-8 md:pl-4" id="skip">
-  {% if inSeries %}
-    {{ seriesContents(activeSeries, seriesPosts, page.url) }}
-  {% endif %}
   <div class="prose prose-stone">{{ content }}</div>
 </main>
 <div class="col-span-12 max-w-none space-y-4">

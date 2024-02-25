@@ -152,7 +152,16 @@ title: Lyza Danger Gardner, CV (Resume)
           </h3>
           <ul class="list-inside list-disc p-2 font-smallcaps text-xs">
             {% for skill in skillset.skills %}
-              <li class="marker:text-pank-300 print:leading-[1.1em]">
+              {# NB: There is a bug in the 'fl' ligature of GFont's Playfair
+               # SC (small-caps) font. Disabling ligatures with CSS for the
+               # moment, but TODO follow-up because using
+               # `font-variant-caps:all-small-caps` of Playfair does not exhibit
+               # this glitch.
+              #}
+              <li
+                class="marker:text-pank-300 print:leading-[1.1em]"
+                style="font-variant-ligatures:none"
+              >
                 {{ skill }}
               </li>
             {% endfor %}

@@ -10,3 +10,4 @@
 # Currently the landing page of the site serves as about
 /about   			/
 /about/bio			/
+/feed         /feeds/rss.rss

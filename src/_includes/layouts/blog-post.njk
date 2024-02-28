@@ -17,7 +17,7 @@ navigationKey: posts
     <div
       class="{% if inSeries %}border-grey-300{% endif %} border-b py-2 font-display"
     >
-      <h2 class="text-xl">{{ title }}</h2>
+      <h2 class="text-pretty text-xl">{{ title }}</h2>
       <h4 class="italic">{{ page.date | localeDate }}</h4>
     </div>
     {% if not inSeries %}

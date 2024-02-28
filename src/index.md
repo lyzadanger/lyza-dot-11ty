@@ -1,6 +1,11 @@
 ---
 layout: layouts/home.njk
 title: About Lyza
+featured:
+  title: "27 Years of Lyza.com: A series"
+  excerpt: >
+    I started writing a series of historical blog posts about the 27-year history of my domain, Lyza.com. I thought it was going to be a chance to trot out technical milestones and document how my website echoed the evolution of the web platform. But it has headed somewhere else entirely.
+  url: /series/lyza-dot-com-history
 ---
 
 Hi, I'm Lyza Danger Gardner. I have over 25 years of experience building on the open Web platform. I came from Portland, Ore., where was a co-founder of [Cloud Four](http://www.cloudfour.com/). I’m a generalist with an abiding love for the Web.

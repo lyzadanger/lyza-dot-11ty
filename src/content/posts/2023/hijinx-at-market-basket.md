@@ -7,6 +7,8 @@ tags:
 date: 2023-10-16
 excerpt: >
   I’m sharing some photos mostly because I got in trouble for taking them in a Market Basket supermarket in Keene, New Hampshire.
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1707427658/best-meats_wztdic.jpg
 ---
 
 I’m posting these photos mostly because I got in trouble for taking them in a Market Basket supermarket in Keene, New Hampshire.

@@ -7,6 +7,8 @@ tags:
 date: 2024-02-16
 excerpt: >
   Basically I wrote a bunch of blog software. Again. But I still wasn’t calling it that because I was intent on reinventing a galaxy full of wheels. Tada! It’s Celeste! Look on my Works, ye Mighty, and despair!
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1708041274/2003-sometimes-celeste-sunny_gvju7k.png
 ---
 
 This — late 2002 through 2005 — is an era of Lyza.com that I look back on with a condescending but genuine sense of affection for my enthusiasm, youth, dumbshittery. Basically I wrote a bunch of blog software. Again. But I still wasn’t calling it that because I was intent on reinventing a galaxy full of wheels. Tada! It’s _Celeste_. _Look on my Works, ye Mighty, and despair!_

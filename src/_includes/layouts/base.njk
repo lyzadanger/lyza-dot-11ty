@@ -1,31 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>{{ "Lyza.com: " + title }}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ "Lyza.com: " + title }}</title>
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,900;1,400&family=Playfair+Display:ital,wght@0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/styles.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
-      integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    {% block css %}
+      {%- include "partials/_css.njk" -%}
+    {% endblock %}
     <link rel="me" href="mailto:lyza@lyza.com" />
     <meta name="robots" content="noimageai" />
     <meta name="robots" content="noai" />
     <meta name="author" content="{{ metadata.author.name }}" />
     <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />
+    <meta property="article:author" content="{{ metadata.author.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta
+      property="og:url"
+      content="{{ page.url | htmlBaseUrl(metadata.url) }}"
+    />
+    <meta
+      property="og:image"
+      content="{{ '/images/lyza.gif' | htmlBaseUrl(metadata.url) }}"
+    />
+    {% if excerpt %}
+      <meta property="og:description" content="{{ excerpt }}" />
+    {% else %}
+      <meta property="og:description" content="{{ metadata.description }}" />
+    {% endif %}
 
     <link
       rel="alternate"
@@ -45,95 +48,15 @@
       href="/feeds/life.rss"
       title="Lyza.com: Life (Non-tech) Posts"
     />
-
-    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />
-    <meta property="article:author" content="{{ metadata.author.name }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ title }}" />
-    <meta
-      property="og:url"
-      content="{{ page.url | htmlBaseUrl(metadata.url) }}"
-    />
-    <meta
-      property="og:image"
-      content="{{ '/images/lyza.gif' | htmlBaseUrl(metadata.url) }}"
-    />
-    {% if excerpt %}
-      <meta property="og:description" content="{{ excerpt }}" />
-    {% else %}
-      <meta property="og:description" content="{{ metadata.description }}" />
-    {% endif %}
   </head>
   <body class="mx-4 font-body">
     <a href="#skip" class="sr-only">Skip to main content</a>
     <div
       class="mx-auto flex min-h-[100vh] max-w-5xl flex-col space-y-6 py-2 md:space-y-8 md:py-8"
     >
-      <header
-        role="banner"
-        class="grid grid-cols-3 items-center gap-x-8 border-b-2 border-t border-grey-900"
-      >
-        <div
-          class="col-span-3 grid grid-cols-2 border-b-3 border-b-grey-900 md:grid-cols-3"
-        >
-          <div class="col-span-1 self-center pl-4 md:col-span-2">
-            <a href="/">
-              <div
-                class="flex items-center gap-x-1 font-display text-lg italic sm:text-xl md:text-2xl"
-              >
-                <div class="sr-only md:not-sr-only">Web Builder</div>
-                <div class="md:sr-only">Dev</div>
-                <div
-                  class="flex h-6 w-6 items-center justify-center rounded-full bg-pank text-white md:h-10 md:w-10 md:text-4xl"
-                >
-                  &amp;
-                </div>
-                <div>Person</div>
-              </div>
-            </a>
-          </div>
-          <div class="col-span-1 justify-self-end pr-4">
-            {% include 'components/navigation.njk' %}
-          </div>
-        </div>
-
-        <div class="col-span-1 self-stretch sm:self-center">
-          <a href="/">
-            <h1 class="font-display text-2xl sm:text-5xl lg:text-6xl">
-              <div class="relative z-10 md:-mt-2">Lyza</div>
-              <div class="relative z-0 -mt-4 ml-3 text-pank">Danger</div>
-              <div class="relative -mt-4 ml-1">Gardner</div>
-            </h1>
-          </a>
-        </div>
-
-        <div
-          class="relative col-span-2 flex self-stretch border-l border-grey-900"
-        >
-          <div class="grid sm:grid-cols-2">
-            <div class="col-span-1">
-              <img
-                src="/images/lyza.gif"
-                class="absolute bottom-0 right-full h-[110px] w-[100px] sm:right-auto sm:h-[170px] sm:w-[155px] sm:scale-x-[-1] lg:h-auto lg:w-auto print:h-[155px] print:w-[140px]"
-                alt="Lyza"
-              />
-            </div>
-            <div class="col-span-1 self-center p-2 text-grey-800">
-              <div
-                class="sm:-ml-8 sm:leading-tight md:-ml-12 md:leading-normal lg:-ml-4"
-              >
-                <span class="mr-2 font-display text-lg md:text-2xl">
-                  Hi! I’m Lyza!
-                </span>
-                <span class="italic text-grey-600 lg:block lg:pt-1">
-                  I am a developer and human, forest dweller of Vermont and
-                  steward of the web platform for over 25 years.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      {%- block header -%}
+        {%- include 'partials/_header.njk' -%}
+      {%- endblock -%}
 
       <div
         class="grid flex-grow grid-cols-12 gap-x-4 gap-y-6 md:gap-y-12 lg:gap-y-16"
@@ -141,35 +64,9 @@
         {{ content | safe }}
       </div>
 
-      <footer
-        class="flex justify-center border-t-2 py-4 text-center font-smallcaps print:hidden"
-      >
-        <div class="flex gap-x-2 px-2">
-          <div>
-            Built by Lyza with
-            <a
-              href="https://www.11ty.dev/"
-              class="text-pank transition-colors hover:underline"
-              >Eleventy</a
-            >
-          </div>
-        </div>
-        <div class="group flex items-center gap-x-2 border-l px-2">
-          <a
-            href="https://github.com/lyzadanger/lyza-dot-11ty"
-            class="transition-colors group-hover:text-pank group-hover:underline"
-            >Source</a
-          >
-          <div class="mt-px h-4 w-4">
-            <a
-              href="https://github.com/lyzadanger/lyza-dot-11ty"
-              class="text-grey-700 transition-colors group-hover:text-pank"
-            >
-              {%- include 'icons/github.njk' -%}
-            </a>
-          </div>
-        </div>
-      </footer>
+      {%- block footer -%}
+        {%- include 'partials/_footer.njk' -%}
+      {%- endblock -%}
     </div>
   </body>
 </html>

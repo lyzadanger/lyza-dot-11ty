@@ -4,8 +4,10 @@ description: layout for the site landing page
 navigationKey: about
 ---
 
-{% from 'components/featured-summary.njk' import latest %}
 {% from 'components/icon-link.njk' import iconLink %}
+{% from '_latest.njk' import latest %}
+{% from '_book.njk' import bookItem %}
+{% from '_work.njk' import workItem %}
 
 {% macro subhead(id, title) %}
   <div
@@ -75,7 +77,7 @@ navigationKey: about
 >
   {% for book in books %}
     <div class="group row-span-2 grid max-w-[18rem] grid-rows-subgrid gap-2">
-      {% include 'components/book.njk' %}
+      {{ bookItem(book) }}
     </div>
   {% endfor %}
 </div>
@@ -121,6 +123,6 @@ navigationKey: about
   class="col-span-12 grid gap-y-4 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-8 md:col-span-9 lg:col-span-10 lg:grid-cols-3 lg:gap-y-12"
 >
   {% for work in collections.works | reverse %}
-    {% include 'components/work.njk' %}
+    {{ workItem(work) }}
   {% endfor %}
 </div>

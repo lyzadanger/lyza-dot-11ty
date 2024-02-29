@@ -15,7 +15,8 @@ permalink: /tags/{{ activeTag | slugify }}/
 ---
 
 <ul class="space-y-8">
+  {% from '_post.njk' import postItem %}
   {% for post in collections[activeTag] | reverse %}
-    <li>{% include "components/post-summary.njk" %}</li>
+    <li>{{ postItem(post) }}</li>
   {% endfor %}
 </ul>

@@ -7,6 +7,8 @@ pagination:
   reverse: true
 ---
 
+{% from '_post.njk' import postItem %}
+
 {% macro navLink(href, content) %}
   <a class="font-smallcaps transition-colors hover:text-pank" href="{{ href }}"
     >{{ content }}</a
@@ -15,7 +17,7 @@ pagination:
 
 <ul class="space-y-8">
   {% for post in pagination.items %}
-    <li>{% include 'components/post-summary.njk' %}</li>
+    <li>{{ postItem(post) }}</li>
   {% endfor %}
 </ul>
 

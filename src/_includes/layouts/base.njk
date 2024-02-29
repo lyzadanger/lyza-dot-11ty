@@ -7,7 +7,7 @@
     {% block css %}
       {%- include "partials/_css.njk" -%}
     {% endblock %}
-    <link rel="me" href="mailto:lyza@lyza.com" />
+    <link rel="me" href="mailto:{{ metadata.author.email }}" />
     <meta name="robots" content="noimageai" />
     <meta name="robots" content="noai" />
     <meta name="author" content="{{ metadata.author.name }}" />

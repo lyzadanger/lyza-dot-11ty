@@ -1,7 +1,4 @@
----
-layout: layouts/base.njk
-description: >
-  A layout with a full-width main-content area
----
-
-<main class="col-span-12" id="skip">{{ content | safe }}</main>
+{% extends './base.njk' %}
+{% block content %}
+  <main class="col-span-12" id="skip">{{ content | safe }}</main>
+{% endblock %}

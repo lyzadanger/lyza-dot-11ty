@@ -7,6 +7,8 @@ tags:
 date: 2024-02-15
 excerpt: >
   The Internet Archive took its first snapshot of Lyza.com on March 31, 2001.  I could call the time between 1997 and this 2001 crawl the Dark Ages of Lyza.com, but I don't. Instead, during those years, everything was wonderful and ugly.
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1708033955/lyza-dot-com-2001-03-31_qraerc.png
 ---
 
 The Internet Archive’s Wayback Machine took its [first snapshot of Lyza.com](https://web.archive.org/web/20010331234559/http://www.lyza.com/) on March 31, 2001. I could call the time between 1997 and this 2001 crawl the _Dark Ages_ of Lyza.com because it’s undocumented, and, consistent with the theme, the site’s background was literally black for the first year or two.

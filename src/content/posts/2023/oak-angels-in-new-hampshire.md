@@ -7,6 +7,8 @@ tags:
 date: 2023-11-02
 excerpt: >
   I made oak angels today at the Robert Frost Farm in Derry, New Hampshire, on a day trip with my friend DG. I just dropped down in the duff and scribbled my limbs for a while.
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1707344572/manchester-nh_fu9d3z.jpg
 ---
 
 I made oak angels today at the Robert Frost Farm in Derry, New Hampshire, on a day trip with my friend DG. I just dropped down in the duff and scribbled my limbs for a while. The oaks are the last to relent before stick season, their leaves so gone hard copper it is difficult to credit that they don’t clank or shatter when they hit the ground.

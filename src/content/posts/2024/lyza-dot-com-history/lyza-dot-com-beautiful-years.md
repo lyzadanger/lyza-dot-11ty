@@ -7,6 +7,8 @@ tags:
 date: 2024-02-28
 excerpt: >
   For several months in 2009 I developed a feverish hobby: meticulously crafting a visual design for Lyza.com down to the last pixel. Then I applied that lush coat of glamor to my existing content. I call these the Beautiful Years.
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1708965553/beautiful-years_vhks6s.png
 ---
 
 I have a habit of holding my breath when I look at Lyza.com as it was in 2010. As if these pages would go to dust if I exhaled on them. I'd done the content genesis for years; now I gave it a lavish coat of finery.

@@ -124,28 +124,58 @@ module.exports = function (eleventyConfig) {
 
   // Take a title and return a URL to a composited Open Graph image via
   // Cloudinary's image-transform URL API
-  eleventyConfig.addFilter("cloudinaryOGImage", (title) => {
+  eleventyConfig.addFilter("cloudinaryOGImage", (title, imageUrl) => {
     if (!siteConfig.cloudinary?.id) {
       return undefined;
     }
 
-    const cloudinaryURLParts = [
+    // NB: ',', '/' and '%' must be double-escaped to render on a text layer
+    // on Cloudinary. Failure mode ugly.
+    const encodedTitle = encodeURIComponent(
+      title.replaceAll(/[,\/\%]/g, encodeURIComponent),
+    );
+    // Size and position of title text depends on whether there's a content-
+    // specific image (imageUrl provided) or not.
+    // With image: text takes of left size of image, and is smaller to make
+    // room for image.
+    // No image: text is fuller-width and larger
+    const titleSize = imageUrl ? "60" : "72";
+    const titleLayerOptions = imageUrl
+      ? "c_fit,w_540/fl_layer_apply,g_west,x_40"
+      : "c_fit,w_800/fl_layer_apply,g_north,y_240";
+
+    const cloudinaryUrlParts = [
       // Set up fetch URI, with cloudinary ID and size of overall image (the URL to the image
       // used here comes at the very end of the URL). Set height, width, quality
       `https://res.cloudinary.com/${siteConfig.cloudinary.id}/image/fetch/w_1200,h_630,q_100`,
       // Static: Render "Lyza / Danger / Gardner" text layers
       "co_rgb:000,l_text:Playfair%20Display_72_900_line:Lyza,c_fit,w_540/fl_layer_apply,g_north_west,x_40,y_40/co_rgb:000,l_text:Playfair%20Display_72_900_line:Gardner,c_fit,w_540/fl_layer_apply,g_north_west,x_40,y_135/co_rgb:e60a62,l_text:Playfair%20Display_72_900_line:Danger,c_fit,w_540/fl_layer_apply,g_north_west,x_60,y_92",
+    ];
+
+    // If the content has an image to be used, make it half the width of the
+    // OG image (taking margins into account), aligned on the right.
+    if (imageUrl) {
+      const encodedURL = Buffer.from(imageUrl, "utf8").toString("base64");
+      cloudinaryUrlParts.push(
+        `l_fetch:${encodedURL}/fl_layer_apply,c_fit,h_520,w_540,g_east,x_40`,
+      );
+    }
+
+    cloudinaryUrlParts.push(
       // Static: Render a photo of me in bottom right. This contains Base-64 encoded URL to image of me on cloudinary
       "l_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGZzc3Nkd2J1L2ltYWdlL3VwbG9hZC92MTcwOTIyNjEyOC9seXphX2loNnJray5naWY=/fl_layer_apply,g_south_east",
       // Static: Render "Lyza.com" on bottom right, near photo of me
       "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold_line_spacing_-20:Lyza.Com,c_fit,w_500/fl_layer_apply,g_south_east,x_220,y_20",
       // Render the title of the post/thing
-      // NB: ',', '/' and '%' must be double-escaped. Failure mode otherwise is not graceful
-      `co_rgb:44403c,l_text:Playfair%20Display_72_400_italic_line_spacing_-15:${encodeURIComponent(title.replaceAll(/[,\/\%]/g, encodeURIComponent))},c_fit,w_800/fl_layer_apply,g_north,y_240`,
-      // And, finally, give the URL of the image that will be at the base/background of all of this
+      `co_rgb:44403c,l_text:Playfair%20Display_${titleSize}_400_italic_line_spacing_-15:${encodedTitle},${titleLayerOptions}`,
+    );
+
+    // And, finally, give the URL of the image that will be at the base/background of all of this
+    cloudinaryUrlParts.push(
       "https://res.cloudinary.com/dfsssdwbu/image/upload/v1709226095/white_ldpjpk.jpg",
-    ];
-    return cloudinaryURLParts.join("/");
+    );
+
+    return cloudinaryUrlParts.join("/");
   });
 
   // Config directories

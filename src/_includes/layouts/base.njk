@@ -7,12 +7,10 @@
     {% block css %}
       {%- include "partials/_css.njk" -%}
     {% endblock %}
-    <link rel="me" href="mailto:{{ metadata.author.email }}" />
     <meta name="robots" content="noimageai" />
     <meta name="robots" content="noai" />
     <meta name="author" content="{{ metadata.author.name }}" />
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />
     <meta property="article:author" content="{{ metadata.author.name }}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ title }}" />
@@ -30,6 +28,8 @@
       <meta property="og:description" content="{{ metadata.description }}" />
     {% endif %}
 
+    <link rel="me" href="mailto:{{ metadata.author.email }}" />
+    <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />
     <link
       rel="alternate"
       type="application/rss+xml"

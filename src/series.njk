@@ -11,9 +11,9 @@ permalink: /series/{{ activeSeries.slug | slugify }}/
 navigationKey: posts
 ---
 
-{% set seriesItems = collections[activeSeries.slug] %}
-
 <div class="col-span-12 space-y-4 md:col-span-4">
+  {% set seriesItems = collections[activeSeries.slug] %}
+  {% from '_post.njk' import postItem %}
   <div class="static space-y-2 md:sticky md:top-0">
     <div class="border-b py-2 font-display md:pt-0">
       <h1 class="text-xl">
@@ -34,10 +34,7 @@ navigationKey: posts
         class="relative font-sans [counter-increment:section] before:absolute before:-left-12 before:top-3 before:flex before:min-h-8 before:min-w-8 before:items-center
         before:justify-center before:rounded-full before:bg-pank before:text-center before:text-xl before:font-semibold before:leading-none before:text-white before:content-[counters(section,'.')]"
       >
-        {%
-          include
-          "components/post-summary.njk"
-        %}
+        {{ postItem(post) }}
       </li>
     {%- endfor -%}
   </ol>

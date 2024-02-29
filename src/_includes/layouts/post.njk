@@ -4,7 +4,7 @@ description: layout for an individual blog post; excerpt at left
 navigationKey: posts
 ---
 
-{% from 'series.njk' import seriesNavigation, seriesContents %}
+{% from '_series.njk' import seriesNavigation, seriesContents %}
 {% if inSeries %}
   {% set seriesPosts = collections[inSeries] %}
   {% set activeSeries = series | getSeriesBySlug(inSeries) %}

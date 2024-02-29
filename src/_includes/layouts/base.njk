@@ -18,9 +18,10 @@
       property="og:url"
       content="{{ page.url | htmlBaseUrl(metadata.url) }}"
     />
+    {% set defaultOgImage = '/images/lyza.gif' | htmlBaseUrl(metadata.url) %}
     <meta
       property="og:image"
-      content="{{ '/images/lyza.gif' | htmlBaseUrl(metadata.url) }}"
+      content="{{ title | cloudinaryOGImage | default(defaultOgImage) }}"
     />
     {% if excerpt %}
       <meta property="og:description" content="{{ excerpt }}" />

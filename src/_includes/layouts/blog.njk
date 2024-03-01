@@ -1,7 +1,5 @@
 ---
 layout: layouts/base.njk
-description: >
-  A layout with post tags in the left column (wide screen) and a content area
 navigationKey: posts
 ---
 
@@ -11,7 +9,7 @@ navigationKey: posts
     href="{% if tag == 'all' %}/blog/{% else %}/tags/{{ tag | slugify }}{% endif %}"
     class="{% if tag == _activeTag %}
       text-pank italic border-l-3 border-pank font-semibold
-    {% endif %} font-smallcaps pl-2 transition-colors hover:text-pank"
+    {% endif %} pl-2 font-smallcaps transition-colors hover:text-pank"
     {% if tag == _activeTag %}
       aria-current="page"
     {% endif %}

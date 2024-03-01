@@ -15,7 +15,7 @@ module.exports = /** @type OGData */ {
   og: {
     image: (data) => data.og?.image,
     description: (data) => {
-      // Cascade:
+      // Order of preference:
       // 1. data.og.description - when set manually in local data
       // 2. data.description - prefer to `excerpt` if present
       // 3. data.excerpt

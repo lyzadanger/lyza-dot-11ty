@@ -12,24 +12,14 @@
     <meta name="author" content="{{ metadata.author.name }}" />
     <meta name="robots" content="index,follow" />
     <meta property="article:author" content="{{ metadata.author.name }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ title }}" />
-    <meta
-      property="og:url"
-      content="{{ page.url | htmlBaseUrl(metadata.url) }}"
-    />
-    {% if og and og.image %}
-      {% set ogImage = og.image %}
-    {% endif %}
-    <meta
-      property="og:image"
-      content="{% cloudinaryOGImage title, ogImage %}"
-    />
-    {% if excerpt %}
-      <meta property="og:description" content="{{ excerpt }}" />
-    {% else %}
-      <meta property="og:description" content="{{ metadata.description }}" />
-    {% endif %}
+
+    {% block og %}
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="{{ og.title }}" />
+      <meta property="og:url" content="{{ og.url }}" />
+      <meta property="og:image" content="{% cloudinaryOGImage og %}" />
+      <meta property="og:description" content="{{ og.description }}" />
+    {% endblock %}
 
     <link rel="me" href="mailto:{{ metadata.author.email }}" />
     <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}" />

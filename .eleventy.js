@@ -5,6 +5,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItFootnote = require("markdown-it-footnote");
 
+// @ts-ignore Third-party types being incomplete is not my problem right now
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -28,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));
   eleventyConfig.amendLibrary("md", (mdLib) =>
     mdLib.use(markdownItAnchor, {
+      // @ts-ignore Missing third-party typing on `permalink` prop
       permalink: markdownItAnchor.permalink.headerLink({
         class: "markdown-it-anchor-permalink",
         safariReaderFix: true,

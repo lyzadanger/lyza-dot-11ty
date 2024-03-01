@@ -11,7 +11,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const seriesPlugin = require("./lib/series");
-const cloudinaryPlugin = require("./lib/cloudinary");
+const cloudinaryOGPlugin = require("./lib/cloudinary");
 
 const siteConfig = require("./src/_data/config");
 
@@ -23,7 +23,9 @@ module.exports = function (eleventyConfig) {
 
   // My own plugins
   eleventyConfig.addPlugin(seriesPlugin);
-  eleventyConfig.addPlugin(cloudinaryPlugin, siteConfig?.cloudinary);
+  eleventyConfig.addPlugin(cloudinaryOGPlugin, {
+    cloudinary: siteConfig.cloudinary,
+  });
 
   // Extend markdown transformation with permalinks and footnotes support
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));

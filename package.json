@@ -17,7 +17,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.18",
     "js-yaml": "^4.1.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-footnote": "^4.0.0",

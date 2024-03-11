@@ -5,6 +5,8 @@ tags:
   - tech
   - lyza-dot-com
 date: 2024-03-11
+og:
+  image: https://res.cloudinary.com/dfsssdwbu/image/upload/v1708972998/2019-pank-machine_ke2k31.png
 excerpt: >
   Lyza.com came back with aplomb from its almost-nothingness in the summer of 2015, decked in _pank_. It was hand-crafted. Blisteringly fast. Exquisitely tuned. And fundamentally boring for lack of any real content.
 ---

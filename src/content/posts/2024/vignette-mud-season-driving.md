@@ -4,6 +4,7 @@ tags:
   - life
   - grcorolla
   - vermont
+  - vignette
 date: 2024-03-12
 excerpt: >
   In which I suffer an irrepressible need to take the Grafton Road because it’s perfect. To Grafton village, seven miles, then back, and then I do the trip again. The first pairing to set the lay of the road conditions in my mind, the second to fly. Window just cracked to hear the sound of the car, keeping just tight enough on curves not to throw myself into the forest.

@@ -3,12 +3,7 @@ import { readFileSync } from "fs";
 
 import type { UserConfig } from "@11ty/eleventy";
 
-// TODO: Organize and document types here
-export type Series = {
-  slug: string;
-  title: string;
-  description: string;
-};
+import type { Series } from "./types";
 
 // Pretend 11ty type
 type CollectionAPI = {

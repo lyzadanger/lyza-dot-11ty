@@ -1,33 +1,47 @@
 /**
- * Global computed data merging operations.
+ * Global computed data futzing.
  *
- * Merge local Open Graph template data with global defaults and assure an
- * object of Open Graph data exists for each content item.
+ * Returns an object that operates on merged data from Eleventy and returns
+ * computed content data.
  *
- * @typedef OGData
- *   @prop {string} [image] - Content-specific OG image, if any
- *   @prop {string} [description] - Merged content description or excerpt
- *   @prop {string} title
- *   @prop {string} [url] - Fully-qualified canonical URL to content
+ * @typedef {import('../../lib/types').MergedData} MergedData
+ * @typedef {import('../../lib/types').ComputedContentData} ComputedContentData
  */
 
-module.exports = /** @type OGData */ {
+module.exports = /** @type {<Partial>ComputedContentData}> */ {
+  // Open Graph data
   og: {
-    image: (data) => data.og?.image,
-    description: (data) => {
-      // Order of preference:
-      // 1. data.og.description - when set manually in local data
-      // 2. data.description - prefer to `excerpt` if present
-      // 3. data.excerpt
-      if (data?.og.description) {
-        return data.og.description;
-      }
-      const contentDescription = data.description ?? data.excerpt;
-      return contentDescription ?? data.metadata?.description;
-    },
-    title: (data) => data.title,
-    url: function (data) {
-      return this.htmlBaseUrl(data.page?.url, data.metadata?.url);
-    },
+    image:
+      /**
+       * @param {MergedData} data
+       */
+      (data) => data.og?.image,
+    description:
+      /**
+       * @param {MergedData} data
+       */
+      (data) => {
+        // Order of preference:
+        // 1. data.og.description - when set manually in local data
+        // 2. data.description - prefer to `excerpt` if present
+        // 3. data.excerpt
+        if (data.og?.description) {
+          return data.og.description;
+        }
+        const contentDescription = data.description ?? data.excerpt;
+        return contentDescription ?? data.metadata.description;
+      },
+    title:
+      /**
+       * @param {MergedData} data
+       */
+      (data) => data.title,
+    url:
+      /**
+       * @param {MergedData} data
+       */
+      function (data) {
+        return this.htmlBaseUrl(data.page.url, data.metadata.url);
+      },
   },
 };

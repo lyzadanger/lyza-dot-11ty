@@ -28,11 +28,7 @@ module.exports = (eleventyConfig, config) => {
         return encodeURIComponent(str.replaceAll(/[\?#,\/\%]/g, encodeURIComponent));
     }
     // Return URL to composited Open Graph image
-    eleventyConfig.addShortcode("cloudinaryOGImage", 
-    /**
-     * @param og - Open Graph data for this piece of content
-     */
-    (og) => {
+    eleventyConfig.addShortcode("cloudinaryOGImage", (og) => {
         const encodedTitle = encodeCloudinaryText(og.title);
         // Make font larger if there is no post-specific image
         const titleSize = og.image ? "54" : "72";

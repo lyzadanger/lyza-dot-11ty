@@ -1,4 +1,5 @@
 import type { UserConfig } from "@11ty/eleventy";
+import type { ComputedOpenGraphContentData } from "./types";
 
 // TODO Clean this type mess up
 type CloudinaryConfig = {
@@ -7,17 +8,6 @@ type CloudinaryConfig = {
 
 type CloudinaryPluginConfig = {
   cloudinary: CloudinaryConfig;
-};
-
-// TODO This is a dupe
-export type OGData = {
-  /** URL to content-specific Open Graph image, if any */
-  image?: string;
-  /** Fully-qualified canonical URL to content */
-  url?: string;
-
-  description?: string;
-  title: string;
 };
 
 /**
@@ -59,10 +49,7 @@ module.exports = (
   // Return URL to composited Open Graph image
   eleventyConfig.addShortcode(
     "cloudinaryOGImage",
-    /**
-     * @param og - Open Graph data for this piece of content
-     */
-    (og: OGData) => {
+    (og: ComputedOpenGraphContentData) => {
       const encodedTitle = encodeCloudinaryText(og.title);
 
       // Make font larger if there is no post-specific image

@@ -10,8 +10,8 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-const seriesPlugin = require("./lib/series");
-const cloudinaryOGPlugin = require("./lib/cloudinary");
+const seriesPlugin = require("./src/_lib/series");
+const cloudinaryOGPlugin = require("./src/_lib/cloudinary");
 
 const siteConfig = require("./src/_data/config");
 

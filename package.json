@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "build": "npx @11ty/eleventy && tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _site/styles.css",
-    "dev:11ty": "eleventy --serve --quiet",
-    "dev:css": "tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _tmp/styles.css --watch --postcss"
+    "clean": "rm -rf _site; mkdir _site",
+    "build:css": "tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _site/styles.css",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:ts": "tsc --outDir src/_lib",
+    "build": "npm-run-all -s clean build:11ty build:css",
+    "watch:11ty": "eleventy --serve --quiet",
+    "watch:css": "tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _tmp/styles.css --watch --postcss",
+    "watch:ts": "npm run build:ts --watch",
+    "start": "npm-run-all clean build:ts watch:* -- --watch"
   },
   "keywords": [],
   "author": "",

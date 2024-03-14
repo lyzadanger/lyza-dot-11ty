@@ -1,4 +1,5 @@
 import type { UserConfig } from "@11ty/eleventy";
+
 import type { ComputedOpenGraphContentData } from "./types";
 
 type CloudinaryPluginConfig = {
@@ -37,7 +38,7 @@ module.exports = (
     const encodedTitle = encodeCloudinaryText(og.title);
 
     // Make font larger if there is no post-specific image
-    const titleSize = og.image ? "54" : "72";
+    const titleSize = og.image ? "58" : "72";
 
     // - with content image: text positioned left under LDG type treatment,
     //     spanning half width of OG image
@@ -45,7 +46,7 @@ module.exports = (
     //     spanning most of the width of the OG image
     const titleLayerOptions = og.image
       ? "c_fit,w_540/fl_layer_apply,g_north_west,x_50,y_250"
-      : "c_fit,w_800/fl_layer_apply,g_north,y_240";
+      : "c_fit,w_900/fl_layer_apply,g_north,y_240";
 
     const cloudinaryUrlParts = [
       // Establish the bounds of the image canvas and denote that the end of
@@ -64,7 +65,7 @@ module.exports = (
     if (og.image) {
       const encodedURL = Buffer.from(og.image, "utf8").toString("base64");
       cloudinaryUrlParts.push(
-        `l_fetch:${encodedURL}/fl_layer_apply,c_fit,h_510,w_540,g_east,x_50`,
+        `l_fetch:${encodedURL}/fl_layer_apply,c_fit,h_500,w_540,g_east,x_50`,
       );
     }
 
@@ -74,7 +75,7 @@ module.exports = (
       // the post image (by design).
       "l_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGZzc3Nkd2J1L2ltYWdlL3VwbG9hZC92MTcwOTIyNjEyOC9seXphX2loNnJray5naWY=/fl_layer_apply,g_south_east",
       // Render "Lyza.com" on bottom right, near photo of me
-      "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold:Lyza.Com/fl_layer_apply,g_south_east,x_220,y_20",
+      "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold:Lyza.Com/fl_layer_apply,g_south_east,x_220,y_15",
       // Render the title of the post/content. Last to ensure it's composited
       // on top
       `co_rgb:44403c,l_text:Playfair%20Display_${titleSize}_400_italic_line_spacing_-15:${encodedTitle},${titleLayerOptions}`,

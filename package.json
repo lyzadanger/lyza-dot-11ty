@@ -12,7 +12,7 @@
     "watch:11ty": "eleventy --serve --quiet",
     "watch:css": "tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _tmp/styles.css --watch --postcss",
     "watch:ts": "tsc --outDir src/_lib --watch",
-    "start": "NODE_ENV=development npm-run-all clean build:ts -p watch:* -- --watch"
+    "start": "ELEVENTY_ENV=development npm-run-all clean build:ts -p watch:* -- --watch"
   },
   "keywords": [],
   "author": "",

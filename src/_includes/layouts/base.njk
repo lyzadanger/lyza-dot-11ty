@@ -58,10 +58,30 @@
           {{ content | safe }}
         {% endblock %}
       </div>
-
-      {%- block footer -%}
-        {%- include 'partials/_footer.njk' -%}
-      {%- endblock -%}
+      {% block ogPreview %}
+        {% if config.environment === 'development' %}
+          <div class="border border-pank">
+            <div class="bg-pank px-2 py-1 text-right text-white">
+              <i>Open Graph preview</i>
+            </div>
+            <div class="flex flex-col gap-4 p-2 md:flex-row">
+              <div class="min-w-0 max-w-[240px] p-1">
+                <a href="{% cloudinaryOGImage og %}" target="_blank"
+                  ><img src="{% cloudinaryOGImage og %}" class="border"
+                /></a>
+              </div>
+              <div class="prose prose-stone max-w-none leading-snug">
+                <p><b>{{ og.title }}</b></p>
+                <p>{{ og.description }}</p>
+                <p class="text-right font-sans text-sm">{{ og.url }}</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {%- block footer -%}
+          {%- include 'partials/_footer.njk' -%}
+        {%- endblock -%}
+      {% endblock %}
     </div>
   </body>
 </html>

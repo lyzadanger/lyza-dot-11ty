@@ -1,13 +1,10 @@
 import type { UserConfig } from "@11ty/eleventy";
 import type { ComputedOpenGraphContentData } from "./types";
 
-// TODO Clean this type mess up
-type CloudinaryConfig = {
-  id: string;
-};
-
 type CloudinaryPluginConfig = {
-  cloudinary: CloudinaryConfig;
+  cloudinary: {
+    id: string;
+  };
 };
 
 /**

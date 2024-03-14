@@ -11,8 +11,8 @@
     "build": "npm-run-all -s clean build:11ty build:css",
     "watch:11ty": "eleventy --serve --quiet",
     "watch:css": "tailwindcss -c styles/tailwind.config.js -i styles/tailwind.css -o _tmp/styles.css --watch --postcss",
-    "watch:ts": "npm run build:ts --watch",
-    "start": "npm-run-all clean build:ts watch:* -- --watch"
+    "watch:ts": "tsc --outDir src/_lib --watch",
+    "start": "npm-run-all clean build:ts -p watch:* -- --watch"
   },
   "keywords": [],
   "author": "",

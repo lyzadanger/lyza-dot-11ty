@@ -6,6 +6,17 @@ type CloudinaryPluginConfig = {
 };
 
 /**
+ * A number of characters must be double-encoded to render on a text layer on
+ * Cloudinary. Failure to do so is not a friendly failure mode.
+ *
+ * @see https://support.cloudinary.com/hc/en-us/articles/202521512-How-to-add-a-special-characters-in-text-overlays
+ * @param {String} str - String to encode for use on text layer.
+ */
+function encodeCloudinaryText(str: string) {
+  return encodeURIComponent(str.replaceAll(/[\?#,\/\%]/g, encodeURIComponent));
+}
+
+/**
  * This eleventy plugin provides the `cloudinaryOGImage` shortcode, which
  * returns a URL that can be used as the `content` attribute value
  * in `<meta property="og:image">` tags.
@@ -20,23 +31,6 @@ module.exports = (
 ) => {
   if (!cloudinaryId) {
     throw new Error("Lyza-Cloudinary Plugin requires a cloudinary ID");
-  }
-
-  // A number of characters must be double-escaped to render on a text
-  // layer on Cloudinary. Prepare the title, else failure mode ugly.
-  // https://support.cloudinary.com/hc/en-us/articles/202521512-How-to-add-a-special-characters-in-text-overlays
-
-  /**
-   * A number of characters must be double-encoded to render on a text layer on
-   * Cloudinary. Failure to do so is not a friendly failure mode.
-   *
-   * @see https://support.cloudinary.com/hc/en-us/articles/202521512-How-to-add-a-special-characters-in-text-overlays
-   * @param {String} str - String to encode for use on text layer.
-   */
-  function encodeCloudinaryText(str: string) {
-    return encodeURIComponent(
-      str.replaceAll(/[\?#,\/\%]/g, encodeURIComponent),
-    );
   }
 
   // Return URL to composited Open Graph image

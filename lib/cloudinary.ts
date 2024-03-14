@@ -4,6 +4,7 @@ import type { ComputedOpenGraphContentData } from "./types";
 
 type CloudinaryPluginConfig = {
   cloudinaryId: string;
+  accentColor: string;
 };
 
 /**
@@ -28,11 +29,13 @@ function encodeCloudinaryText(str: string) {
  */
 module.exports = (
   eleventyConfig: UserConfig,
-  { cloudinaryId }: CloudinaryPluginConfig,
+  { accentColor, cloudinaryId }: CloudinaryPluginConfig,
 ) => {
   if (!cloudinaryId) {
     throw new Error("Lyza-Cloudinary Plugin requires a cloudinary ID");
   }
+
+  const textAccentColor = accentColor.replace("#", "");
 
   const cloudinaryOGImageUrl = (og: ComputedOpenGraphContentData) => {
     const encodedTitle = encodeCloudinaryText(og.title);
@@ -56,7 +59,7 @@ module.exports = (
       // Danger comes last because it's composited on top of the other two
       "co_rgb:000,l_text:Playfair%20Display_72_900:Lyza/fl_layer_apply,g_north_west,x_50,y_40",
       "co_rgb:000,l_text:Playfair%20Display_72_900:Gardner/fl_layer_apply,g_north_west,x_50,y_135",
-      "co_rgb:e60a62,l_text:Playfair%20Display_72_900:Danger/fl_layer_apply,g_north_west,x_70,y_92",
+      `co_rgb:${textAccentColor},l_text:Playfair%20Display_72_900:Danger/fl_layer_apply,g_north_west,x_70,y_92`,
     ];
 
     // If the content has an image to be used, make it half the width of the
@@ -75,7 +78,7 @@ module.exports = (
       // the post image (by design).
       "l_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGZzc3Nkd2J1L2ltYWdlL3VwbG9hZC92MTcwOTIyNjEyOC9seXphX2loNnJray5naWY=/fl_layer_apply,g_south_east",
       // Render "Lyza.com" on bottom right, near photo of me
-      "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold:Lyza.Com/fl_layer_apply,g_south_east,x_220,y_15",
+      `co_rgb:${textAccentColor},l_text:Playfair%20Display%20SC_36_bold:Lyza.Com/fl_layer_apply,g_south_east,x_220,y_15`,
       // Render the title of the post/content. Last to ensure it's composited
       // on top
       `co_rgb:44403c,l_text:Playfair%20Display_${titleSize}_400_italic_line_spacing_-15:${encodedTitle},${titleLayerOptions}`,

@@ -15,6 +15,8 @@ const cloudinaryOGPlugin = require("./src/_lib/cloudinary");
 
 const siteConfig = require("./src/_data/config");
 
+const colors = require("./styles/colors");
+
 module.exports = function (eleventyConfig) {
   // 11ty plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -25,6 +27,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(seriesPlugin);
   eleventyConfig.addPlugin(cloudinaryOGPlugin, {
     cloudinaryId: siteConfig.cloudinary.id,
+    accentColor: colors.pank.DEFAULT,
   });
 
   // Extend markdown transformation with permalinks and footnotes support

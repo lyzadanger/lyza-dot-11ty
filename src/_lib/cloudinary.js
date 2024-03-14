@@ -23,8 +23,7 @@ module.exports = (eleventyConfig, { cloudinaryId }) => {
     if (!cloudinaryId) {
         throw new Error("Lyza-Cloudinary Plugin requires a cloudinary ID");
     }
-    // Return URL to composited Open Graph image
-    eleventyConfig.addShortcode("cloudinaryOGImage", (og) => {
+    const cloudinaryOGImageUrl = (og) => {
         const encodedTitle = encodeCloudinaryText(og.title);
         // Make font larger if there is no post-specific image
         const titleSize = og.image ? "54" : "72";
@@ -66,5 +65,7 @@ module.exports = (eleventyConfig, { cloudinaryId }) => {
         // background of all of this, which is just a white rectangle
         cloudinaryUrlParts.push("https://res.cloudinary.com/dfsssdwbu/image/upload/v1709226095/white_ldpjpk.jpg");
         return cloudinaryUrlParts.join("/");
-    });
+    };
+    // Return URL to composited Open Graph image
+    eleventyConfig.addShortcode("cloudinaryOGImage", cloudinaryOGImageUrl);
 };

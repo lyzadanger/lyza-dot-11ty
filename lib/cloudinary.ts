@@ -2,9 +2,7 @@ import type { UserConfig } from "@11ty/eleventy";
 import type { ComputedOpenGraphContentData } from "./types";
 
 type CloudinaryPluginConfig = {
-  cloudinary: {
-    id: string;
-  };
+  cloudinaryId: string;
 };
 
 /**
@@ -18,10 +16,8 @@ type CloudinaryPluginConfig = {
  */
 module.exports = (
   eleventyConfig: UserConfig,
-  config: CloudinaryPluginConfig,
+  { cloudinaryId }: CloudinaryPluginConfig,
 ) => {
-  const cloudinaryId = config.cloudinary.id;
-
   if (!cloudinaryId) {
     throw new Error("Lyza-Cloudinary Plugin requires a cloudinary ID");
   }

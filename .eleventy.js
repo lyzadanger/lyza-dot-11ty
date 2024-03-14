@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
   // My own plugins
   eleventyConfig.addPlugin(seriesPlugin);
   eleventyConfig.addPlugin(cloudinaryOGPlugin, {
-    cloudinary: siteConfig.cloudinary,
+    cloudinaryId: siteConfig.cloudinary.id,
   });
 
   // Extend markdown transformation with permalinks and footnotes support

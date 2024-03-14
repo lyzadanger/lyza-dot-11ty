@@ -56,9 +56,9 @@ module.exports = (
         `https://res.cloudinary.com/${cloudinaryId}/image/fetch/w_1200,h_630,q_100`,
         // Static: Render "Lyza / Danger / Gardner" text layers at top left
         // Danger comes last because it's composited on top of the other two
-        "co_rgb:000,l_text:Playfair%20Display_72_900_line:Lyza,c_fit,w_540/fl_layer_apply,g_north_west,x_50,y_40",
-        "co_rgb:000,l_text:Playfair%20Display_72_900_line:Gardner,c_fit,w_540/fl_layer_apply,g_north_west,x_50,y_135",
-        "co_rgb:e60a62,l_text:Playfair%20Display_72_900_line:Danger,c_fit,w_540/fl_layer_apply,g_north_west,x_70,y_92",
+        "co_rgb:000,l_text:Playfair%20Display_72_900:Lyza/fl_layer_apply,g_north_west,x_50,y_40",
+        "co_rgb:000,l_text:Playfair%20Display_72_900:Gardner/fl_layer_apply,g_north_west,x_50,y_135",
+        "co_rgb:e60a62,l_text:Playfair%20Display_72_900:Danger/fl_layer_apply,g_north_west,x_70,y_92",
       ];
 
       // If the content has an image to be used, make it half the width of the
@@ -77,7 +77,7 @@ module.exports = (
         // the post image (by design).
         "l_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGZzc3Nkd2J1L2ltYWdlL3VwbG9hZC92MTcwOTIyNjEyOC9seXphX2loNnJray5naWY=/fl_layer_apply,g_south_east",
         // Render "Lyza.com" on bottom right, near photo of me
-        "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold_line_spacing_-20:Lyza.Com,c_fit,w_500/fl_layer_apply,g_south_east,x_220,y_20",
+        "co_rgb:e60a62,l_text:Playfair%20Display%20SC_36_bold:Lyza.Com/fl_layer_apply,g_south_east,x_220,y_20",
         // Render the title of the post/content. Last to ensure it's composited
         // on top
         `co_rgb:44403c,l_text:Playfair%20Display_${titleSize}_400_italic_line_spacing_-15:${encodedTitle},${titleLayerOptions}`,

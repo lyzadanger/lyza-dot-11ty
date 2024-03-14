@@ -31,6 +31,13 @@ export type Series = {
   description: string;
 };
 
+export type Config = {
+  cloudinary: {
+    id: string;
+  };
+  environment: string;
+};
+
 // Merged data
 
 /**
@@ -47,7 +54,7 @@ export type MergedData = ContentData & {
 
   // Global data from my own src data modules
   books: Record<string, unknown>[];
-  config: Record<string, unknown>;
+  config: Config;
   education: Record<string, unknown>[];
   events: Record<string, unknown>[];
   metadata: {

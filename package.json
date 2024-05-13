@@ -23,7 +23,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@tailwindcss/typography": "^0.5.12",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.11",
     "autoprefixer": "^10.4.19",
     "js-yaml": "^4.1.0",
     "markdown-it-anchor": "^8.6.7",

@@ -25,6 +25,7 @@
     - mentorship
 - description: "full-stack web application development"
   skills:
+    - Frontend and Backend
     - Node.js
     - TypeScript
     - python
@@ -35,10 +36,10 @@
     - CSS thingy du jour
     - API design
     - SQL
-    - ...etc.
 - description: "software development methodology"
   skills:
     - project architecture
+    - product development
     - design patterns
     - version control / git
     - testing
@@ -53,3 +54,4 @@
     - User Experience (UX)
     - User Interface (UI)
     - feature design
+    - always learning

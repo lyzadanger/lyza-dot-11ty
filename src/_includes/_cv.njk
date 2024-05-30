@@ -45,3 +45,62 @@
     </div>
   </div>
 {% endmacro %}
+
+{% macro skillListItems(skills) %}
+  {% for skillset in skills %}
+    <li
+      class="rounded-lg bg-grey-100 p-2 lg:p-3 print:bg-transparent print:p-0"
+    >
+      <h3
+        class="border-b border-grey-500 pb-1 text-sm font-semibold italic leading-tight text-pank lg:text-base lg:leading-snug print:border-none print:leading-none"
+      >
+        {{ skillset.description }}
+      </h3>
+      <ul class="list-inside list-disc p-2 font-smallcaps text-xs">
+        {% for skill in skillset.skills %}
+          {# NB: There is a bug in the 'fl' ligature of GFont's Playfair
+       # SC (small-caps) font. Disabling ligatures with CSS for the
+       # moment, but TODO follow-up because using
+       # `font-variant-caps:all-small-caps` of Playfair does not exhibit
+       # this glitch.
+      #}
+          <li
+            class="marker:text-pank-300 print:leading-[1.1em]"
+            style="font-variant-ligatures:none"
+          >
+            {{ skill }}
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+{% endmacro %}
+
+{% macro works(books) %}
+  {% for book in books %}
+    <div class="group grid grid-cols-2 gap-x-3">
+      <div class="self-center justify-self-center">
+        <a href="{{ book.url }}">
+          <img
+            src="{{ book.imageUrl }}"
+            alt="{{ book.title }}"
+            class="drop-shadow-lg group-hover:outline group-hover:outline-grey-600 group-hover:drop-shadow-xl"
+          />
+        </a>
+      </div>
+
+      <div>
+        <h3
+          class="h-full text-balance text-center font-display text-sm text-blue-800"
+        >
+          <a
+            href="{{ book.url }}"
+            class="block h-full transition-colors group-hover:text-pank group-hover:underline"
+          >
+            <i>{{ book.title }}</i>
+          </a>
+        </h3>
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}

@@ -5,7 +5,7 @@ title: Lyza Danger Gardner, CV (Resume)
 ---
 
 {% from 'components/icon-link.njk' import iconLink %}
-{% from '_cv.njk' import experienceItem, educationItem %}
+{% from '_cv.njk' import educationItem, experienceItem, skillListItems, works %}
 
 <div
   class="col-span-12 grid grid-cols-12 gap-4 sm:gap-y-6 md:gap-y-8 lg:gap-x-6"
@@ -59,32 +59,7 @@ title: Lyza Danger Gardner, CV (Resume)
   <div class="order-last col-span-12 space-y-4 sm:order-none sm:col-span-4">
     <h2 class="border-b-2 font-display text-lg md:text-2xl">Works</h2>
 
-    {% for book in books %}
-      <div class="group grid grid-cols-2 gap-x-3">
-        <div class="self-center justify-self-center">
-          <a href="{{ book.url }}">
-            <img
-              src="{{ book.imageUrl }}"
-              alt="{{ book.title }}"
-              class="drop-shadow-lg group-hover:outline group-hover:outline-grey-600 group-hover:drop-shadow-xl"
-            />
-          </a>
-        </div>
-
-        <div>
-          <h3
-            class="h-full text-balance text-center font-display text-sm text-blue-800"
-          >
-            <a
-              href="{{ book.url }}"
-              class="block h-full transition-colors group-hover:text-pank group-hover:underline"
-            >
-              <i>{{ book.title }}</i>
-            </a>
-          </h3>
-        </div>
-      </div>
-    {% endfor %}
+    {{ works(books) }}
     <div
       class="prose prose-sm leading-snug lg:prose-base print:prose-a:italic print:prose-a:no-underline"
     >
@@ -94,33 +69,7 @@ title: Lyza Danger Gardner, CV (Resume)
     </div>
     <h2 class="border-b-2 font-display text-lg md:text-2xl">What I Can Do</h2>
     <ul class="space-y-2 lg:space-y-4">
-      {% for skillset in skills %}
-        <li
-          class="rounded-lg bg-grey-100 p-2 lg:p-3 print:bg-transparent print:p-0"
-        >
-          <h3
-            class="border-b border-grey-500 pb-1 text-sm font-semibold italic leading-tight text-pank lg:text-base lg:leading-snug print:border-none print:leading-none"
-          >
-            {{ skillset.description }}
-          </h3>
-          <ul class="list-inside list-disc p-2 font-smallcaps text-xs">
-            {% for skill in skillset.skills %}
-              {# NB: There is a bug in the 'fl' ligature of GFont's Playfair
-               # SC (small-caps) font. Disabling ligatures with CSS for the
-               # moment, but TODO follow-up because using
-               # `font-variant-caps:all-small-caps` of Playfair does not exhibit
-               # this glitch.
-              #}
-              <li
-                class="marker:text-pank-300 print:leading-[1.1em]"
-                style="font-variant-ligatures:none"
-              >
-                {{ skill }}
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
+      {{ skillListItems(skills) }}
     </ul>
   </div>
   <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">

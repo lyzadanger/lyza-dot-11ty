@@ -13,7 +13,7 @@ hideHeaderPrint: true
 >
   <div class="col-span-12 max-w-none space-y-3 sm:col-span-8 md:space-y-4">
     <div
-      class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg sm:text-justify md:leading-normal"
+      class="prose prose-sm prose-stone max-w-none leading-snug md:prose-lg sm:text-justify md:leading-normal print:pt-1"
     >
       {% markdown %}
         {%- include "./objective.md" -%}
@@ -21,18 +21,32 @@ hideHeaderPrint: true
     </div>
   </div>
   <div
-    class="order-first col-span-12 space-y-3 sm:order-none sm:col-span-4 print:space-y-3"
+    class="order-first col-span-12 space-y-3 sm:order-none sm:col-span-4 print:order-first print:space-y-3"
   >
-    <div class="text-center">
-      <h2 class="font-display text-lg sm:text-base md:text-lg lg:text-xl">
-        Lyza Danger Gardner
+    <div class="text-center print:pr-2 print:text-right">
+      <h2
+        class="font-display text-lg sm:text-base md:text-lg lg:text-xl print:text-xl"
+      >
+        Lyza <span class="print:text-pank">Danger</span> Gardner
       </h2>
       <h3 class="font-display text-sm italic lg:text-base">
         Web Developer and Advocate
       </h3>
     </div>
 
-    <div class="flex flex-col items-center">
+    <div
+      class="hidden gap-y-1 print:flex print:flex-col print:items-end print:pr-2"
+    >
+      {% set email = profile.identities.email %}
+      <div class="text-xs leading-none">Chester, Vermont, USA</div>
+      <div class="text-xs leading-none">+1 (503) 789-5611</div>
+      <div>{{ iconLink(email.url, 'lyza@lyza.com', email.icon) }}</div>
+      <div class="font-display text-sm italic leading-none">
+        <a href="https://wwww.lyza.com">www.lyza.com</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center print:hidden">
       {% set email = profile.identities.email %}
       {% set mastodon = profile.identities.mastodon %}
       {% set github = profile.identities.github %}
@@ -40,18 +54,18 @@ hideHeaderPrint: true
         {{ iconLink(email.url, 'lyza@lyza.com', email.icon) }}
       </div>
       <div
-        class="hidden font-display text-base italic leading-tight sm:text-lg print:block"
+        class="hidden font-display text-base italic leading-tight sm:text-lg"
       >
         <a href="https://wwww.lyza.com">www.lyza.com</a>
       </div>
       <div
-        class="flex items-center gap-x-2 pb-2 text-base sm:border-b sm:text-lg print:hidden"
+        class="flex items-center gap-x-2 pb-2 text-base sm:border-b sm:text-lg"
       >
         {{ iconLink(mastodon.url, mastodon.title, mastodon.icon) }}
         <div>|</div>
         {{ iconLink(github.url, github.title, github.icon) }}
       </div>
-      <div class="hidden py-2 text-center text-lg sm:block print:hidden">
+      <div class="hidden py-2 text-center text-lg sm:block">
         {{ iconLink('/lyza-danger-gardner-resume-cv.pdf', 'Download PDF', 'download') }}
       </div>
     </div>

@@ -1,0 +1,47 @@
+{% macro experienceItem(experience) %}
+  {% set eData = experience.data %}
+  <div class="space-y-2">
+    <div>
+      <div class="flex items-center">
+        <h3 class="font-bold md:text-lg lg:text-xl">
+          {{ eData.organization.name }}
+        </h3>
+        <div class="flex-grow text-right italic">
+          <span class="whitespace-nowrap"
+            >{{ eData.tenure.start | formatDate("LLL, yyyy") }}&nbsp;-&nbsp;{{ eData.tenure.end | formatDate("LLL, yyyy") }}</span
+          >
+        </div>
+      </div>
+      <div class="text-sm font-semibold text-pank md:text-base">
+        {{ eData.position }}
+      </div>
+    </div>
+    <div
+      class="prose prose-sm prose-stone leading-snug md:prose-base md:leading-normal"
+    >
+      {{ experience.content | safe }}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro educationItem(edu) %}
+  <div>
+    <div class="flex items-center gap-x-2">
+      <h3 class="font-bold md:text-lg">
+        <a
+          href="{{ edu.url }}"
+          class="transition-colors hover:text-pank hover:underline"
+          >{{ edu.institution }}</a
+        >
+      </h3>
+
+      <div class="flex-grow text-right italic">
+        {{ edu.dates.start | formatDate("yyyy") }} -
+        {{ edu.dates.end | formatDate("yyyy") }}
+      </div>
+    </div>
+    <div class="text-sm font-semibold text-pank md:text-base">
+      {{ edu.description }}
+    </div>
+  </div>
+{% endmacro %}

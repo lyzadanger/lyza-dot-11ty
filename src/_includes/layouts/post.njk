@@ -26,10 +26,10 @@ navigationKey: posts
         </div>
       </div>
     {% endif %}
-    <ul class="flex flex-row gap-2 font-smallcaps">
+    <ul class="font-smallcaps">
       {% set postTags = tags | postTags %}
       {% for tag in postTags %}
-        <li>
+        <li class="mr-1 inline-block last:mr-0">
           <a
             href="/tags/{{ tag | slugify }}"
             class="font-smallcaps text-sm text-grey-600 transition-colors hover:text-pank hover:underline"

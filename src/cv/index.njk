@@ -49,6 +49,7 @@ hideHeaderPrint: true
     <div class="flex flex-col items-center print:hidden">
       {% set email = profile.identities.email %}
       {% set mastodon = profile.identities.mastodon %}
+      {% set linkedin = profile.identities.linkedin %}
       {% set github = profile.identities.github %}
       <div class="text-2xl">
         {{ iconLink(email.url, 'lyza@lyza.com', email.icon) }}
@@ -61,7 +62,7 @@ hideHeaderPrint: true
       <div
         class="flex items-center gap-x-2 pb-2 text-base sm:border-b sm:text-lg"
       >
-        {{ iconLink(mastodon.url, mastodon.title, mastodon.icon) }}
+        {{ iconLink(linkedin.url, linkedin.title, linkedin.icon) }}
         <div>|</div>
         {{ iconLink(github.url, github.title, github.icon) }}
       </div>

@@ -19,3 +19,8 @@ identities:
     title: Email
     url: mailto:lyza@lyza.com
     icon: email
+  linkedin:
+    title: LinkedIn
+    username: "@lyzadanger"
+    url: https://www.linkedin.com/in/lyzadanger/
+    icon: linkedin

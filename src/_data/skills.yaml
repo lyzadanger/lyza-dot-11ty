@@ -1,58 +1,55 @@
-- description: "web development and fundamentals"
+- description: "front-end architecture and application design"
   skills:
-    - HTML
+    - Component design
+    - Design systems
+    - TypeScript
     - JavaScript
+    - React, Vue.js, Preact
     - CSS
+    - Responsive design
+    - Accessibility (WCAG, WAI-ARIA)
+
+- description: "empathic, values-driven technical leadership"
+  skills:
+    - Team leadership
+    - Mentorship
+    - Project management
+    - Process improvement
+    - Standards stewardship
+    - OSS contributor
+
+- description: "developer experience and software quality"
+  skills:
+    - Testing
+    - Linting and tooling
+    - CI/CD
+    - Developer ergonomics
+    - Workflows
+    - Version control (Git)
+
+- description: "full-stack and legacy system fluency"
+  skills:
+    - Node.js
+    - Python
+    - API design
+    - PHP
+    - SQL
+    - Front-end and back-end integration
+
+- description: "communication, synthesis and impact"
+  skills:
+    - Books
+    - Articles
+    - Conferences
+    - Tutorials
+    - Workshops
+    - Code reviews
+
+- description: "open web values and human-centered systems"
+  skills:
     - Open web standards
     - Web APIs
-    - accessibility
-    - performance
-- description: "exquisite written and spoken communication"
-  skills:
-    - books
-    - articles
-    - conferences
-    - tutorials
-    - workshops
-    - code reviews
-- description: "empathic, values-based technical leadership"
-  skills:
-    - team leadership
-    - project management
-    - standards stewardship
-    - process management
-    - OSS contributor
-    - mentorship
-- description: "full-stack web application development"
-  skills:
-    - Frontend and Backend
-    - Node.js
-    - TypeScript
-    - python
-    - PHP
-    - React, or
-    - JS framework du jour
-    - tailwindcss, or
-    - CSS thingy du jour
-    - API design
-    - SQL
-- description: "software development methodology"
-  skills:
-    - project architecture
-    - product development
-    - design patterns
-    - version control / git
-    - testing
-    - teamwork
-    - CI / CD
-    - workflows
-- description: "design thinking and technical humanity"
-  skills:
-    - design systems
-    - responsive design
-    - accessibility
-    - WAI-ARIA
-    - User Experience (UX)
-    - User Interface (UI)
-    - feature design
-    - always learning
+    - Standards advocacy
+    - Accessibility
+    - Human-centered systems
+    - Always learning

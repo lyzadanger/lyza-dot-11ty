@@ -11,11 +11,8 @@ organization:
     Hypothesis’ non-profit mission is to bring a new layer to the Web, enabling anyone to annotate anywhere. Hypothesis’ open-source, web-based software is free to use.
 ---
 
-At Hypothesis, I participated in the leadership of a world-class team of technologists, building a product that continually pushed the edges of what is possible to do on the web. **Described as the team’s “glue”, I**:
+I was lead engineer and technical project lead at Hypothesis, a nonprofit building open-source tools to bring annotation to the Web. I was part of a world-class team of technologists, working at the edges of what was possible in modern web applications.
 
-- **synthesized and distilled product needs** out of a complex and sometimes-conflicting landscape, building plans for feature development and design
-- **applied broad, multi-disciplinary implementation skills**: coding, technical design, UI/UX, communication, software workflow, and testing — continually delivering exceptional results.
-- **brought people together** with technical project management, empathy, mentorship and consensus-driven teamwork. Drove the creation of team engineering principles, divining shared values and setting aspirational direction. Refined team processes, such as sprint planning and work cadence.
-- **got big things _done_** with an ownership mentality: followed through on big, architectural projects, leading to boosts in performance, reliability and productivity.
-- **brought design thinking and humanity to my work**: designed feature UI; created design systems and built associated library of reusable components; achieved WCAG 2.1 accessibility compliance; reduced CSS payload by 50%.
-- **retained commitment to open web standards**: aided in design and implementation of APIs conformant to W3C Web Annotation specifications; pushed the edges of web platform APIs.
+**Described as the team’s “glue”**, I synthesized needs across product, engineering and design, translating a complex and sometimes-conflicting product landscape into clear, actionable engineering plans. I contributed to major architectural efforts, including the full migration of our annotation client from Angular 1 to Preact (React-compatible), improving performance, reliability, and developer velocity.
+
+I led the design and implementation of our component system, reducing our CSS payload by 50%, and achieving WCAG 2.1 compliance. I also helped define and distill our team engineering values, improved internal workflows (sprint planning, cadence, testing), and mentored others across disciplines.

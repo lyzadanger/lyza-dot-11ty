@@ -3,4 +3,4 @@ permalink: false
 title: Objective
 ---
 
-A **full-stack web developer with a frontend emphasis**, I have **over 25 years of experience** developing with and advocating for the open web platform. I understand how the web works and my work is united by open-source web technologies and stellar colleagues. I’m motivated by figuring things out, building stuff and synthesizing complex information into written or spoken form.
+I’m a longtime **front-end engineer with full-stack understanding and technical lead with over 25 years of experience** building for the open web. I bring architectural depth, cross-functional clarity, and a steadying influence to complex systems and teams. My work is grounded in open source technologies, values and empathy. I'm motivated by figuring things out, building stuff, lifting teams and making complexity easier to understand.

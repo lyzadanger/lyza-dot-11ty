@@ -7,9 +7,14 @@
           {{ eData.organization.name }}
         </h3>
         <div class="flex-grow text-right italic">
-          <span class="whitespace-nowrap"
-            >{{ eData.tenure.start | formatDate("LLL yyyy") }}&nbsp;-&nbsp;{{ eData.tenure.end | formatDate("LLL yyyy") }}</span
-          >
+          <span class="whitespace-nowrap">
+            {{ eData.tenure.start | formatDate("LLL yyyy") }}
+            {% if eData.tenure.end %}
+              &nbsp;-&nbsp;{{ eData.tenure.end | formatDate("LLL yyyy") }}
+            {% else %}
+              &nbsp;-&nbsp;current
+            {% endif %}
+          </span>
         </div>
       </div>
       <div class="text-sm font-semibold text-pank md:text-base">
